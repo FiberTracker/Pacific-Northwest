@@ -1,0 +1,4575 @@
+{
+  "as_of_date": "2025-06-30",
+  "target_states": {
+    "53": "Washington",
+    "41": "Oregon",
+    "16": "Idaho",
+    "30": "Montana"
+  },
+  "total_providers": 216,
+  "all_providers": {
+    "290111": {
+      "name": "Viasat, Inc.",
+      "total_records": 10484807,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 1378647
+        },
+        "30": {
+          "name": "Montana",
+          "records": 928023
+        },
+        "53": {
+          "name": "Washington",
+          "records": 5137355
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 3040782
+        }
+      }
+    },
+    "130627": {
+      "name": "EchoStar Corporation",
+      "total_records": 5335370,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 2564328
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 762815
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 1516385
+        },
+        "30": {
+          "name": "Montana",
+          "records": 491842
+        }
+      }
+    },
+    "430076": {
+      "name": "Space Exploration Technologies Corp.",
+      "total_records": 5334628,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 491830
+        },
+        "53": {
+          "name": "Washington",
+          "records": 2563699
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 762788
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 1516311
+        }
+      }
+    },
+    "130403": {
+      "name": "T-Mobile USA, Inc.",
+      "total_records": 3287723,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 375306
+        },
+        "53": {
+          "name": "Washington",
+          "records": 1748820
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 921125
+        },
+        "30": {
+          "name": "Montana",
+          "records": 242472
+        }
+      }
+    },
+    "130228": {
+      "name": "Lumen Technologies, Inc.",
+      "total_records": 3002088,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 915020
+        },
+        "30": {
+          "name": "Montana",
+          "records": 284073
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 468308
+        },
+        "53": {
+          "name": "Washington",
+          "records": 1334687
+        }
+      }
+    },
+    "130077": {
+      "name": "AT&T Inc.",
+      "total_records": 2699880,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 181579
+        },
+        "53": {
+          "name": "Washington",
+          "records": 1575944
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 942357
+        }
+      }
+    },
+    "130317": {
+      "name": "Comcast Corporation",
+      "total_records": 2504834,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 1716354
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 788025
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 442
+        },
+        "30": {
+          "name": "Montana",
+          "records": 13
+        }
+      }
+    },
+    "131425": {
+      "name": "Verizon Communications Inc.",
+      "total_records": 1623737,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 250101
+        },
+        "30": {
+          "name": "Montana",
+          "records": 178791
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 430665
+        },
+        "53": {
+          "name": "Washington",
+          "records": 764180
+        }
+      }
+    },
+    "420173": {
+      "name": "Northwest Fiber, LLC",
+      "total_records": 1172715,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 12567
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 119498
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 325836
+        },
+        "53": {
+          "name": "Washington",
+          "records": 714814
+        }
+      }
+    },
+    "131310": {
+      "name": "Telephone and Data Systems, Inc.",
+      "total_records": 974756,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 495045
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 96975
+        },
+        "53": {
+          "name": "Washington",
+          "records": 359823
+        },
+        "30": {
+          "name": "Montana",
+          "records": 22913
+        }
+      }
+    },
+    "130235": {
+      "name": "Charter Communications",
+      "total_records": 941281,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 255352
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 363564
+        },
+        "30": {
+          "name": "Montana",
+          "records": 257590
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 64775
+        }
+      }
+    },
+    "130183": {
+      "name": "Cable One, Inc.",
+      "total_records": 443344,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 6700
+        },
+        "53": {
+          "name": "Washington",
+          "records": 8550
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 428094
+        }
+      }
+    },
+    "270011": {
+      "name": "Alyrica Networks, Inc.",
+      "total_records": 381256,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 381256
+        }
+      }
+    },
+    "320127": {
+      "name": "Safelink Internet",
+      "total_records": 357248,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 346104
+        },
+        "30": {
+          "name": "Montana",
+          "records": 1550
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 9594
+        }
+      }
+    },
+    "140048": {
+      "name": "JAB Wireless, Inc.",
+      "total_records": 350437,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 5516
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 344921
+        }
+      }
+    },
+    "130079": {
+      "name": "Radiate Holdings, LP",
+      "total_records": 292614,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 80332
+        },
+        "53": {
+          "name": "Washington",
+          "records": 212282
+        }
+      }
+    },
+    "430175": {
+      "name": "White Cloud Networks",
+      "total_records": 233054,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 233054
+        }
+      }
+    },
+    "131497": {
+      "name": "Wired or Wireless, Inc.",
+      "total_records": 228141,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 157083
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 71058
+        }
+      }
+    },
+    "260010": {
+      "name": "MiFiber Holding, LLC",
+      "total_records": 199244,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 178964
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 20280
+        }
+      }
+    },
+    "370088": {
+      "name": "PocketiNet Communications Inc.",
+      "total_records": 197375,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 191444
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 5931
+        }
+      }
+    },
+    "360134": {
+      "name": "Fybercom LLC",
+      "total_records": 161195,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 161195
+        }
+      }
+    },
+    "300066": {
+      "name": "Hunter Communications & Technologies LLC",
+      "total_records": 142383,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 142381
+        },
+        "53": {
+          "name": "Washington",
+          "records": 2
+        }
+      }
+    },
+    "170071": {
+      "name": "Newmax, LLC",
+      "total_records": 134776,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 83417
+        },
+        "53": {
+          "name": "Washington",
+          "records": 51359
+        }
+      }
+    },
+    "290093": {
+      "name": "Declaration Networks Group, Inc.",
+      "total_records": 113380,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 113376
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 4
+        }
+      }
+    },
+    "460028": {
+      "name": "Elevate Technology Group",
+      "total_records": 103182,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 97022
+        },
+        "53": {
+          "name": "Washington",
+          "records": 6160
+        }
+      }
+    },
+    "340029": {
+      "name": "BHT Investment Holdings LLC",
+      "total_records": 99845,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 99845
+        }
+      }
+    },
+    "470122": {
+      "name": "Advanced Internet",
+      "total_records": 99681,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 99681
+        }
+      }
+    },
+    "350116": {
+      "name": "Whittrio, Inc.",
+      "total_records": 96808,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 96808
+        }
+      }
+    },
+    "130786": {
+      "name": "Mashell Inc.",
+      "total_records": 96686,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 96686
+        }
+      }
+    },
+    "440186": {
+      "name": "Direct Management Company",
+      "total_records": 92807,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 92807
+        }
+      }
+    },
+    "460630": {
+      "name": "xyTel LLC",
+      "total_records": 89436,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 89436
+        }
+      }
+    },
+    "380048": {
+      "name": "Gigabeam Internet, LLC",
+      "total_records": 84731,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 84731
+        }
+      }
+    },
+    "220079": {
+      "name": "Blue Mountain Networks LLC",
+      "total_records": 79643,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 73912
+        },
+        "53": {
+          "name": "Washington",
+          "records": 5731
+        }
+      }
+    },
+    "390006": {
+      "name": "Air Bridge Broadband LLC",
+      "total_records": 76990,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 76990
+        }
+      }
+    },
+    "390099": {
+      "name": "Project A Inc.",
+      "total_records": 72148,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 72148
+        }
+      }
+    },
+    "350019": {
+      "name": "CASCO Communications, Inc.",
+      "total_records": 68783,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 68783
+        }
+      }
+    },
+    "130500": {
+      "name": "First Step Internet, LLC",
+      "total_records": 68613,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 23711
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 44902
+        }
+      }
+    },
+    "190126": {
+      "name": "Douglas Electric Cooperative Inc.",
+      "total_records": 59521,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 59521
+        }
+      }
+    },
+    "370141": {
+      "name": "Wi-Fiber, Inc.",
+      "total_records": 59493,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 2720
+        },
+        "53": {
+          "name": "Washington",
+          "records": 56773
+        }
+      }
+    },
+    "190349": {
+      "name": "Syringa Networks, LLC",
+      "total_records": 52732,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 52545
+        },
+        "53": {
+          "name": "Washington",
+          "records": 187
+        }
+      }
+    },
+    "410114": {
+      "name": "Vyve Broadband Investments (GTCR)",
+      "total_records": 51884,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 45425
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 6459
+        }
+      }
+    },
+    "131190": {
+      "name": "Horizon Communications, Inc.",
+      "total_records": 49445,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 49445
+        }
+      }
+    },
+    "130132": {
+      "name": "Blackfoot Telephone Cooperative, Inc.",
+      "total_records": 47774,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 15425
+        },
+        "30": {
+          "name": "Montana",
+          "records": 32349
+        }
+      }
+    },
+    "520061": {
+      "name": "Centric Integrated Systems, Corp.",
+      "total_records": 46648,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 46648
+        }
+      }
+    },
+    "370071": {
+      "name": "Native Network, Inc.",
+      "total_records": 45680,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 45432
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 248
+        }
+      }
+    },
+    "330059": {
+      "name": "PrineTime Internet Solutions",
+      "total_records": 42319,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 42319
+        }
+      }
+    },
+    "240109": {
+      "name": "Montana Internet Corporation",
+      "total_records": 42227,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 42227
+        }
+      }
+    },
+    "330070": {
+      "name": "SkyNet Communications LLC",
+      "total_records": 39091,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 39091
+        }
+      }
+    },
+    "131367": {
+      "name": "Triangle Telephone Cooperative Assn., Inc.",
+      "total_records": 39007,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 39007
+        }
+      }
+    },
+    "240110": {
+      "name": "Public Utility District of Grant County, Washington",
+      "total_records": 38626,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 38626
+        }
+      }
+    },
+    "290118": {
+      "name": "Webformix Company",
+      "total_records": 36947,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 36947
+        }
+      }
+    },
+    "140055": {
+      "name": "LAT Inc.",
+      "total_records": 36408,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 36408
+        }
+      }
+    },
+    "330082": {
+      "name": "Washington Broadband, Inc.",
+      "total_records": 35018,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 35018
+        }
+      }
+    },
+    "131075": {
+      "name": "Project Mutual Telephone Cooperative Association, Inc.",
+      "total_records": 34984,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 34984
+        }
+      }
+    },
+    "130890": {
+      "name": "Nemont Telephone Cooperative, Inc.",
+      "total_records": 34854,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 34854
+        }
+      }
+    },
+    "430089": {
+      "name": "Project A, Inc.",
+      "total_records": 30550,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 30550
+        }
+      }
+    },
+    "380051": {
+      "name": "Ravalli Electric Cooperative",
+      "total_records": 30188,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 30188
+        }
+      }
+    },
+    "140020": {
+      "name": "PUD No. 1 of Chelan County",
+      "total_records": 29944,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 29944
+        }
+      }
+    },
+    "300187": {
+      "name": "RC Wireless Inc.",
+      "total_records": 29083,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 29083
+        }
+      }
+    },
+    "230025": {
+      "name": "Konceptio Data Services, LLC",
+      "total_records": 29065,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 29065
+        }
+      }
+    },
+    "310017": {
+      "name": "Cascades Digital Forensics LLC",
+      "total_records": 28740,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 27757
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 983
+        }
+      }
+    },
+    "410192": {
+      "name": "Inland Cellular Telephone Company",
+      "total_records": 28613,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 13929
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 14684
+        }
+      }
+    },
+    "130335": {
+      "name": "Fidium Holdings, LLC",
+      "total_records": 26484,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 26484
+        }
+      }
+    },
+    "270027": {
+      "name": "Columbia Energy LLC",
+      "total_records": 25255,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 22043
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 3212
+        }
+      }
+    },
+    "470055": {
+      "name": "NCI Datacom",
+      "total_records": 24678,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 24678
+        }
+      }
+    },
+    "130826": {
+      "name": "Mid-Rivers Telephone Cooperative, Inc.",
+      "total_records": 24091,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 24091
+        }
+      }
+    },
+    "130002": {
+      "name": "3 Rivers Telephone Cooperative, Inc.",
+      "total_records": 21210,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 21210
+        }
+      }
+    },
+    "400130": {
+      "name": "Wtechlink, Inc.",
+      "total_records": 20874,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 20874
+        }
+      }
+    },
+    "160127": {
+      "name": "LICT Corporation",
+      "total_records": 20578,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 20578
+        }
+      }
+    },
+    "240061": {
+      "name": "Montana Opticom LLC",
+      "total_records": 20452,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 20452
+        }
+      }
+    },
+    "300171": {
+      "name": "Visionary Communications, Inc.",
+      "total_records": 19925,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 19925
+        }
+      }
+    },
+    "131129": {
+      "name": "CommunityTel, Inc.",
+      "total_records": 19601,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 19601
+        }
+      }
+    },
+    "420110": {
+      "name": "Rocky Mountain Internet Inc.",
+      "total_records": 19537,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 19537
+        }
+      }
+    },
+    "300125": {
+      "name": "Richon, Inc.",
+      "total_records": 19263,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 19263
+        }
+      }
+    },
+    "130104": {
+      "name": "Beaver Creek Cooperative Telephone Company",
+      "total_records": 17613,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 17613
+        }
+      }
+    },
+    "270063": {
+      "name": "MontanaSky Networks, Inc.",
+      "total_records": 17063,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 17063
+        }
+      }
+    },
+    "130986": {
+      "name": "Oregon Telephone Corporation",
+      "total_records": 16516,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 2025
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 14490
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 1
+        }
+      }
+    },
+    "131046": {
+      "name": "Pioneer Telephone Cooperative (OR)",
+      "total_records": 16411,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 16411
+        }
+      }
+    },
+    "250003": {
+      "name": "360 Communications, LLC (OR & WA)",
+      "total_records": 15780,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 3143
+        },
+        "53": {
+          "name": "Washington",
+          "records": 12637
+        }
+      }
+    },
+    "190303": {
+      "name": "Public Utility District No. 1 of Douglas County",
+      "total_records": 15347,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 15347
+        }
+      }
+    },
+    "460052": {
+      "name": "Mann Holdings, LLC",
+      "total_records": 15025,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 15025
+        }
+      }
+    },
+    "130206": {
+      "name": "Day Management Corporation",
+      "total_records": 14969,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 14938
+        },
+        "53": {
+          "name": "Washington",
+          "records": 31
+        }
+      }
+    },
+    "450044": {
+      "name": "Eminent Technical Solutions, LLC",
+      "total_records": 14888,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 14888
+        }
+      }
+    },
+    "300112": {
+      "name": "Okanogan County PUD No. 1",
+      "total_records": 14009,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 14009
+        }
+      }
+    },
+    "131118": {
+      "name": "RJB Telecommunications Corp.",
+      "total_records": 13946,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 13946
+        }
+      }
+    },
+    "390048": {
+      "name": "Hawk Networks, Inc.",
+      "total_records": 13900,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 701
+        },
+        "53": {
+          "name": "Washington",
+          "records": 13013
+        },
+        "30": {
+          "name": "Montana",
+          "records": 186
+        }
+      }
+    },
+    "230011": {
+      "name": "Cyberdyne Networks, Inc.",
+      "total_records": 13811,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 13811
+        }
+      }
+    },
+    "131478": {
+      "name": "Abound Ventures, Inc.",
+      "total_records": 13802,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 13802
+        }
+      }
+    },
+    "430011": {
+      "name": "Beacon Broadband, Inc.",
+      "total_records": 12788,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 12788
+        }
+      }
+    },
+    "130370": {
+      "name": "Altice USA",
+      "total_records": 12694,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 12694
+        }
+      }
+    },
+    "170066": {
+      "name": "Monmouth Independence Network",
+      "total_records": 12693,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 12693
+        }
+      }
+    },
+    "440159": {
+      "name": "Nikola Engineering, Inc.",
+      "total_records": 12481,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 12481
+        }
+      }
+    },
+    "300057": {
+      "name": "Fatbeam Holdings, LLC",
+      "total_records": 11863,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 65
+        },
+        "53": {
+          "name": "Washington",
+          "records": 169
+        },
+        "30": {
+          "name": "Montana",
+          "records": 26
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 11603
+        }
+      }
+    },
+    "360124": {
+      "name": "Red Spectrum Communications LLC",
+      "total_records": 11479,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 4361
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 7118
+        }
+      }
+    },
+    "240041": {
+      "name": "Google LLC",
+      "total_records": 11371,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 11069
+        },
+        "53": {
+          "name": "Washington",
+          "records": 302
+        }
+      }
+    },
+    "160157": {
+      "name": "Zito West Holding, LLC",
+      "total_records": 10772,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 1314
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 9458
+        }
+      }
+    },
+    "320059": {
+      "name": "Last Mile Wireless, LLC",
+      "total_records": 10727,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 10727
+        }
+      }
+    },
+    "130196": {
+      "name": "Canby Telephone Association",
+      "total_records": 10642,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 10642
+        }
+      }
+    },
+    "130360": {
+      "name": "Cox Communications, Inc.",
+      "total_records": 10441,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 10441
+        }
+      }
+    },
+    "130479": {
+      "name": "Farmers Mutual Telephone Company (ID)",
+      "total_records": 10138,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 7399
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 2739
+        }
+      }
+    },
+    "310036": {
+      "name": "E.L. Automation Inc.",
+      "total_records": 10068,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 8763
+        },
+        "30": {
+          "name": "Montana",
+          "records": 1305
+        }
+      }
+    },
+    "460625": {
+      "name": "Vickery IT LLC",
+      "total_records": 8360,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 8360
+        }
+      }
+    },
+    "131259": {
+      "name": "Stayton Cooperative Telephone Company",
+      "total_records": 8300,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 8300
+        }
+      }
+    },
+    "440017": {
+      "name": "City of Hillsboro",
+      "total_records": 8295,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 8295
+        }
+      }
+    },
+    "130831": {
+      "name": "Midvale Telephone Exchange",
+      "total_records": 8070,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 7575
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 495
+        }
+      }
+    },
+    "470062": {
+      "name": "Ravalli Broadband LLC",
+      "total_records": 7904,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 7904
+        }
+      }
+    },
+    "130784": {
+      "name": "Martell Enterprises, Inc.",
+      "total_records": 7691,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 1639
+        },
+        "53": {
+          "name": "Washington",
+          "records": 2374
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 3678
+        }
+      }
+    },
+    "130651": {
+      "name": "Western Elite Incorporated Services",
+      "total_records": 7644,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 6988
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 656
+        }
+      }
+    },
+    "490062": {
+      "name": "Vision Wifi Inc.",
+      "total_records": 7502,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 7502
+        }
+      }
+    },
+    "130303": {
+      "name": "Coast Communications Co. Inc.",
+      "total_records": 7189,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 7189
+        }
+      }
+    },
+    "130032": {
+      "name": "Albion Telephone Company, Inc.",
+      "total_records": 7188,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 7188
+        }
+      }
+    },
+    "430209": {
+      "name": "Rimrock Wireless",
+      "total_records": 6946,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 6946
+        }
+      }
+    },
+    "131165": {
+      "name": "Scatter Creek Ltd.",
+      "total_records": 6819,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 6819
+        }
+      }
+    },
+    "470078": {
+      "name": "The Greater Eastern Oregon Network",
+      "total_records": 6392,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 6392
+        }
+      }
+    },
+    "130850": {
+      "name": "Molalla Communications Company",
+      "total_records": 6373,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 6373
+        }
+      }
+    },
+    "430130": {
+      "name": "Hood River Electric Cooperative",
+      "total_records": 6371,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 6371
+        }
+      }
+    },
+    "131090": {
+      "name": "Range Telephone Cooperative, Inc.",
+      "total_records": 6297,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 6297
+        }
+      }
+    },
+    "150245": {
+      "name": "CresComm WiFi, LLC",
+      "total_records": 6154,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 6154
+        }
+      }
+    },
+    "410164": {
+      "name": "Mason County Public Utility District No. 3",
+      "total_records": 6010,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 6010
+        }
+      }
+    },
+    "230036": {
+      "name": "Rebus Communications, LLC",
+      "total_records": 5849,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 5849
+        }
+      }
+    },
+    "130657": {
+      "name": "InterBel Telephone Cooperative, Inc.",
+      "total_records": 5532,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 5532
+        }
+      }
+    },
+    "130193": {
+      "name": "Cambridge Telephone Company, Inc.",
+      "total_records": 5514,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 5103
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 411
+        }
+      }
+    },
+    "410135": {
+      "name": "City of Sandy, Oregon",
+      "total_records": 5440,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 5440
+        }
+      }
+    },
+    "370004": {
+      "name": "600Amps Internet Services, Inc.",
+      "total_records": 5416,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 5416
+        }
+      }
+    },
+    "330054": {
+      "name": "Nez Perce Tribe",
+      "total_records": 5339,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 5339
+        }
+      }
+    },
+    "460089": {
+      "name": "VFN Holdings, Inc.",
+      "total_records": 5118,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 4721
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 397
+        }
+      }
+    },
+    "130378": {
+      "name": "Custer Telephone Cooperative Inc.",
+      "total_records": 5016,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 5016
+        }
+      }
+    },
+    "410090": {
+      "name": "Siyeh Communications",
+      "total_records": 4859,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 4859
+        }
+      }
+    },
+    "131347": {
+      "name": "The Toledo Telephone Company",
+      "total_records": 4802,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 4802
+        }
+      }
+    },
+    "460047": {
+      "name": "Kaniksu, LLC",
+      "total_records": 4765,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 4765
+        }
+      }
+    },
+    "400046": {
+      "name": "Ting Fiber, Inc.",
+      "total_records": 4485,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 4485
+        }
+      }
+    },
+    "140033": {
+      "name": "Filer Mutual Telephone Company",
+      "total_records": 4474,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 4474
+        }
+      }
+    },
+    "150330": {
+      "name": "Upward Access, LLC",
+      "total_records": 4467,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 4467
+        }
+      }
+    },
+    "380097": {
+      "name": "Pacific Independent Technology Alliance LLC",
+      "total_records": 4365,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 4365
+        }
+      }
+    },
+    "320056": {
+      "name": "Island Networks, LLC",
+      "total_records": 4109,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 4109
+        }
+      }
+    },
+    "500032": {
+      "name": "Larkin LLC",
+      "total_records": 4019,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 4019
+        }
+      }
+    },
+    "460020": {
+      "name": "City of Sherwood, Oregon",
+      "total_records": 3967,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 3967
+        }
+      }
+    },
+    "300144": {
+      "name": "Siuslaw Broadband, LLC",
+      "total_records": 3881,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 3881
+        }
+      }
+    },
+    "350042": {
+      "name": "Fiber Platform, LLC",
+      "total_records": 3858,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 7
+        },
+        "53": {
+          "name": "Washington",
+          "records": 3851
+        }
+      }
+    },
+    "240031": {
+      "name": "Davis Communications Inc.",
+      "total_records": 3804,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 3804
+        }
+      }
+    },
+    "130289": {
+      "name": "Clear Creek Mutual Telephone Company",
+      "total_records": 3612,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 3612
+        }
+      }
+    },
+    "350133": {
+      "name": "Grase Communications LLC",
+      "total_records": 3607,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 3607
+        }
+      }
+    },
+    "130539": {
+      "name": "Gervais Telephone Company",
+      "total_records": 3562,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 3562
+        }
+      }
+    },
+    "290075": {
+      "name": "Northwest Open Access Network",
+      "total_records": 3245,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 3245
+        }
+      }
+    },
+    "130982": {
+      "name": "Zayo Group, LLC",
+      "total_records": 2998,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 309
+        },
+        "30": {
+          "name": "Montana",
+          "records": 104
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 894
+        },
+        "53": {
+          "name": "Washington",
+          "records": 1691
+        }
+      }
+    },
+    "220031": {
+      "name": "IsoFusion, Inc.",
+      "total_records": 2816,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 2816
+        }
+      }
+    },
+    "490041": {
+      "name": "Public Utility District #1 of Kitsap County, Washington",
+      "total_records": 2805,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 2805
+        }
+      }
+    },
+    "290108": {
+      "name": "Tnet Broadband Internet",
+      "total_records": 2778,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 2778
+        }
+      }
+    },
+    "131475": {
+      "name": "Wahkiakum West Inc.",
+      "total_records": 2688,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 2688
+        }
+      }
+    },
+    "131247": {
+      "name": "St. John Telephone, Inc.",
+      "total_records": 2470,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 2470
+        }
+      }
+    },
+    "131366": {
+      "name": "BHT Holdings, Inc.",
+      "total_records": 2427,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 2427
+        }
+      }
+    },
+    "420020": {
+      "name": "City of Anacortes",
+      "total_records": 2346,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 2346
+        }
+      }
+    },
+    "500075": {
+      "name": "FiberFi, LLC",
+      "total_records": 2325,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 2325
+        }
+      }
+    },
+    "310061": {
+      "name": "Salish Networks, Inc.",
+      "total_records": 2184,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 2184
+        }
+      }
+    },
+    "350087": {
+      "name": "Adept Internet Solutions LLP",
+      "total_records": 2145,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 2145
+        }
+      }
+    },
+    "320118": {
+      "name": "Inland Development Corporation",
+      "total_records": 2030,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 2030
+        }
+      }
+    },
+    "131168": {
+      "name": "Scio Mutual Telephone Association",
+      "total_records": 1978,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 1978
+        }
+      }
+    },
+    "280052": {
+      "name": "San Juan Cable, Inc.",
+      "total_records": 1860,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 1860
+        }
+      }
+    },
+    "130854": {
+      "name": "Monroe Telephone Company",
+      "total_records": 1797,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 1797
+        }
+      }
+    },
+    "130622": {
+      "name": "Hot Springs Telephone Company",
+      "total_records": 1791,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 1791
+        }
+      }
+    },
+    "290105": {
+      "name": "Television Association of Republic",
+      "total_records": 1761,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 1761
+        }
+      }
+    },
+    "130874": {
+      "name": "Mud Lake Telephone Cooperative Association, Inc.",
+      "total_records": 1676,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 1676
+        }
+      }
+    },
+    "130945": {
+      "name": "Northern Telephone Cooperative, Inc.",
+      "total_records": 1485,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 1485
+        }
+      }
+    },
+    "300138": {
+      "name": "SS Ventures, Inc.",
+      "total_records": 1442,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 1442
+        }
+      }
+    },
+    "131102": {
+      "name": "Reservation Telephone Cooperative",
+      "total_records": 1393,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 1393
+        }
+      }
+    },
+    "200008": {
+      "name": "BendTel, Inc.",
+      "total_records": 1389,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 1389
+        }
+      }
+    },
+    "130744": {
+      "name": "Lincoln Telephone Company, Inc.",
+      "total_records": 1336,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 1336
+        }
+      }
+    },
+    "131231": {
+      "name": "Southern Montana Telephone Company",
+      "total_records": 1327,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 1327
+        }
+      }
+    },
+    "520000": {
+      "name": "Okanogan County Electric Cooperative, Inc.",
+      "total_records": 1213,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 1213
+        }
+      }
+    },
+    "260070": {
+      "name": "Warm Springs Telecommunications Company",
+      "total_records": 1136,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 1136
+        }
+      }
+    },
+    "130312": {
+      "name": "Colton Telephone Company",
+      "total_records": 1112,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 1112
+        }
+      }
+    },
+    "410168": {
+      "name": "Skymesh, Inc.",
+      "total_records": 1069,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 1069
+        }
+      }
+    },
+    "131130": {
+      "name": "Roome Telecommunications Inc.",
+      "total_records": 984,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 984
+        }
+      }
+    },
+    "480120": {
+      "name": "Ardent Wireless LLC",
+      "total_records": 934,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 934
+        }
+      }
+    },
+    "150336": {
+      "name": "Whiz to Coho, Inc.",
+      "total_records": 916,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 916
+        }
+      }
+    },
+    "131123": {
+      "name": "Robinson Communications Corporation",
+      "total_records": 862,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 829
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 33
+        }
+      }
+    },
+    "370066": {
+      "name": "Lavalink, LLC",
+      "total_records": 798,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 798
+        }
+      }
+    },
+    "131047": {
+      "name": "Pioneer Telephone Holding Company",
+      "total_records": 797,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 797
+        }
+      }
+    },
+    "460576": {
+      "name": "NocTel Communications, Inc.",
+      "total_records": 681,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 681
+        }
+      }
+    },
+    "200057": {
+      "name": "Orcas Online, Inc.",
+      "total_records": 648,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 648
+        }
+      }
+    },
+    "190227": {
+      "name": "InstarAGF",
+      "total_records": 643,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 477
+        },
+        "53": {
+          "name": "Washington",
+          "records": 166
+        }
+      }
+    },
+    "130852": {
+      "name": "Monitor Cooperative Telephone Company",
+      "total_records": 593,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 593
+        }
+      }
+    },
+    "300093": {
+      "name": "Mosier WiNet LLC",
+      "total_records": 575,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 493
+        },
+        "53": {
+          "name": "Washington",
+          "records": 82
+        }
+      }
+    },
+    "150341": {
+      "name": "Yellowstone Media Design",
+      "total_records": 573,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 573
+        }
+      }
+    },
+    "450055": {
+      "name": "IFN, LLC",
+      "total_records": 552,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 552
+        }
+      }
+    },
+    "131248": {
+      "name": "St. Paul Cooperative Telephone Association",
+      "total_records": 449,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 449
+        }
+      }
+    },
+    "470129": {
+      "name": "Spokane Tribe of Indians",
+      "total_records": 424,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 424
+        }
+      }
+    },
+    "130431": {
+      "name": "Eagle Telephone Systems, Inc.",
+      "total_records": 413,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 413
+        }
+      }
+    },
+    "510029": {
+      "name": "Klick Networks, LLC",
+      "total_records": 364,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 364
+        }
+      }
+    },
+    "470061": {
+      "name": "Public Utilities District No. 1 of Jefferson County, Washington",
+      "total_records": 313,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 313
+        }
+      }
+    },
+    "240046": {
+      "name": "Hughes Computer Services, Inc.",
+      "total_records": 305,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 305
+        }
+      }
+    },
+    "290015": {
+      "name": "Bear River Communications, LLC",
+      "total_records": 300,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 300
+        }
+      }
+    },
+    "370106": {
+      "name": "Softworx Inc.",
+      "total_records": 296,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 296
+        }
+      }
+    },
+    "450099": {
+      "name": "Pendleton Overground, LLC",
+      "total_records": 257,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 257
+        }
+      }
+    },
+    "370012": {
+      "name": "Azure Standard",
+      "total_records": 231,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 231
+        }
+      }
+    },
+    "460057": {
+      "name": "Nisqually Indian Tribe",
+      "total_records": 203,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 203
+        }
+      }
+    },
+    "190406": {
+      "name": "Westgate Communications LLC",
+      "total_records": 108,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 108
+        }
+      }
+    },
+    "131386": {
+      "name": "U.S. TelePacific Holdings Corp.",
+      "total_records": 94,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 6
+        },
+        "30": {
+          "name": "Montana",
+          "records": 5
+        },
+        "53": {
+          "name": "Washington",
+          "records": 62
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 21
+        }
+      }
+    },
+    "420175": {
+      "name": "Central Connect LLC",
+      "total_records": 91,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 91
+        }
+      }
+    },
+    "460032": {
+      "name": "Ezee Fiber Texas, LLC",
+      "total_records": 83,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 83
+        }
+      }
+    },
+    "200014": {
+      "name": "Cogent Communications Group",
+      "total_records": 45,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 37
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 6
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 2
+        }
+      }
+    },
+    "140101": {
+      "name": "West River Cooperative Telephone Company",
+      "total_records": 43,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 43
+        }
+      }
+    },
+    "300103": {
+      "name": "NetFortris Acquisition Co., Inc.",
+      "total_records": 40,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 1
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 8
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 7
+        },
+        "53": {
+          "name": "Washington",
+          "records": 24
+        }
+      }
+    },
+    "430042": {
+      "name": "Helio Broadband, LLC",
+      "total_records": 30,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 30
+        }
+      }
+    },
+    "300205": {
+      "name": "Ruhl Moore Technologies",
+      "total_records": 26,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 26
+        }
+      }
+    },
+    "460646": {
+      "name": "Coastal Broadband Inc.",
+      "total_records": 22,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 22
+        }
+      }
+    },
+    "360117": {
+      "name": "Fusion Connect, Inc.",
+      "total_records": 14,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 2
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 1
+        },
+        "53": {
+          "name": "Washington",
+          "records": 10
+        },
+        "30": {
+          "name": "Montana",
+          "records": 1
+        }
+      }
+    },
+    "500084": {
+      "name": "Generate-Ubiquity Holdings, LLC",
+      "total_records": 14,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 9
+        },
+        "53": {
+          "name": "Washington",
+          "records": 5
+        }
+      }
+    },
+    "130037": {
+      "name": "All West Communications, Inc.",
+      "total_records": 13,
+      "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 13
+        }
+      }
+    },
+    "420125": {
+      "name": "Taluslink, LLC",
+      "total_records": 6,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 5
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 1
+        }
+      }
+    },
+    "300019": {
+      "name": "Bluespan Wireless, LLC",
+      "total_records": 5,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 5
+        }
+      }
+    },
+    "190290": {
+      "name": "Peerless Network Holdings, Inc.",
+      "total_records": 2,
+      "states": {
+        "53": {
+          "name": "Washington",
+          "records": 1
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 1
+        }
+      }
+    },
+    "130139": {
+      "name": "Bloomingdale Home Telephone Company",
+      "total_records": 1,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 1
+        }
+      }
+    },
+    "300186": {
+      "name": "ICS Advanced Technologies",
+      "total_records": 1,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 1
+        }
+      }
+    },
+    "210061": {
+      "name": "Pavlov Media, Inc.",
+      "total_records": 1,
+      "states": {
+        "41": {
+          "name": "Oregon",
+          "records": 1
+        }
+      }
+    },
+    "310026": {
+      "name": "Sinch US Holding, Inc.",
+      "total_records": 1,
+      "states": {
+        "30": {
+          "name": "Montana",
+          "records": 1
+        }
+      }
+    }
+  },
+  "consolidation_candidates": [
+    {
+      "provider_id": "131190",
+      "name": "Horizon Communications, Inc.",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 49445,
+      "state_records": {
+        "Idaho": 49445
+      }
+    },
+    {
+      "provider_id": "130132",
+      "name": "Blackfoot Telephone Cooperative, Inc.",
+      "states": {
+        "16": "Idaho",
+        "30": "Montana"
+      },
+      "total_records": 47774,
+      "state_records": {
+        "Idaho": 15425,
+        "Montana": 32349
+      }
+    },
+    {
+      "provider_id": "520061",
+      "name": "Centric Integrated Systems, Corp.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 46648,
+      "state_records": {
+        "Montana": 46648
+      }
+    },
+    {
+      "provider_id": "370071",
+      "name": "Native Network, Inc.",
+      "states": {
+        "53": "Washington",
+        "41": "Oregon"
+      },
+      "total_records": 45680,
+      "state_records": {
+        "Washington": 45432,
+        "Oregon": 248
+      }
+    },
+    {
+      "provider_id": "330059",
+      "name": "PrineTime Internet Solutions",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 42319,
+      "state_records": {
+        "Oregon": 42319
+      }
+    },
+    {
+      "provider_id": "240109",
+      "name": "Montana Internet Corporation",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 42227,
+      "state_records": {
+        "Montana": 42227
+      }
+    },
+    {
+      "provider_id": "330070",
+      "name": "SkyNet Communications LLC",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 39091,
+      "state_records": {
+        "Montana": 39091
+      }
+    },
+    {
+      "provider_id": "131367",
+      "name": "Triangle Telephone Cooperative Assn., Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 39007,
+      "state_records": {
+        "Montana": 39007
+      }
+    },
+    {
+      "provider_id": "240110",
+      "name": "Public Utility District of Grant County, Washington",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 38626,
+      "state_records": {
+        "Washington": 38626
+      }
+    },
+    {
+      "provider_id": "290118",
+      "name": "Webformix Company",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 36947,
+      "state_records": {
+        "Oregon": 36947
+      }
+    },
+    {
+      "provider_id": "140055",
+      "name": "LAT Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 36408,
+      "state_records": {
+        "Montana": 36408
+      }
+    },
+    {
+      "provider_id": "330082",
+      "name": "Washington Broadband, Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 35018,
+      "state_records": {
+        "Washington": 35018
+      }
+    },
+    {
+      "provider_id": "131075",
+      "name": "Project Mutual Telephone Cooperative Association, Inc.",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 34984,
+      "state_records": {
+        "Idaho": 34984
+      }
+    },
+    {
+      "provider_id": "130890",
+      "name": "Nemont Telephone Cooperative, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 34854,
+      "state_records": {
+        "Montana": 34854
+      }
+    },
+    {
+      "provider_id": "430089",
+      "name": "Project A, Inc.",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 30550,
+      "state_records": {
+        "Oregon": 30550
+      }
+    },
+    {
+      "provider_id": "380051",
+      "name": "Ravalli Electric Cooperative",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 30188,
+      "state_records": {
+        "Montana": 30188
+      }
+    },
+    {
+      "provider_id": "140020",
+      "name": "PUD No. 1 of Chelan County",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 29944,
+      "state_records": {
+        "Washington": 29944
+      }
+    },
+    {
+      "provider_id": "300187",
+      "name": "RC Wireless Inc.",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 29083,
+      "state_records": {
+        "Idaho": 29083
+      }
+    },
+    {
+      "provider_id": "230025",
+      "name": "Konceptio Data Services, LLC",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 29065,
+      "state_records": {
+        "Montana": 29065
+      }
+    },
+    {
+      "provider_id": "310017",
+      "name": "Cascades Digital Forensics LLC",
+      "states": {
+        "53": "Washington",
+        "16": "Idaho"
+      },
+      "total_records": 28740,
+      "state_records": {
+        "Washington": 27757,
+        "Idaho": 983
+      }
+    },
+    {
+      "provider_id": "410192",
+      "name": "Inland Cellular Telephone Company",
+      "states": {
+        "53": "Washington",
+        "16": "Idaho"
+      },
+      "total_records": 28613,
+      "state_records": {
+        "Washington": 13929,
+        "Idaho": 14684
+      }
+    },
+    {
+      "provider_id": "130335",
+      "name": "Fidium Holdings, LLC",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 26484,
+      "state_records": {
+        "Washington": 26484
+      }
+    },
+    {
+      "provider_id": "270027",
+      "name": "Columbia Energy LLC",
+      "states": {
+        "53": "Washington",
+        "41": "Oregon"
+      },
+      "total_records": 25255,
+      "state_records": {
+        "Washington": 22043,
+        "Oregon": 3212
+      }
+    },
+    {
+      "provider_id": "470055",
+      "name": "NCI Datacom",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 24678,
+      "state_records": {
+        "Washington": 24678
+      }
+    },
+    {
+      "provider_id": "130826",
+      "name": "Mid-Rivers Telephone Cooperative, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 24091,
+      "state_records": {
+        "Montana": 24091
+      }
+    },
+    {
+      "provider_id": "130002",
+      "name": "3 Rivers Telephone Cooperative, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 21210,
+      "state_records": {
+        "Montana": 21210
+      }
+    },
+    {
+      "provider_id": "400130",
+      "name": "Wtechlink, Inc.",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 20874,
+      "state_records": {
+        "Oregon": 20874
+      }
+    },
+    {
+      "provider_id": "160127",
+      "name": "LICT Corporation",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 20578,
+      "state_records": {
+        "Oregon": 20578
+      }
+    },
+    {
+      "provider_id": "240061",
+      "name": "Montana Opticom LLC",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 20452,
+      "state_records": {
+        "Montana": 20452
+      }
+    },
+    {
+      "provider_id": "300171",
+      "name": "Visionary Communications, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 19925,
+      "state_records": {
+        "Montana": 19925
+      }
+    },
+    {
+      "provider_id": "131129",
+      "name": "CommunityTel, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 19601,
+      "state_records": {
+        "Montana": 19601
+      }
+    },
+    {
+      "provider_id": "420110",
+      "name": "Rocky Mountain Internet Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 19537,
+      "state_records": {
+        "Montana": 19537
+      }
+    },
+    {
+      "provider_id": "300125",
+      "name": "Richon, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 19263,
+      "state_records": {
+        "Montana": 19263
+      }
+    },
+    {
+      "provider_id": "130104",
+      "name": "Beaver Creek Cooperative Telephone Company",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 17613,
+      "state_records": {
+        "Oregon": 17613
+      }
+    },
+    {
+      "provider_id": "270063",
+      "name": "MontanaSky Networks, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 17063,
+      "state_records": {
+        "Montana": 17063
+      }
+    },
+    {
+      "provider_id": "130986",
+      "name": "Oregon Telephone Corporation",
+      "states": {
+        "53": "Washington",
+        "41": "Oregon",
+        "16": "Idaho"
+      },
+      "total_records": 16516,
+      "state_records": {
+        "Washington": 2025,
+        "Oregon": 14490,
+        "Idaho": 1
+      }
+    },
+    {
+      "provider_id": "131046",
+      "name": "Pioneer Telephone Cooperative (OR)",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 16411,
+      "state_records": {
+        "Oregon": 16411
+      }
+    },
+    {
+      "provider_id": "250003",
+      "name": "360 Communications, LLC (OR & WA)",
+      "states": {
+        "41": "Oregon",
+        "53": "Washington"
+      },
+      "total_records": 15780,
+      "state_records": {
+        "Oregon": 3143,
+        "Washington": 12637
+      }
+    },
+    {
+      "provider_id": "190303",
+      "name": "Public Utility District No. 1 of Douglas County",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 15347,
+      "state_records": {
+        "Washington": 15347
+      }
+    },
+    {
+      "provider_id": "460052",
+      "name": "Mann Holdings, LLC",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 15025,
+      "state_records": {
+        "Idaho": 15025
+      }
+    },
+    {
+      "provider_id": "130206",
+      "name": "Day Management Corporation",
+      "states": {
+        "41": "Oregon",
+        "53": "Washington"
+      },
+      "total_records": 14969,
+      "state_records": {
+        "Oregon": 14938,
+        "Washington": 31
+      }
+    },
+    {
+      "provider_id": "450044",
+      "name": "Eminent Technical Solutions, LLC",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 14888,
+      "state_records": {
+        "Idaho": 14888
+      }
+    },
+    {
+      "provider_id": "300112",
+      "name": "Okanogan County PUD No. 1",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 14009,
+      "state_records": {
+        "Washington": 14009
+      }
+    },
+    {
+      "provider_id": "131118",
+      "name": "RJB Telecommunications Corp.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 13946,
+      "state_records": {
+        "Washington": 13946
+      }
+    },
+    {
+      "provider_id": "390048",
+      "name": "Hawk Networks, Inc.",
+      "states": {
+        "41": "Oregon",
+        "53": "Washington",
+        "30": "Montana"
+      },
+      "total_records": 13900,
+      "state_records": {
+        "Oregon": 701,
+        "Washington": 13013,
+        "Montana": 186
+      }
+    },
+    {
+      "provider_id": "230011",
+      "name": "Cyberdyne Networks, Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 13811,
+      "state_records": {
+        "Washington": 13811
+      }
+    },
+    {
+      "provider_id": "131478",
+      "name": "Abound Ventures, Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 13802,
+      "state_records": {
+        "Washington": 13802
+      }
+    },
+    {
+      "provider_id": "430011",
+      "name": "Beacon Broadband, Inc.",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 12788,
+      "state_records": {
+        "Oregon": 12788
+      }
+    },
+    {
+      "provider_id": "130370",
+      "name": "Altice USA",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 12694,
+      "state_records": {
+        "Idaho": 12694
+      }
+    },
+    {
+      "provider_id": "170066",
+      "name": "Monmouth Independence Network",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 12693,
+      "state_records": {
+        "Oregon": 12693
+      }
+    },
+    {
+      "provider_id": "440159",
+      "name": "Nikola Engineering, Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 12481,
+      "state_records": {
+        "Washington": 12481
+      }
+    },
+    {
+      "provider_id": "300057",
+      "name": "Fatbeam Holdings, LLC",
+      "states": {
+        "41": "Oregon",
+        "53": "Washington",
+        "30": "Montana",
+        "16": "Idaho"
+      },
+      "total_records": 11863,
+      "state_records": {
+        "Oregon": 65,
+        "Washington": 169,
+        "Montana": 26,
+        "Idaho": 11603
+      }
+    },
+    {
+      "provider_id": "360124",
+      "name": "Red Spectrum Communications LLC",
+      "states": {
+        "53": "Washington",
+        "16": "Idaho"
+      },
+      "total_records": 11479,
+      "state_records": {
+        "Washington": 4361,
+        "Idaho": 7118
+      }
+    },
+    {
+      "provider_id": "240041",
+      "name": "Google LLC",
+      "states": {
+        "16": "Idaho",
+        "53": "Washington"
+      },
+      "total_records": 11371,
+      "state_records": {
+        "Idaho": 11069,
+        "Washington": 302
+      }
+    },
+    {
+      "provider_id": "160157",
+      "name": "Zito West Holding, LLC",
+      "states": {
+        "53": "Washington",
+        "16": "Idaho"
+      },
+      "total_records": 10772,
+      "state_records": {
+        "Washington": 1314,
+        "Idaho": 9458
+      }
+    },
+    {
+      "provider_id": "320059",
+      "name": "Last Mile Wireless, LLC",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 10727,
+      "state_records": {
+        "Idaho": 10727
+      }
+    },
+    {
+      "provider_id": "130196",
+      "name": "Canby Telephone Association",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 10642,
+      "state_records": {
+        "Oregon": 10642
+      }
+    },
+    {
+      "provider_id": "130360",
+      "name": "Cox Communications, Inc.",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 10441,
+      "state_records": {
+        "Idaho": 10441
+      }
+    },
+    {
+      "provider_id": "130479",
+      "name": "Farmers Mutual Telephone Company (ID)",
+      "states": {
+        "16": "Idaho",
+        "41": "Oregon"
+      },
+      "total_records": 10138,
+      "state_records": {
+        "Idaho": 7399,
+        "Oregon": 2739
+      }
+    },
+    {
+      "provider_id": "310036",
+      "name": "E.L. Automation Inc.",
+      "states": {
+        "16": "Idaho",
+        "30": "Montana"
+      },
+      "total_records": 10068,
+      "state_records": {
+        "Idaho": 8763,
+        "Montana": 1305
+      }
+    },
+    {
+      "provider_id": "460625",
+      "name": "Vickery IT LLC",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 8360,
+      "state_records": {
+        "Idaho": 8360
+      }
+    },
+    {
+      "provider_id": "131259",
+      "name": "Stayton Cooperative Telephone Company",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 8300,
+      "state_records": {
+        "Oregon": 8300
+      }
+    },
+    {
+      "provider_id": "440017",
+      "name": "City of Hillsboro",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 8295,
+      "state_records": {
+        "Oregon": 8295
+      }
+    },
+    {
+      "provider_id": "130831",
+      "name": "Midvale Telephone Exchange",
+      "states": {
+        "16": "Idaho",
+        "41": "Oregon"
+      },
+      "total_records": 8070,
+      "state_records": {
+        "Idaho": 7575,
+        "Oregon": 495
+      }
+    },
+    {
+      "provider_id": "470062",
+      "name": "Ravalli Broadband LLC",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 7904,
+      "state_records": {
+        "Montana": 7904
+      }
+    },
+    {
+      "provider_id": "130784",
+      "name": "Martell Enterprises, Inc.",
+      "states": {
+        "16": "Idaho",
+        "53": "Washington",
+        "41": "Oregon"
+      },
+      "total_records": 7691,
+      "state_records": {
+        "Idaho": 1639,
+        "Washington": 2374,
+        "Oregon": 3678
+      }
+    },
+    {
+      "provider_id": "130651",
+      "name": "Western Elite Incorporated Services",
+      "states": {
+        "53": "Washington",
+        "16": "Idaho"
+      },
+      "total_records": 7644,
+      "state_records": {
+        "Washington": 6988,
+        "Idaho": 656
+      }
+    },
+    {
+      "provider_id": "490062",
+      "name": "Vision Wifi Inc.",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 7502,
+      "state_records": {
+        "Idaho": 7502
+      }
+    },
+    {
+      "provider_id": "130303",
+      "name": "Coast Communications Co. Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 7189,
+      "state_records": {
+        "Washington": 7189
+      }
+    },
+    {
+      "provider_id": "130032",
+      "name": "Albion Telephone Company, Inc.",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 7188,
+      "state_records": {
+        "Idaho": 7188
+      }
+    },
+    {
+      "provider_id": "430209",
+      "name": "Rimrock Wireless",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 6946,
+      "state_records": {
+        "Idaho": 6946
+      }
+    },
+    {
+      "provider_id": "131165",
+      "name": "Scatter Creek Ltd.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 6819,
+      "state_records": {
+        "Washington": 6819
+      }
+    },
+    {
+      "provider_id": "470078",
+      "name": "The Greater Eastern Oregon Network",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 6392,
+      "state_records": {
+        "Oregon": 6392
+      }
+    },
+    {
+      "provider_id": "130850",
+      "name": "Molalla Communications Company",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 6373,
+      "state_records": {
+        "Oregon": 6373
+      }
+    },
+    {
+      "provider_id": "430130",
+      "name": "Hood River Electric Cooperative",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 6371,
+      "state_records": {
+        "Oregon": 6371
+      }
+    },
+    {
+      "provider_id": "131090",
+      "name": "Range Telephone Cooperative, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 6297,
+      "state_records": {
+        "Montana": 6297
+      }
+    },
+    {
+      "provider_id": "150245",
+      "name": "CresComm WiFi, LLC",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 6154,
+      "state_records": {
+        "Washington": 6154
+      }
+    },
+    {
+      "provider_id": "410164",
+      "name": "Mason County Public Utility District No. 3",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 6010,
+      "state_records": {
+        "Washington": 6010
+      }
+    },
+    {
+      "provider_id": "230036",
+      "name": "Rebus Communications, LLC",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 5849,
+      "state_records": {
+        "Washington": 5849
+      }
+    },
+    {
+      "provider_id": "130657",
+      "name": "InterBel Telephone Cooperative, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 5532,
+      "state_records": {
+        "Montana": 5532
+      }
+    },
+    {
+      "provider_id": "130193",
+      "name": "Cambridge Telephone Company, Inc.",
+      "states": {
+        "16": "Idaho",
+        "41": "Oregon"
+      },
+      "total_records": 5514,
+      "state_records": {
+        "Idaho": 5103,
+        "Oregon": 411
+      }
+    },
+    {
+      "provider_id": "410135",
+      "name": "City of Sandy, Oregon",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 5440,
+      "state_records": {
+        "Oregon": 5440
+      }
+    },
+    {
+      "provider_id": "370004",
+      "name": "600Amps Internet Services, Inc.",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 5416,
+      "state_records": {
+        "Oregon": 5416
+      }
+    },
+    {
+      "provider_id": "330054",
+      "name": "Nez Perce Tribe",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 5339,
+      "state_records": {
+        "Idaho": 5339
+      }
+    },
+    {
+      "provider_id": "460089",
+      "name": "VFN Holdings, Inc.",
+      "states": {
+        "30": "Montana",
+        "41": "Oregon"
+      },
+      "total_records": 5118,
+      "state_records": {
+        "Montana": 4721,
+        "Oregon": 397
+      }
+    },
+    {
+      "provider_id": "130378",
+      "name": "Custer Telephone Cooperative Inc.",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 5016,
+      "state_records": {
+        "Idaho": 5016
+      }
+    },
+    {
+      "provider_id": "410090",
+      "name": "Siyeh Communications",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 4859,
+      "state_records": {
+        "Montana": 4859
+      }
+    },
+    {
+      "provider_id": "131347",
+      "name": "The Toledo Telephone Company",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 4802,
+      "state_records": {
+        "Washington": 4802
+      }
+    },
+    {
+      "provider_id": "460047",
+      "name": "Kaniksu, LLC",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 4765,
+      "state_records": {
+        "Idaho": 4765
+      }
+    },
+    {
+      "provider_id": "400046",
+      "name": "Ting Fiber, Inc.",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 4485,
+      "state_records": {
+        "Idaho": 4485
+      }
+    },
+    {
+      "provider_id": "140033",
+      "name": "Filer Mutual Telephone Company",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 4474,
+      "state_records": {
+        "Idaho": 4474
+      }
+    },
+    {
+      "provider_id": "150330",
+      "name": "Upward Access, LLC",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 4467,
+      "state_records": {
+        "Oregon": 4467
+      }
+    },
+    {
+      "provider_id": "380097",
+      "name": "Pacific Independent Technology Alliance LLC",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 4365,
+      "state_records": {
+        "Washington": 4365
+      }
+    },
+    {
+      "provider_id": "320056",
+      "name": "Island Networks, LLC",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 4109,
+      "state_records": {
+        "Washington": 4109
+      }
+    },
+    {
+      "provider_id": "500032",
+      "name": "Larkin LLC",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 4019,
+      "state_records": {
+        "Montana": 4019
+      }
+    },
+    {
+      "provider_id": "460020",
+      "name": "City of Sherwood, Oregon",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 3967,
+      "state_records": {
+        "Oregon": 3967
+      }
+    },
+    {
+      "provider_id": "300144",
+      "name": "Siuslaw Broadband, LLC",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 3881,
+      "state_records": {
+        "Oregon": 3881
+      }
+    },
+    {
+      "provider_id": "350042",
+      "name": "Fiber Platform, LLC",
+      "states": {
+        "30": "Montana",
+        "53": "Washington"
+      },
+      "total_records": 3858,
+      "state_records": {
+        "Montana": 7,
+        "Washington": 3851
+      }
+    },
+    {
+      "provider_id": "240031",
+      "name": "Davis Communications Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 3804,
+      "state_records": {
+        "Washington": 3804
+      }
+    },
+    {
+      "provider_id": "130289",
+      "name": "Clear Creek Mutual Telephone Company",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 3612,
+      "state_records": {
+        "Oregon": 3612
+      }
+    },
+    {
+      "provider_id": "350133",
+      "name": "Grase Communications LLC",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 3607,
+      "state_records": {
+        "Oregon": 3607
+      }
+    },
+    {
+      "provider_id": "130539",
+      "name": "Gervais Telephone Company",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 3562,
+      "state_records": {
+        "Oregon": 3562
+      }
+    },
+    {
+      "provider_id": "290075",
+      "name": "Northwest Open Access Network",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 3245,
+      "state_records": {
+        "Washington": 3245
+      }
+    },
+    {
+      "provider_id": "130982",
+      "name": "Zayo Group, LLC",
+      "states": {
+        "16": "Idaho",
+        "30": "Montana",
+        "41": "Oregon",
+        "53": "Washington"
+      },
+      "total_records": 2998,
+      "state_records": {
+        "Idaho": 309,
+        "Montana": 104,
+        "Oregon": 894,
+        "Washington": 1691
+      }
+    },
+    {
+      "provider_id": "220031",
+      "name": "IsoFusion, Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 2816,
+      "state_records": {
+        "Washington": 2816
+      }
+    },
+    {
+      "provider_id": "490041",
+      "name": "Public Utility District #1 of Kitsap County, Washington",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 2805,
+      "state_records": {
+        "Washington": 2805
+      }
+    },
+    {
+      "provider_id": "290108",
+      "name": "Tnet Broadband Internet",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 2778,
+      "state_records": {
+        "Oregon": 2778
+      }
+    },
+    {
+      "provider_id": "131475",
+      "name": "Wahkiakum West Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 2688,
+      "state_records": {
+        "Washington": 2688
+      }
+    },
+    {
+      "provider_id": "131247",
+      "name": "St. John Telephone, Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 2470,
+      "state_records": {
+        "Washington": 2470
+      }
+    },
+    {
+      "provider_id": "131366",
+      "name": "BHT Holdings, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 2427,
+      "state_records": {
+        "Montana": 2427
+      }
+    },
+    {
+      "provider_id": "420020",
+      "name": "City of Anacortes",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 2346,
+      "state_records": {
+        "Washington": 2346
+      }
+    },
+    {
+      "provider_id": "500075",
+      "name": "FiberFi, LLC",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 2325,
+      "state_records": {
+        "Oregon": 2325
+      }
+    },
+    {
+      "provider_id": "310061",
+      "name": "Salish Networks, Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 2184,
+      "state_records": {
+        "Washington": 2184
+      }
+    },
+    {
+      "provider_id": "350087",
+      "name": "Adept Internet Solutions LLP",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 2145,
+      "state_records": {
+        "Washington": 2145
+      }
+    },
+    {
+      "provider_id": "320118",
+      "name": "Inland Development Corporation",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 2030,
+      "state_records": {
+        "Oregon": 2030
+      }
+    },
+    {
+      "provider_id": "131168",
+      "name": "Scio Mutual Telephone Association",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 1978,
+      "state_records": {
+        "Oregon": 1978
+      }
+    },
+    {
+      "provider_id": "280052",
+      "name": "San Juan Cable, Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 1860,
+      "state_records": {
+        "Washington": 1860
+      }
+    },
+    {
+      "provider_id": "130854",
+      "name": "Monroe Telephone Company",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 1797,
+      "state_records": {
+        "Oregon": 1797
+      }
+    },
+    {
+      "provider_id": "130622",
+      "name": "Hot Springs Telephone Company",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 1791,
+      "state_records": {
+        "Montana": 1791
+      }
+    },
+    {
+      "provider_id": "290105",
+      "name": "Television Association of Republic",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 1761,
+      "state_records": {
+        "Washington": 1761
+      }
+    },
+    {
+      "provider_id": "130874",
+      "name": "Mud Lake Telephone Cooperative Association, Inc.",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 1676,
+      "state_records": {
+        "Idaho": 1676
+      }
+    },
+    {
+      "provider_id": "130945",
+      "name": "Northern Telephone Cooperative, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 1485,
+      "state_records": {
+        "Montana": 1485
+      }
+    },
+    {
+      "provider_id": "300138",
+      "name": "SS Ventures, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 1442,
+      "state_records": {
+        "Montana": 1442
+      }
+    },
+    {
+      "provider_id": "131102",
+      "name": "Reservation Telephone Cooperative",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 1393,
+      "state_records": {
+        "Montana": 1393
+      }
+    },
+    {
+      "provider_id": "200008",
+      "name": "BendTel, Inc.",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 1389,
+      "state_records": {
+        "Oregon": 1389
+      }
+    },
+    {
+      "provider_id": "130744",
+      "name": "Lincoln Telephone Company, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 1336,
+      "state_records": {
+        "Montana": 1336
+      }
+    },
+    {
+      "provider_id": "131231",
+      "name": "Southern Montana Telephone Company",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 1327,
+      "state_records": {
+        "Montana": 1327
+      }
+    },
+    {
+      "provider_id": "520000",
+      "name": "Okanogan County Electric Cooperative, Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 1213,
+      "state_records": {
+        "Washington": 1213
+      }
+    },
+    {
+      "provider_id": "260070",
+      "name": "Warm Springs Telecommunications Company",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 1136,
+      "state_records": {
+        "Oregon": 1136
+      }
+    },
+    {
+      "provider_id": "130312",
+      "name": "Colton Telephone Company",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 1112,
+      "state_records": {
+        "Oregon": 1112
+      }
+    },
+    {
+      "provider_id": "410168",
+      "name": "Skymesh, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 1069,
+      "state_records": {
+        "Montana": 1069
+      }
+    },
+    {
+      "provider_id": "131130",
+      "name": "Roome Telecommunications Inc.",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 984,
+      "state_records": {
+        "Oregon": 984
+      }
+    },
+    {
+      "provider_id": "480120",
+      "name": "Ardent Wireless LLC",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 934,
+      "state_records": {
+        "Washington": 934
+      }
+    },
+    {
+      "provider_id": "150336",
+      "name": "Whiz to Coho, Inc.",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 916,
+      "state_records": {
+        "Oregon": 916
+      }
+    },
+    {
+      "provider_id": "131123",
+      "name": "Robinson Communications Corporation",
+      "states": {
+        "41": "Oregon",
+        "16": "Idaho"
+      },
+      "total_records": 862,
+      "state_records": {
+        "Oregon": 829,
+        "Idaho": 33
+      }
+    },
+    {
+      "provider_id": "370066",
+      "name": "Lavalink, LLC",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 798,
+      "state_records": {
+        "Idaho": 798
+      }
+    },
+    {
+      "provider_id": "131047",
+      "name": "Pioneer Telephone Holding Company",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 797,
+      "state_records": {
+        "Washington": 797
+      }
+    },
+    {
+      "provider_id": "460576",
+      "name": "NocTel Communications, Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 681,
+      "state_records": {
+        "Washington": 681
+      }
+    },
+    {
+      "provider_id": "200057",
+      "name": "Orcas Online, Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 648,
+      "state_records": {
+        "Washington": 648
+      }
+    },
+    {
+      "provider_id": "190227",
+      "name": "InstarAGF",
+      "states": {
+        "41": "Oregon",
+        "53": "Washington"
+      },
+      "total_records": 643,
+      "state_records": {
+        "Oregon": 477,
+        "Washington": 166
+      }
+    },
+    {
+      "provider_id": "130852",
+      "name": "Monitor Cooperative Telephone Company",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 593,
+      "state_records": {
+        "Oregon": 593
+      }
+    },
+    {
+      "provider_id": "300093",
+      "name": "Mosier WiNet LLC",
+      "states": {
+        "41": "Oregon",
+        "53": "Washington"
+      },
+      "total_records": 575,
+      "state_records": {
+        "Oregon": 493,
+        "Washington": 82
+      }
+    },
+    {
+      "provider_id": "150341",
+      "name": "Yellowstone Media Design",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 573,
+      "state_records": {
+        "Montana": 573
+      }
+    },
+    {
+      "provider_id": "450055",
+      "name": "IFN, LLC",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 552,
+      "state_records": {
+        "Washington": 552
+      }
+    },
+    {
+      "provider_id": "131248",
+      "name": "St. Paul Cooperative Telephone Association",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 449,
+      "state_records": {
+        "Oregon": 449
+      }
+    },
+    {
+      "provider_id": "470129",
+      "name": "Spokane Tribe of Indians",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 424,
+      "state_records": {
+        "Washington": 424
+      }
+    },
+    {
+      "provider_id": "130431",
+      "name": "Eagle Telephone Systems, Inc.",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 413,
+      "state_records": {
+        "Oregon": 413
+      }
+    },
+    {
+      "provider_id": "510029",
+      "name": "Klick Networks, LLC",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 364,
+      "state_records": {
+        "Washington": 364
+      }
+    },
+    {
+      "provider_id": "470061",
+      "name": "Public Utilities District No. 1 of Jefferson County, Washington",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 313,
+      "state_records": {
+        "Washington": 313
+      }
+    },
+    {
+      "provider_id": "240046",
+      "name": "Hughes Computer Services, Inc.",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 305,
+      "state_records": {
+        "Washington": 305
+      }
+    },
+    {
+      "provider_id": "290015",
+      "name": "Bear River Communications, LLC",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 300,
+      "state_records": {
+        "Idaho": 300
+      }
+    },
+    {
+      "provider_id": "370106",
+      "name": "Softworx Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 296,
+      "state_records": {
+        "Montana": 296
+      }
+    },
+    {
+      "provider_id": "450099",
+      "name": "Pendleton Overground, LLC",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 257,
+      "state_records": {
+        "Oregon": 257
+      }
+    },
+    {
+      "provider_id": "370012",
+      "name": "Azure Standard",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 231,
+      "state_records": {
+        "Oregon": 231
+      }
+    },
+    {
+      "provider_id": "460057",
+      "name": "Nisqually Indian Tribe",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 203,
+      "state_records": {
+        "Washington": 203
+      }
+    },
+    {
+      "provider_id": "190406",
+      "name": "Westgate Communications LLC",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 108,
+      "state_records": {
+        "Washington": 108
+      }
+    },
+    {
+      "provider_id": "131386",
+      "name": "U.S. TelePacific Holdings Corp.",
+      "states": {
+        "16": "Idaho",
+        "30": "Montana",
+        "53": "Washington",
+        "41": "Oregon"
+      },
+      "total_records": 94,
+      "state_records": {
+        "Idaho": 6,
+        "Montana": 5,
+        "Washington": 62,
+        "Oregon": 21
+      }
+    },
+    {
+      "provider_id": "420175",
+      "name": "Central Connect LLC",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 91,
+      "state_records": {
+        "Washington": 91
+      }
+    },
+    {
+      "provider_id": "460032",
+      "name": "Ezee Fiber Texas, LLC",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 83,
+      "state_records": {
+        "Washington": 83
+      }
+    },
+    {
+      "provider_id": "200014",
+      "name": "Cogent Communications Group",
+      "states": {
+        "53": "Washington",
+        "41": "Oregon",
+        "16": "Idaho"
+      },
+      "total_records": 45,
+      "state_records": {
+        "Washington": 37,
+        "Oregon": 6,
+        "Idaho": 2
+      }
+    },
+    {
+      "provider_id": "140101",
+      "name": "West River Cooperative Telephone Company",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 43,
+      "state_records": {
+        "Montana": 43
+      }
+    },
+    {
+      "provider_id": "300103",
+      "name": "NetFortris Acquisition Co., Inc.",
+      "states": {
+        "30": "Montana",
+        "16": "Idaho",
+        "41": "Oregon",
+        "53": "Washington"
+      },
+      "total_records": 40,
+      "state_records": {
+        "Montana": 1,
+        "Idaho": 8,
+        "Oregon": 7,
+        "Washington": 24
+      }
+    },
+    {
+      "provider_id": "430042",
+      "name": "Helio Broadband, LLC",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 30,
+      "state_records": {
+        "Oregon": 30
+      }
+    },
+    {
+      "provider_id": "300205",
+      "name": "Ruhl Moore Technologies",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 26,
+      "state_records": {
+        "Montana": 26
+      }
+    },
+    {
+      "provider_id": "460646",
+      "name": "Coastal Broadband Inc.",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 22,
+      "state_records": {
+        "Idaho": 22
+      }
+    },
+    {
+      "provider_id": "360117",
+      "name": "Fusion Connect, Inc.",
+      "states": {
+        "16": "Idaho",
+        "41": "Oregon",
+        "53": "Washington",
+        "30": "Montana"
+      },
+      "total_records": 14,
+      "state_records": {
+        "Idaho": 2,
+        "Oregon": 1,
+        "Washington": 10,
+        "Montana": 1
+      }
+    },
+    {
+      "provider_id": "500084",
+      "name": "Generate-Ubiquity Holdings, LLC",
+      "states": {
+        "30": "Montana",
+        "53": "Washington"
+      },
+      "total_records": 14,
+      "state_records": {
+        "Montana": 9,
+        "Washington": 5
+      }
+    },
+    {
+      "provider_id": "130037",
+      "name": "All West Communications, Inc.",
+      "states": {
+        "16": "Idaho"
+      },
+      "total_records": 13,
+      "state_records": {
+        "Idaho": 13
+      }
+    },
+    {
+      "provider_id": "420125",
+      "name": "Taluslink, LLC",
+      "states": {
+        "53": "Washington",
+        "41": "Oregon"
+      },
+      "total_records": 6,
+      "state_records": {
+        "Washington": 5,
+        "Oregon": 1
+      }
+    },
+    {
+      "provider_id": "300019",
+      "name": "Bluespan Wireless, LLC",
+      "states": {
+        "53": "Washington"
+      },
+      "total_records": 5,
+      "state_records": {
+        "Washington": 5
+      }
+    },
+    {
+      "provider_id": "190290",
+      "name": "Peerless Network Holdings, Inc.",
+      "states": {
+        "53": "Washington",
+        "41": "Oregon"
+      },
+      "total_records": 2,
+      "state_records": {
+        "Washington": 1,
+        "Oregon": 1
+      }
+    },
+    {
+      "provider_id": "130139",
+      "name": "Bloomingdale Home Telephone Company",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 1,
+      "state_records": {
+        "Montana": 1
+      }
+    },
+    {
+      "provider_id": "300186",
+      "name": "ICS Advanced Technologies",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 1,
+      "state_records": {
+        "Oregon": 1
+      }
+    },
+    {
+      "provider_id": "210061",
+      "name": "Pavlov Media, Inc.",
+      "states": {
+        "41": "Oregon"
+      },
+      "total_records": 1,
+      "state_records": {
+        "Oregon": 1
+      }
+    },
+    {
+      "provider_id": "310026",
+      "name": "Sinch US Holding, Inc.",
+      "states": {
+        "30": "Montana"
+      },
+      "total_records": 1,
+      "state_records": {
+        "Montana": 1
+      }
+    }
+  ]
+}

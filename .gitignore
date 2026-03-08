@@ -1,0 +1,15 @@
+# FCC BDC data files (large CSVs)
+fcc_data/*.csv
+fcc_data/*.zip
+fcc_data/*.headers
+
+# Environment
+.env
+
+# OS
+.DS_Store
+__pycache__/
+*.pyc
+
+# Claude Code
+.claude/
