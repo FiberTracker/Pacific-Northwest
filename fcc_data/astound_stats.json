@@ -1,0 +1,50 @@
+{
+  "provider": "Astound / Wave Broadband",
+  "providerId": 130079,
+  "brand": "Radiate Holdings",
+  "filing": "Jun 2025",
+  "technology": "Fiber to the Premises (50)",
+  "totalFiberBSLs": 30189,
+  "totalBlockGroups": 810,
+  "states": {
+    "OR": {
+      "bsls": 11385,
+      "blockGroups": 202,
+      "counties": [
+        "Clackamas",
+        "Clatsop",
+        "Columbia",
+        "Deschutes",
+        "Lincoln",
+        "Linn",
+        "Marion",
+        "Multnomah",
+        "Tillamook",
+        "Washington",
+        "Yamhill"
+      ]
+    },
+    "WA": {
+      "bsls": 18804,
+      "blockGroups": 608,
+      "counties": [
+        "Clallam",
+        "Clark",
+        "Cowlitz",
+        "Island",
+        "Jefferson",
+        "King",
+        "Kitsap",
+        "Lewis",
+        "Mason",
+        "Pierce",
+        "Skagit",
+        "Skamania",
+        "Snohomish",
+        "Thurston",
+        "Wahkiakum",
+        "Whatcom"
+      ]
+    }
+  }
+}

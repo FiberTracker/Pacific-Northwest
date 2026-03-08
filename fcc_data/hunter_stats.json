@@ -1,0 +1,45 @@
+{
+  "provider": "Hunter Communications",
+  "providerId": 300066,
+  "brand": "Hunter Communications",
+  "filing": "Jun 2025",
+  "technology": "Fiber to the Premises (50)",
+  "totalFiberBSLs": 88451,
+  "totalBlockGroups": 531,
+  "states": {
+    "OR": {
+      "bsls": 88449,
+      "blockGroups": 529,
+      "counties": [
+        "Clackamas",
+        "Clatsop",
+        "Coos",
+        "Curry",
+        "Deschutes",
+        "Douglas",
+        "Grant",
+        "Jackson",
+        "Josephine",
+        "Klamath",
+        "Lake",
+        "Lane",
+        "Lincoln",
+        "Linn",
+        "Malheur",
+        "Marion",
+        "Multnomah",
+        "Polk",
+        "Union",
+        "Washington",
+        "Yamhill"
+      ]
+    },
+    "WA": {
+      "bsls": 2,
+      "blockGroups": 2,
+      "counties": [
+        "King"
+      ]
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "provider": "Ziply Fiber",
+  "providerId": 420173,
+  "brand": "Northwest Fiber, LLC",
+  "filing": "Jun 2025",
+  "technology": "Fiber to the Premises (50)",
+  "totalFiberBSLs": 706017,
+  "totalBlockGroups": 2403,
+  "states": {
+    "ID": {
+      "bsls": 50627,
+      "blockGroups": 174,
+      "counties": [
+        "Adams",
+        "Benewah",
+        "Boise",
+        "Bonner",
+        "Boundary",
+        "Canyon",
+        "Clearwater",
+        "Idaho",
+        "Kootenai",
+        "Latah",
+        "Nez Perce",
+        "Owyhee",
+        "Shoshone",
+        "Valley"
+      ]
+    },
+    "MT": {
+      "bsls": 10432,
+      "blockGroups": 56,
+      "counties": [
+        "Cascade",
+        "Lincoln",
+        "Yellowstone"
+      ]
+    },
+    "OR": {
+      "bsls": 274947,
+      "blockGroups": 816,
+      "counties": [
+        "Baker",
+        "Benton",
+        "Clackamas",
+        "Columbia",
+        "Coos",
+        "Curry",
+        "Deschutes",
+        "Douglas",
+        "Josephine",
+        "Lane",
+        "Linn",
+        "Marion",
+        "Multnomah",
+        "Union",
+        "Wallowa",
+        "Washington",
+        "Yamhill"
+      ]
+    },
+    "WA": {
+      "bsls": 370011,
+      "blockGroups": 1357,
+      "counties": [
+        "Adams",
+        "Benton",
+        "Clark",
+        "Cowlitz",
+        "Ferry",
+        "Franklin",
+        "Grays Harbor",
+        "Island",
+        "King",
+        "Kitsap",
+        "Lewis",
+        "Lincoln",
+        "Okanogan",
+        "Pend Oreille",
+        "Skagit",
+        "Skamania",
+        "Snohomish",
+        "Spokane",
+        "Stevens",
+        "Thurston",
+        "Walla Walla",
+        "Whatcom",
+        "Whitman",
+        "Yakima"
+      ]
+    }
+  }
+}

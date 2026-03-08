@@ -42,13 +42,13 @@
           "name": "Idaho",
           "records": 762815
         },
-        "41": {
-          "name": "Oregon",
-          "records": 1516385
-        },
         "30": {
           "name": "Montana",
           "records": 491842
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 1516385
         }
       }
     },
@@ -56,6 +56,10 @@
       "name": "Space Exploration Technologies Corp.",
       "total_records": 5334628,
       "states": {
+        "16": {
+          "name": "Idaho",
+          "records": 762788
+        },
         "30": {
           "name": "Montana",
           "records": 491830
@@ -63,10 +67,6 @@
         "53": {
           "name": "Washington",
           "records": 2563699
-        },
-        "16": {
-          "name": "Idaho",
-          "records": 762788
         },
         "41": {
           "name": "Oregon",
@@ -82,13 +82,13 @@
           "name": "Idaho",
           "records": 375306
         },
-        "53": {
-          "name": "Washington",
-          "records": 1748820
-        },
         "41": {
           "name": "Oregon",
           "records": 921125
+        },
+        "53": {
+          "name": "Washington",
+          "records": 1748820
         },
         "30": {
           "name": "Montana",
@@ -100,21 +100,21 @@
       "name": "Lumen Technologies, Inc.",
       "total_records": 3002088,
       "states": {
-        "41": {
-          "name": "Oregon",
-          "records": 915020
+        "16": {
+          "name": "Idaho",
+          "records": 468308
         },
         "30": {
           "name": "Montana",
           "records": 284073
         },
-        "16": {
-          "name": "Idaho",
-          "records": 468308
-        },
         "53": {
           "name": "Washington",
           "records": 1334687
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 915020
         }
       }
     },
@@ -140,13 +140,13 @@
       "name": "Comcast Corporation",
       "total_records": 2504834,
       "states": {
-        "53": {
-          "name": "Washington",
-          "records": 1716354
-        },
         "41": {
           "name": "Oregon",
           "records": 788025
+        },
+        "53": {
+          "name": "Washington",
+          "records": 1716354
         },
         "16": {
           "name": "Idaho",
@@ -162,21 +162,21 @@
       "name": "Verizon Communications Inc.",
       "total_records": 1623737,
       "states": {
-        "16": {
-          "name": "Idaho",
-          "records": 250101
-        },
-        "30": {
-          "name": "Montana",
-          "records": 178791
-        },
         "41": {
           "name": "Oregon",
           "records": 430665
         },
+        "16": {
+          "name": "Idaho",
+          "records": 250101
+        },
         "53": {
           "name": "Washington",
           "records": 764180
+        },
+        "30": {
+          "name": "Montana",
+          "records": 178791
         }
       }
     },
@@ -228,10 +228,6 @@
       "name": "Charter Communications",
       "total_records": 941281,
       "states": {
-        "53": {
-          "name": "Washington",
-          "records": 255352
-        },
         "41": {
           "name": "Oregon",
           "records": 363564
@@ -239,6 +235,10 @@
         "30": {
           "name": "Montana",
           "records": 257590
+        },
+        "53": {
+          "name": "Washington",
+          "records": 255352
         },
         "16": {
           "name": "Idaho",
@@ -250,13 +250,13 @@
       "name": "Cable One, Inc.",
       "total_records": 443344,
       "states": {
-        "41": {
-          "name": "Oregon",
-          "records": 6700
-        },
         "53": {
           "name": "Washington",
           "records": 8550
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 6700
         },
         "16": {
           "name": "Idaho",
@@ -334,13 +334,13 @@
       "name": "Wired or Wireless, Inc.",
       "total_records": 228141,
       "states": {
-        "53": {
-          "name": "Washington",
-          "records": 157083
-        },
         "16": {
           "name": "Idaho",
           "records": 71058
+        },
+        "53": {
+          "name": "Washington",
+          "records": 157083
         }
       }
     },
@@ -556,13 +556,13 @@
       "name": "First Step Internet, LLC",
       "total_records": 68613,
       "states": {
-        "53": {
-          "name": "Washington",
-          "records": 23711
-        },
         "16": {
           "name": "Idaho",
           "records": 44902
+        },
+        "53": {
+          "name": "Washington",
+          "records": 23711
         }
       }
     },
@@ -594,13 +594,13 @@
       "name": "Syringa Networks, LLC",
       "total_records": 52732,
       "states": {
-        "16": {
-          "name": "Idaho",
-          "records": 52545
-        },
         "53": {
           "name": "Washington",
           "records": 187
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 52545
         }
       }
     },
@@ -1020,13 +1020,13 @@
       "name": "360 Communications, LLC (OR & WA)",
       "total_records": 15780,
       "states": {
-        "41": {
-          "name": "Oregon",
-          "records": 3143
-        },
         "53": {
           "name": "Washington",
           "records": 12637
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 3143
         }
       }
     },
@@ -1176,14 +1176,6 @@
       "name": "Fatbeam Holdings, LLC",
       "total_records": 11863,
       "states": {
-        "41": {
-          "name": "Oregon",
-          "records": 65
-        },
-        "53": {
-          "name": "Washington",
-          "records": 169
-        },
         "30": {
           "name": "Montana",
           "records": 26
@@ -1191,6 +1183,14 @@
         "16": {
           "name": "Idaho",
           "records": 11603
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 65
+        },
+        "53": {
+          "name": "Washington",
+          "records": 169
         }
       }
     },
@@ -2078,13 +2078,13 @@
       "name": "Robinson Communications Corporation",
       "total_records": 862,
       "states": {
-        "41": {
-          "name": "Oregon",
-          "records": 829
-        },
         "16": {
           "name": "Idaho",
           "records": 33
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 829
         }
       }
     },
@@ -2132,13 +2132,13 @@
       "name": "InstarAGF",
       "total_records": 643,
       "states": {
-        "41": {
-          "name": "Oregon",
-          "records": 477
-        },
         "53": {
           "name": "Washington",
           "records": 166
+        },
+        "41": {
+          "name": "Oregon",
+          "records": 477
         }
       }
     },
@@ -2314,10 +2314,6 @@
           "name": "Idaho",
           "records": 6
         },
-        "30": {
-          "name": "Montana",
-          "records": 5
-        },
         "53": {
           "name": "Washington",
           "records": 62
@@ -2325,6 +2321,10 @@
         "41": {
           "name": "Oregon",
           "records": 21
+        },
+        "30": {
+          "name": "Montana",
+          "records": 5
         }
       }
     },
@@ -2380,13 +2380,13 @@
       "name": "NetFortris Acquisition Co., Inc.",
       "total_records": 40,
       "states": {
-        "30": {
-          "name": "Montana",
-          "records": 1
-        },
         "16": {
           "name": "Idaho",
           "records": 8
+        },
+        "30": {
+          "name": "Montana",
+          "records": 1
         },
         "41": {
           "name": "Oregon",
@@ -2432,13 +2432,13 @@
       "name": "Fusion Connect, Inc.",
       "total_records": 14,
       "states": {
-        "16": {
-          "name": "Idaho",
-          "records": 2
-        },
         "41": {
           "name": "Oregon",
           "records": 1
+        },
+        "16": {
+          "name": "Idaho",
+          "records": 2
         },
         "53": {
           "name": "Washington",
@@ -2454,13 +2454,13 @@
       "name": "Generate-Ubiquity Holdings, LLC",
       "total_records": 14,
       "states": {
-        "30": {
-          "name": "Montana",
-          "records": 9
-        },
         "53": {
           "name": "Washington",
           "records": 5
+        },
+        "30": {
+          "name": "Montana",
+          "records": 9
         }
       }
     },
@@ -2478,13 +2478,13 @@
       "name": "Taluslink, LLC",
       "total_records": 6,
       "states": {
-        "53": {
-          "name": "Washington",
-          "records": 5
-        },
         "41": {
           "name": "Oregon",
           "records": 1
+        },
+        "53": {
+          "name": "Washington",
+          "records": 5
         }
       }
     },
@@ -2979,13 +2979,13 @@
       "provider_id": "250003",
       "name": "360 Communications, LLC (OR & WA)",
       "states": {
-        "41": "Oregon",
-        "53": "Washington"
+        "53": "Washington",
+        "41": "Oregon"
       },
       "total_records": 15780,
       "state_records": {
-        "Oregon": 3143,
-        "Washington": 12637
+        "Washington": 12637,
+        "Oregon": 3143
       }
     },
     {
@@ -3141,17 +3141,17 @@
       "provider_id": "300057",
       "name": "Fatbeam Holdings, LLC",
       "states": {
-        "41": "Oregon",
-        "53": "Washington",
         "30": "Montana",
-        "16": "Idaho"
+        "16": "Idaho",
+        "41": "Oregon",
+        "53": "Washington"
       },
       "total_records": 11863,
       "state_records": {
-        "Oregon": 65,
-        "Washington": 169,
         "Montana": 26,
-        "Idaho": 11603
+        "Idaho": 11603,
+        "Oregon": 65,
+        "Washington": 169
       }
     },
     {
@@ -4090,13 +4090,13 @@
       "provider_id": "131123",
       "name": "Robinson Communications Corporation",
       "states": {
-        "41": "Oregon",
-        "16": "Idaho"
+        "16": "Idaho",
+        "41": "Oregon"
       },
       "total_records": 862,
       "state_records": {
-        "Oregon": 829,
-        "Idaho": 33
+        "Idaho": 33,
+        "Oregon": 829
       }
     },
     {
@@ -4147,13 +4147,13 @@
       "provider_id": "190227",
       "name": "InstarAGF",
       "states": {
-        "41": "Oregon",
-        "53": "Washington"
+        "53": "Washington",
+        "41": "Oregon"
       },
       "total_records": 643,
       "state_records": {
-        "Oregon": 477,
-        "Washington": 166
+        "Washington": 166,
+        "Oregon": 477
       }
     },
     {
@@ -4339,16 +4339,16 @@
       "name": "U.S. TelePacific Holdings Corp.",
       "states": {
         "16": "Idaho",
-        "30": "Montana",
         "53": "Washington",
-        "41": "Oregon"
+        "41": "Oregon",
+        "30": "Montana"
       },
       "total_records": 94,
       "state_records": {
         "Idaho": 6,
-        "Montana": 5,
         "Washington": 62,
-        "Oregon": 21
+        "Oregon": 21,
+        "Montana": 5
       }
     },
     {
@@ -4403,15 +4403,15 @@
       "provider_id": "300103",
       "name": "NetFortris Acquisition Co., Inc.",
       "states": {
-        "30": "Montana",
         "16": "Idaho",
+        "30": "Montana",
         "41": "Oregon",
         "53": "Washington"
       },
       "total_records": 40,
       "state_records": {
-        "Montana": 1,
         "Idaho": 8,
+        "Montana": 1,
         "Oregon": 7,
         "Washington": 24
       }
@@ -4453,15 +4453,15 @@
       "provider_id": "360117",
       "name": "Fusion Connect, Inc.",
       "states": {
-        "16": "Idaho",
         "41": "Oregon",
+        "16": "Idaho",
         "53": "Washington",
         "30": "Montana"
       },
       "total_records": 14,
       "state_records": {
-        "Idaho": 2,
         "Oregon": 1,
+        "Idaho": 2,
         "Washington": 10,
         "Montana": 1
       }
@@ -4470,13 +4470,13 @@
       "provider_id": "500084",
       "name": "Generate-Ubiquity Holdings, LLC",
       "states": {
-        "30": "Montana",
-        "53": "Washington"
+        "53": "Washington",
+        "30": "Montana"
       },
       "total_records": 14,
       "state_records": {
-        "Montana": 9,
-        "Washington": 5
+        "Washington": 5,
+        "Montana": 9
       }
     },
     {
@@ -4494,13 +4494,13 @@
       "provider_id": "420125",
       "name": "Taluslink, LLC",
       "states": {
-        "53": "Washington",
-        "41": "Oregon"
+        "41": "Oregon",
+        "53": "Washington"
       },
       "total_records": 6,
       "state_records": {
-        "Washington": 5,
-        "Oregon": 1
+        "Oregon": 1,
+        "Washington": 5
       }
     },
     {

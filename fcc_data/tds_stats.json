@@ -1,0 +1,57 @@
+{
+  "provider": "TDS Telecom",
+  "providerId": 131310,
+  "brand": "TDS Telecom",
+  "filing": "Jun 2025",
+  "technology": "Fiber to the Premises (50)",
+  "totalFiberBSLs": 160245,
+  "totalBlockGroups": 503,
+  "states": {
+    "ID": {
+      "bsls": 95640,
+      "blockGroups": 211,
+      "counties": [
+        "Ada",
+        "Canyon",
+        "Cassia",
+        "Jerome",
+        "Kootenai",
+        "Latah",
+        "Minidoka",
+        "Nez Perce",
+        "Twin Falls"
+      ]
+    },
+    "MT": {
+      "bsls": 22913,
+      "blockGroups": 103,
+      "counties": [
+        "Cascade",
+        "Lewis and Clark",
+        "Missoula",
+        "Silver Bow",
+        "Yellowstone"
+      ]
+    },
+    "OR": {
+      "bsls": 15573,
+      "blockGroups": 93,
+      "counties": [
+        "Crook",
+        "Deschutes",
+        "Jefferson"
+      ]
+    },
+    "WA": {
+      "bsls": 26119,
+      "blockGroups": 96,
+      "counties": [
+        "Asotin",
+        "Clark",
+        "Cowlitz",
+        "Lewis",
+        "Spokane"
+      ]
+    }
+  }
+}

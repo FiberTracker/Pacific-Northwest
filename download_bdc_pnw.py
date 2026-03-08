@@ -282,7 +282,7 @@ def download_files(target_files, username, token, force=False):
         for item in target_files:
             state = item.get('state_fips', '')
             pid = item.get('provider_id', '')
-            existing = list(FCC_DATA_DIR.glob(f"bdc_{state}_{pid}_*.csv"))
+            existing = list(FCC_DATA_DIR.glob(f"bdc_{state}_{pid}_*.*"))
             if existing:
                 already_have.append(item)
             else:

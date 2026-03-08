@@ -597,7 +597,7 @@ def generate_and_write(provider_key, block_groups_data, polygons,
 //
 // Data: https://broadbandmap.fcc.gov/data-download/fixed
 
-const {js_const} = {json.dumps(geojson, separators=(',', ':'))};
+var {js_const} = {json.dumps(geojson, separators=(',', ':'))};
 """
     with open(js_path, 'w') as f:
         f.write(js_content)

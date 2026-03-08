@@ -1,0 +1,101 @@
+{
+  "provider": "Lumen Technologies",
+  "providerId": 130228,
+  "brand": "Lumen Technologies",
+  "filing": "Jun 2025",
+  "technology": "Fiber to the Premises (50)",
+  "totalFiberBSLs": 828282,
+  "totalBlockGroups": 3763,
+  "states": {
+    "ID": {
+      "bsls": 93873,
+      "blockGroups": 512,
+      "counties": [
+        "Ada",
+        "Bannock",
+        "Blaine",
+        "Boise",
+        "Bonneville",
+        "Canyon",
+        "Cassia",
+        "Elmore",
+        "Gem",
+        "Jefferson",
+        "Jerome",
+        "Madison",
+        "Minidoka",
+        "Nez Perce",
+        "Payette",
+        "Twin Falls"
+      ]
+    },
+    "MT": {
+      "bsls": 8598,
+      "blockGroups": 133,
+      "counties": [
+        "Carbon",
+        "Cascade",
+        "Flathead",
+        "Gallatin",
+        "Lake",
+        "Lewis and Clark",
+        "Missoula",
+        "Pondera",
+        "Powell",
+        "Teton",
+        "Yellowstone"
+      ]
+    },
+    "OR": {
+      "bsls": 278056,
+      "blockGroups": 1065,
+      "counties": [
+        "Benton",
+        "Clackamas",
+        "Columbia",
+        "Crook",
+        "Deschutes",
+        "Hood River",
+        "Jackson",
+        "Josephine",
+        "Lane",
+        "Linn",
+        "Marion",
+        "Morrow",
+        "Multnomah",
+        "Polk",
+        "Umatilla",
+        "Wasco",
+        "Washington",
+        "Yamhill"
+      ]
+    },
+    "WA": {
+      "bsls": 447755,
+      "blockGroups": 2053,
+      "counties": [
+        "Asotin",
+        "Clallam",
+        "Clark",
+        "Cowlitz",
+        "Franklin",
+        "Grant",
+        "Grays Harbor",
+        "Jefferson",
+        "King",
+        "Kitsap",
+        "Kittitas",
+        "Klickitat",
+        "Mason",
+        "Pacific",
+        "Pierce",
+        "Spokane",
+        "Stevens",
+        "Thurston",
+        "Walla Walla",
+        "Whatcom",
+        "Yakima"
+      ]
+    }
+  }
+}
