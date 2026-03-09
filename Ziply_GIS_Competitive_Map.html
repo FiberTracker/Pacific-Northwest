@@ -390,10 +390,12 @@
                     <div class="bg-white rounded-xl shadow-sm p-3 hidden lg:block">
                         <h3 class="font-semibold text-slate-800 mb-2 text-sm">Build Cost Assumptions</h3>
                         <div class="space-y-1 text-xs">
-                            <div class="flex justify-between text-slate-600"><span>Urban (&gt;2K HU/mi2)</span><span class="font-medium">$750</span></div>
+                            <div class="flex justify-between text-slate-600"><span>Urban (&gt;2K HU/mi²)</span><span class="font-medium">$750</span></div>
                             <div class="flex justify-between text-slate-600"><span>Suburban (500-2K)</span><span class="font-medium">$825-850</span></div>
                             <div class="flex justify-between text-slate-600"><span>Rural (&lt;500)</span><span class="font-medium">$1,100+</span></div>
+                            <div class="flex justify-between text-slate-600"><span>Underground premium</span><span class="font-medium">+30-50%</span></div>
                         </div>
+                        <button onclick="showCostMethodologyModal()" class="mt-2 text-[10px] text-blue-600 underline hover:text-blue-800">View full methodology →</button>
                     </div>
                 </div>
             </div>
@@ -596,6 +598,52 @@
                     </table>
                 </div>
             </div>
+
+            <!-- Priority Acquisition Targets -->
+            <div class="bg-white rounded-xl shadow-sm p-4 mt-4">
+                <div class="flex items-center gap-2 mb-1">
+                    <h3 class="font-bold text-sm text-slate-800">Priority Acquisition Targets</h3>
+                    <span class="px-2 py-0.5 bg-blue-50 text-blue-700 rounded text-[10px] font-medium">DEEP PROFILES</span>
+                </div>
+                <p class="text-[10px] text-slate-500 mb-4">Detailed profiles of top tuck-in candidates for Ziply/BCE. BCE acquired Ziply Aug 2025 for C$5.0B — targeting 8M US fiber locations. Prior tuck-ins: LocalTel (Wenatchee, 40K customers, Sep 2024), UPN PNW assets (7K+ fiber mi).</p>
+                <div class="space-y-4" id="acquisitionTargetCards"></div>
+            </div>
+
+            <!-- Top Expansion Opportunities -->
+            <div class="bg-white rounded-xl shadow-sm p-4 mt-4">
+                <div class="flex items-center gap-2 mb-1">
+                    <h3 class="font-bold text-sm text-slate-800">Top Expansion Opportunities</h3>
+                    <span class="px-2 py-0.5 bg-green-50 text-green-700 rounded text-[10px] font-medium">GREENFIELD & OVERBUILD</span>
+                </div>
+                <p class="text-[10px] text-slate-500 mb-3">Best towns across WA, OR, ID, MT for Ziply/BCE expansion — ranked by housing density, competitive landscape, and strategic adjacency. Build costs use density-tier methodology (<button onclick="showCostMethodologyModal()" class="text-blue-600 underline">view methodology</button>).</p>
+                <div class="flex gap-2 mb-3 flex-wrap">
+                    <button class="exp-state-btn px-3 py-1 rounded-full text-[10px] font-medium bg-green-100 text-green-800 border border-green-300" onclick="filterExpansion('all')">All States</button>
+                    <button class="exp-state-btn px-3 py-1 rounded-full text-[10px] font-medium bg-gray-100 text-gray-600 border" onclick="filterExpansion('WA')">WA</button>
+                    <button class="exp-state-btn px-3 py-1 rounded-full text-[10px] font-medium bg-gray-100 text-gray-600 border" onclick="filterExpansion('OR')">OR</button>
+                    <button class="exp-state-btn px-3 py-1 rounded-full text-[10px] font-medium bg-gray-100 text-gray-600 border" onclick="filterExpansion('ID')">ID</button>
+                    <button class="exp-state-btn px-3 py-1 rounded-full text-[10px] font-medium bg-gray-100 text-gray-600 border" onclick="filterExpansion('MT')">MT</button>
+                    <span class="text-[10px] text-slate-400 self-center ml-2" id="expSummary"></span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs min-w-[900px]">
+                        <thead>
+                            <tr class="border-b text-left text-slate-500">
+                                <th class="pb-2 px-3">Town</th>
+                                <th class="pb-2 px-3">State</th>
+                                <th class="pb-2 px-3 text-right">Est. HH</th>
+                                <th class="pb-2 px-3 text-right">HU/mi²</th>
+                                <th class="pb-2 px-3 text-center">Tier</th>
+                                <th class="pb-2 px-3">Incumbent</th>
+                                <th class="pb-2 px-3 text-center">Ziply?</th>
+                                <th class="pb-2 px-3 text-right">$/Passing</th>
+                                <th class="pb-2 px-3 text-right">Est. Build Cost</th>
+                                <th class="pb-2 px-3">Rationale</th>
+                            </tr>
+                        </thead>
+                        <tbody id="expansionTable"></tbody>
+                    </table>
+                </div>
+            </div>
         </div>
 
         <!-- ========== TAB 6: OREGON TOWNS ========== -->
@@ -682,6 +730,103 @@
                 <button onclick="closeSourcesModal()" class="text-slate-400 hover:text-slate-600 text-lg">&times;</button>
             </div>
             <div id="sourcesModalBody" class="p-4 text-xs space-y-2 max-h-[60vh] overflow-y-auto"></div>
+        </div>
+    </div>
+
+    <!-- Build Cost Methodology Modal -->
+    <div id="costMethodModal" class="modal-overlay hidden" onclick="if(event.target===this)closeCostMethodologyModal()">
+        <div class="modal-content" style="max-width:700px;">
+            <div class="flex justify-between items-center p-4 border-b bg-gradient-to-r from-slate-800 to-slate-700 text-white rounded-t-xl">
+                <h3 class="font-bold text-sm">Build Cost Estimation Methodology</h3>
+                <button onclick="closeCostMethodologyModal()" class="text-slate-300 hover:text-white text-lg">&times;</button>
+            </div>
+            <div class="p-4 text-xs space-y-4 max-h-[70vh] overflow-y-auto">
+                <!-- Base Cost Matrix -->
+                <div>
+                    <h4 class="font-bold text-slate-800 text-sm mb-2">1. Base Cost per Passing by Density Tier</h4>
+                    <table class="w-full border-collapse text-xs mb-2">
+                        <thead><tr class="bg-slate-100">
+                            <th class="py-2 px-3 text-left font-semibold border">Density Tier</th>
+                            <th class="py-2 px-3 text-left font-semibold border">HU / mi²</th>
+                            <th class="py-2 px-3 text-right font-semibold border">Cost / Passing</th>
+                            <th class="py-2 px-3 text-left font-semibold border">Rationale</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr class="border-b"><td class="py-2 px-3 border font-medium"><span class="px-1.5 py-0.5 bg-green-100 text-green-700 rounded text-[10px]">Urban</span></td><td class="py-2 px-3 border">&gt; 2,000</td><td class="py-2 px-3 border text-right font-bold">$700 – $775</td><td class="py-2 px-3 border text-slate-500">Short drops, existing conduit reuse, MDU aggregation. Lower trenching/boring needs.</td></tr>
+                            <tr class="border-b bg-slate-50"><td class="py-2 px-3 border font-medium"><span class="px-1.5 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px]">Suburban</span></td><td class="py-2 px-3 border">500 – 2,000</td><td class="py-2 px-3 border text-right font-bold">$825 – $900</td><td class="py-2 px-3 border text-slate-500">Standard aerial/underground mix. Typical SFH neighborhoods. Most common tier in PNW.</td></tr>
+                            <tr class="border-b"><td class="py-2 px-3 border font-medium"><span class="px-1.5 py-0.5 bg-amber-100 text-amber-700 rounded text-[10px]">Rural</span></td><td class="py-2 px-3 border">&lt; 500</td><td class="py-2 px-3 border text-right font-bold">$1,100 – $1,500+</td><td class="py-2 px-3 border text-slate-500">Long feeder runs, sparse lots, rights-of-way complexity. BEAD subsidy may offset.</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="text-[10px] text-slate-400">Density = estimated housing units ÷ city area (mi²) from Census ACS 2020 5-Year Estimates.</p>
+                </div>
+
+                <!-- Construction Method Adjustments -->
+                <div>
+                    <h4 class="font-bold text-slate-800 text-sm mb-2">2. Construction Method Adjustment</h4>
+                    <table class="w-full border-collapse text-xs mb-2">
+                        <thead><tr class="bg-slate-100">
+                            <th class="py-2 px-3 text-left font-semibold border">Method</th>
+                            <th class="py-2 px-3 text-right font-semibold border">Multiplier</th>
+                            <th class="py-2 px-3 text-left font-semibold border">Typical Providers</th>
+                            <th class="py-2 px-3 text-left font-semibold border">Notes</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr class="border-b"><td class="py-2 px-3 border font-medium">Aerial (pole attachment)</td><td class="py-2 px-3 border text-right font-bold">1.0× (base)</td><td class="py-2 px-3 border">Ziply, Hunter, Astound</td><td class="py-2 px-3 border text-slate-500">Lowest cost. Uses existing utility poles. Common in PNW (established pole infrastructure).</td></tr>
+                            <tr class="border-b bg-amber-50"><td class="py-2 px-3 border font-medium">Underground (directional boring)</td><td class="py-2 px-3 border text-right font-bold text-amber-700">1.3–1.5×</td><td class="py-2 px-3 border"><span class="font-bold text-pink-600">Ezee Fiber</span>, some PUDs</td><td class="py-2 px-3 border text-slate-500">30-50% premium. Directional boring + conduit. Higher upfront cost but lower maintenance, storm resilience.</td></tr>
+                            <tr class="border-b"><td class="py-2 px-3 border font-medium">Hybrid (aerial + underground)</td><td class="py-2 px-3 border text-right font-bold">1.15×</td><td class="py-2 px-3 border">TDS, Lightcurve</td><td class="py-2 px-3 border text-slate-500">Mixed plant. Aerial on main runs, underground in subdivisions/new developments.</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="bg-pink-50 border border-pink-200 rounded p-2 mt-1">
+                        <p class="text-[10px] text-pink-800"><strong>Ezee Fiber — Confirmed underground builder:</strong> Ezee uses <strong>Horizontal Directional Drilling (HDD)</strong> as primary method (<a href="https://www.rrnm.gov/5005/Ezee-Fiber-Expansion-Project-in-Rio-Ranc" target="_blank" class="underline">Rio Rancho city docs</a>). Vancouver WA build featured in <a href="https://undergroundinfrastructure.com/news/2025/november/ezee-fiber-begins-underground-broadband-construction-in-vancouver-wash" target="_blank" class="underline"><em>Underground Construction</em> magazine</a>. Company states: "Wherever underground construction is feasible, we strongly prioritize it." TX investment of $200M for ~125K homes implies <strong>~$1,400-1,600/passing</strong>. We apply a <strong>1.35× multiplier</strong> to base tier cost for Ezee tracts (conservative vs. the FBA/Cartesian 2.0-2.25× median underground premium).</p>
+                    </div>
+                </div>
+
+                <!-- Provider-Specific Factors -->
+                <div>
+                    <h4 class="font-bold text-slate-800 text-sm mb-2">3. Provider-Specific Cost Factors</h4>
+                    <table class="w-full border-collapse text-xs">
+                        <thead><tr class="bg-slate-100">
+                            <th class="py-2 px-3 text-left font-semibold border">Provider</th>
+                            <th class="py-2 px-3 text-left font-semibold border">Construction</th>
+                            <th class="py-2 px-3 text-right font-semibold border">Effective $/Passing</th>
+                            <th class="py-2 px-3 text-left font-semibold border">Key Assumption</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr class="border-b"><td class="py-2 px-3 border font-medium text-green-700">Ziply Fiber</td><td class="py-2 px-3 border">Primarily aerial</td><td class="py-2 px-3 border text-right">$700–$900</td><td class="py-2 px-3 border text-slate-500">Incumbent ILEC with existing pole rights. Lowest marginal build cost.</td></tr>
+                            <tr class="border-b bg-pink-50"><td class="py-2 px-3 border font-medium text-pink-600">Ezee Fiber</td><td class="py-2 px-3 border">100% underground</td><td class="py-2 px-3 border text-right font-bold text-pink-700">$1,050–$1,215</td><td class="py-2 px-3 border text-slate-500">Underground boring in suburban WA markets. Base $825 × 1.35 = ~$1,114.</td></tr>
+                            <tr class="border-b"><td class="py-2 px-3 border font-medium text-red-600">Hunter Comms</td><td class="py-2 px-3 border">Aerial (rural OR)</td><td class="py-2 px-3 border text-right">$850–$1,200</td><td class="py-2 px-3 border text-slate-500">Southern OR mix of suburban & rural. Higher rural proportion.</td></tr>
+                            <tr class="border-b"><td class="py-2 px-3 border font-medium text-blue-600">AT&T (fka Lumen)</td><td class="py-2 px-3 border">Existing plant upgrade</td><td class="py-2 px-3 border text-right">$400–$650</td><td class="py-2 px-3 border text-slate-500">Copper-to-fiber upgrade of existing routes. Lowest greenfield equivalent.</td></tr>
+                            <tr class="border-b"><td class="py-2 px-3 border font-medium text-purple-600">TDS Telecom</td><td class="py-2 px-3 border">Hybrid</td><td class="py-2 px-3 border text-right">$900–$1,100</td><td class="py-2 px-3 border text-slate-500">New-market overbuilder in Bend, Boise, Coeur d'Alene.</td></tr>
+                            <tr class="border-b"><td class="py-2 px-3 border font-medium text-amber-600">Lightcurve</td><td class="py-2 px-3 border">Legacy copper + fiber overbuild</td><td class="py-2 px-3 border text-right">$500–$850</td><td class="py-2 px-3 border text-slate-500">Inherited Consolidated Comms WA plant. Upgrade economics favored.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Formula -->
+                <div class="bg-slate-50 rounded-lg p-3 border">
+                    <h4 class="font-bold text-slate-800 text-sm mb-2">4. Cost Formula</h4>
+                    <div class="bg-white rounded p-3 font-mono text-[11px] text-slate-700 border mb-2">
+                        Est. Build Cost = Housing Units × Cost/Passing<br>
+                        Cost/Passing = Base Tier Rate × Construction Method Multiplier<br><br>
+                        <span class="text-slate-400">Example (Ezee in Kent, suburban):</span><br>
+                        $825 × 1.35 = <strong>$1,114/passing</strong> × 8,200 HU = <strong>$9.1M</strong>
+                    </div>
+                    <p class="text-[10px] text-slate-500">Housing units sourced from Census ACS 2020 5-Year Estimates. Actual build costs vary with terrain, permitting, make-ready, and prevailing construction labor rates. These estimates represent industry median benchmarks for FTTH greenfield and overbuild scenarios in the Pacific Northwest.</p>
+                </div>
+
+                <!-- Sources -->
+                <div>
+                    <h4 class="font-bold text-slate-800 text-sm mb-2">5. Benchmark Sources</h4>
+                    <ul class="space-y-1 text-[10px] text-slate-600">
+                        <li>• <a href="https://fiberbroadband.org/wp-content/uploads/2026/01/FBA_Cartesian_Fiber-Deployment-Cost-Annual-Report_2025.pdf" target="_blank" class="text-blue-600 underline">FBA / Cartesian 2025 Fiber Deployment Cost Report</a> — Underground median $18.00/ft vs aerial $8.00/ft (2.25× premium). Industry standard reference.</li>
+                        <li>• <a href="https://fiberbroadband.org/wp-content/uploads/2025/01/FBA_Cartesian_Fiber-Deployment-Cost-Annual-Report-2024.pdf" target="_blank" class="text-blue-600 underline">FBA / Cartesian 2024 Report</a> — Underground $18.25/ft vs aerial $6.55/ft (2.8× premium)</li>
+                        <li>• <a href="https://www.fierce-network.com/broadband/underground-fiber-drives-deployment-costs" target="_blank" class="text-blue-600 underline">Fierce Network</a> — "Underground fiber drives deployment costs" — confirms 2× aerial cost baseline</li>
+                        <li>• <a href="https://ntia.gov/category/bead" target="_blank" class="text-blue-600 underline">NTIA BEAD Program</a> — Federal broadband cost benchmarks for state subsidy applications</li>
+                        <li>• <strong>Ezee underground HDD confirmed:</strong> <a href="https://www.rrnm.gov/5005/Ezee-Fiber-Expansion-Project-in-Rio-Ranc" target="_blank" class="text-blue-600 underline">Rio Rancho city page</a> documents HDD method; <a href="https://undergroundinfrastructure.com/news/2025/november/ezee-fiber-begins-underground-broadband-construction-in-vancouver-wash" target="_blank" class="text-blue-600 underline">Underground Construction</a> covers Vancouver WA build</li>
+                        <li>• <strong>Ezee TX implied cost:</strong> $200M investment / ~125K homes = ~$1,400-$1,600/passing (<a href="https://www.telecompetitor.com/ezee-fiber-makes-200m-investment-in-texas-expansion/" target="_blank" class="text-blue-600 underline">Telecompetitor</a>)</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -820,7 +965,7 @@
             tabBtns[tabMap[tabId]].classList.remove('text-slate-500');
         }
         if (tabId === 'map') setTimeout(function() { map.invalidateSize(); }, 100);
-        if (tabId === 'consolidation') renderConsolidationTab();
+        if (tabId === 'consolidation') { renderConsolidationTab(); renderAcquisitionTargets(); renderExpansionTable(); }
         if (tabId === 'ortowns') renderORTownsTab();
     }
 
@@ -2091,6 +2236,144 @@
     }
 
     // ================================================================
+    // ACQUISITION TARGET CARDS
+    // ================================================================
+    function renderAcquisitionTargets() {
+        var container = document.getElementById('acquisitionTargetCards');
+        if (!container || typeof ACQUISITION_TARGETS === 'undefined') return;
+
+        // Sort by acquisition likelihood — put actionable ones first
+        var order = { 'MEDIUM-HIGH': 1, 'MEDIUM': 2, 'LOW': 3 };
+        var sorted = ACQUISITION_TARGETS.slice().sort(function(a, b) {
+            var aO = order[a.acquisitionLikelihood.split(' — ')[0]] || 9;
+            var bO = order[b.acquisitionLikelihood.split(' — ')[0]] || 9;
+            return aO - bO;
+        });
+
+        container.innerHTML = sorted.map(function(t) {
+            var likelihoodText = t.acquisitionLikelihood.split(' — ')[0];
+            var likelihoodNote = t.acquisitionLikelihood.split(' — ')[1] || '';
+            var fitText = t.strategicFit.split(' — ')[0];
+            var fitNote = t.strategicFit.split(' — ')[1] || '';
+
+            var lColor, lBg;
+            if (likelihoodText === 'MEDIUM-HIGH') { lColor = 'text-green-700'; lBg = 'bg-green-50 border-green-200'; }
+            else if (likelihoodText === 'MEDIUM') { lColor = 'text-amber-700'; lBg = 'bg-amber-50 border-amber-200'; }
+            else { lColor = 'text-red-700'; lBg = 'bg-red-50 border-red-200'; }
+
+            var fColor, fBg;
+            if (fitText === 'HIGH') { fColor = 'text-green-700'; fBg = 'bg-green-50 border-green-200'; }
+            else if (fitText === 'MEDIUM-HIGH' || fitText === 'MEDIUM') { fColor = 'text-blue-700'; fBg = 'bg-blue-50 border-blue-200'; }
+            else { fColor = 'text-slate-600'; fBg = 'bg-slate-50 border-slate-200'; }
+
+            var passingsStr = t.totalPassings ? t.totalPassings.toLocaleString() : 'N/A (small)';
+            var fiberStr = t.fiberPct !== null ? t.fiberPct + '%' : 'N/A';
+
+            return '<div class="border rounded-xl overflow-hidden">' +
+                '<div class="p-3 text-white flex justify-between items-center" style="background:' + t.color + '">' +
+                '<div><h4 class="font-bold text-sm">' + t.name + '</h4>' +
+                '<span class="text-[10px] opacity-80">' + t.hq + (t.fccId ? ' | FCC ID: ' + t.fccId : '') + '</span></div>' +
+                '<div class="flex gap-2">' +
+                '<span class="px-2 py-0.5 rounded text-[10px] font-bold border ' + lBg + ' ' + lColor + '">Acq: ' + likelihoodText + '</span>' +
+                '<span class="px-2 py-0.5 rounded text-[10px] font-bold border ' + fBg + ' ' + fColor + '">Fit: ' + fitText + '</span>' +
+                '</div></div>' +
+                '<div class="p-4 space-y-3">' +
+                // Key metrics row
+                '<div class="grid grid-cols-2 md:grid-cols-4 gap-2">' +
+                '<div class="bg-slate-50 rounded p-2"><p class="text-[10px] text-slate-500">Passings</p><p class="font-bold text-sm">' + passingsStr + '</p></div>' +
+                '<div class="bg-slate-50 rounded p-2"><p class="text-[10px] text-slate-500">Fiber %</p><p class="font-bold text-sm">' + fiberStr + '</p></div>' +
+                '<div class="bg-slate-50 rounded p-2"><p class="text-[10px] text-slate-500">Employees</p><p class="font-bold text-sm">' + t.employees + '</p></div>' +
+                '<div class="bg-slate-50 rounded p-2"><p class="text-[10px] text-slate-500">States</p><p class="font-bold text-sm">' + t.states.join(', ') + '</p></div>' +
+                '</div>' +
+                // Details grid
+                '<div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">' +
+                '<div><span class="font-semibold text-slate-700">Owner:</span> <span class="text-slate-600">' + t.owner + '</span></div>' +
+                (t.ceo ? '<div><span class="font-semibold text-slate-700">CEO:</span> <span class="text-slate-600">' + t.ceo + '</span></div>' : '') +
+                '<div><span class="font-semibold text-slate-700">Key Markets:</span> <span class="text-slate-600">' + t.keyMarkets + '</span></div>' +
+                '<div><span class="font-semibold text-slate-700">Tech:</span> <span class="text-slate-600">' + t.techMix + '</span></div>' +
+                (t.revenue ? '<div><span class="font-semibold text-slate-700">Revenue:</span> <span class="text-slate-600">' + t.revenue + '</span></div>' : '') +
+                (t.impliedValuation ? '<div><span class="font-semibold text-slate-700">Est. Valuation:</span> <span class="text-slate-600">' + t.impliedValuation + '</span></div>' : '') +
+                '</div>' +
+                // Fiber upgrades
+                (t.fiberUpgrades ? '<div class="bg-blue-50 rounded p-2 text-xs"><span class="font-semibold text-blue-700">Fiber Upgrades:</span> <span class="text-blue-600">' + t.fiberUpgrades + '</span></div>' : '') +
+                // Acquisition history
+                (t.acquisitionHistory ? '<div class="bg-amber-50 rounded p-2 text-xs"><span class="font-semibold text-amber-700">History:</span> <span class="text-amber-600">' + t.acquisitionHistory + '</span></div>' : '') +
+                // Assessment boxes
+                '<div class="flex gap-2">' +
+                '<div class="flex-1 border rounded p-2 ' + lBg + '"><p class="text-[10px] font-bold ' + lColor + ' mb-0.5">Acquisition Likelihood</p><p class="text-[10px] text-slate-600">' + likelihoodNote + '</p></div>' +
+                '<div class="flex-1 border rounded p-2 ' + fBg + '"><p class="text-[10px] font-bold ' + fColor + ' mb-0.5">Strategic Fit</p><p class="text-[10px] text-slate-600">' + fitNote + '</p></div>' +
+                '</div>' +
+                // Sources
+                '<div class="flex flex-wrap gap-1">' +
+                t.sources.map(function(s) { return '<a href="' + s.url + '" target="_blank" class="text-[9px] text-blue-600 underline hover:text-blue-800">[' + s.name + ']</a>'; }).join(' ') +
+                '</div></div></div>';
+        }).join('');
+    }
+
+    // ================================================================
+    // EXPANSION OPPORTUNITIES TABLE
+    // ================================================================
+    var currentExpFilter = 'all';
+    function filterExpansion(state) {
+        currentExpFilter = state;
+        document.querySelectorAll('.exp-state-btn').forEach(function(btn) {
+            if (btn.textContent.trim() === state || (state === 'all' && btn.textContent.trim() === 'All States')) {
+                btn.className = 'exp-state-btn px-3 py-1 rounded-full text-[10px] font-medium bg-green-100 text-green-800 border border-green-300';
+            } else {
+                btn.className = 'exp-state-btn px-3 py-1 rounded-full text-[10px] font-medium bg-gray-100 text-gray-600 border';
+            }
+        });
+        renderExpansionTable();
+    }
+
+    function renderExpansionTable() {
+        var tbody = document.getElementById('expansionTable');
+        var summary = document.getElementById('expSummary');
+        if (!tbody || typeof EXPANSION_OPPORTUNITIES === 'undefined') return;
+
+        var data = EXPANSION_OPPORTUNITIES.filter(function(e) {
+            if (currentExpFilter === 'all') return true;
+            return e.state === currentExpFilter;
+        });
+
+        // Sort by density descending
+        data.sort(function(a, b) { return b.density - a.density; });
+
+        var totalHH = 0;
+        var totalCost = 0;
+        data.forEach(function(e) { totalHH += e.estHH; totalCost += e.estHH * e.buildCost; });
+
+        if (summary) {
+            summary.textContent = data.length + ' markets | ' + totalHH.toLocaleString() + ' total HH | ~$' + (totalCost / 1e9).toFixed(1) + 'B est. build cost';
+        }
+
+        tbody.innerHTML = data.map(function(e, i) {
+            var tierColor, tierBg;
+            if (e.tier === 'Urban') { tierColor = 'text-red-700'; tierBg = 'bg-red-50'; }
+            else if (e.tier === 'Suburban') { tierColor = 'text-blue-700'; tierBg = 'bg-blue-50'; }
+            else { tierColor = 'text-amber-700'; tierBg = 'bg-amber-50'; }
+
+            var estBuildTotal = (e.estHH * e.buildCost / 1e6).toFixed(1);
+            var ziplyBadge = e.ziplyPresent ?
+                '<span class="px-1.5 py-0.5 bg-green-100 text-green-700 rounded text-[10px] font-medium">YES</span>' :
+                '<span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 rounded text-[10px]">No</span>';
+
+            return '<tr class="border-b border-slate-100 hover:bg-green-50/30">' +
+                '<td class="py-2 px-3 font-semibold text-slate-800">' + e.town + '<br><span class="text-[9px] text-slate-400 font-normal">' + e.county + ' Co</span></td>' +
+                '<td class="py-2 px-3">' + e.state + '</td>' +
+                '<td class="py-2 px-3 text-right font-semibold">' + e.estHH.toLocaleString() + '</td>' +
+                '<td class="py-2 px-3 text-right font-semibold">' + e.density.toLocaleString() + '</td>' +
+                '<td class="py-2 px-3 text-center"><span class="px-1.5 py-0.5 rounded text-[10px] font-medium ' + tierColor + ' ' + tierBg + '">' + e.tier + '</span></td>' +
+                '<td class="py-2 px-3 text-slate-600">' + e.incumbent + '</td>' +
+                '<td class="py-2 px-3 text-center">' + ziplyBadge + '</td>' +
+                '<td class="py-2 px-3 text-right">$' + e.buildCost.toLocaleString() + '</td>' +
+                '<td class="py-2 px-3 text-right font-semibold text-green-700">$' + estBuildTotal + 'M</td>' +
+                '<td class="py-2 px-3 text-slate-500 text-[11px]" style="max-width:280px">' + e.rationale + '</td>' +
+                '</tr>';
+        }).join('');
+    }
+
+    // ================================================================
     // FCC BDC INCREMENTAL ANALYSIS
     // ================================================================
     function populateIncrementalAnalysis() {
@@ -2171,6 +2454,13 @@
 
     function closeSourcesModal() {
         document.getElementById('sourcesModal').classList.add('hidden');
+    }
+
+    function showCostMethodologyModal() {
+        document.getElementById('costMethodModal').classList.remove('hidden');
+    }
+    function closeCostMethodologyModal() {
+        document.getElementById('costMethodModal').classList.add('hidden');
     }
 
     function showCalcModal(content) {

@@ -225,7 +225,7 @@ const CENSUS_TRACTS = {
             { id: '061500', name: 'Tacoma North End / Proctor', coords: [[47.305,-122.495],[47.305,-122.445],[47.270,-122.445],[47.270,-122.495]], housingUnits: 11250, density: 'suburban', costPerPassing: 850, provider: 'Lightcurve', permitStatus: 'Active Service', sourceType: 'Company Website', sourceUrl: 'https://getlightcurve.com/', sourceText: 'Lightcurve residential fiber', notes: 'Established Lightcurve (fmr. Rainier Connect) market.', overlap: false, isNew: false, announcedPassings: null },
             { id: '061600', name: 'Tacoma East / Fircrest', coords: [[47.265,-122.425],[47.265,-122.375],[47.230,-122.375],[47.230,-122.425]], housingUnits: 8450, density: 'suburban', costPerPassing: 850, provider: 'Lightcurve', permitStatus: 'Active Service', sourceType: 'Company Website', sourceUrl: 'https://getlightcurve.com/', sourceText: 'Lightcurve fiber per company site', notes: 'Core Lightcurve residential area.', overlap: false, isNew: false, announcedPassings: null },
             { id: '062000', name: 'Lakewood', coords: [[47.195,-122.535],[47.195,-122.475],[47.155,-122.475],[47.155,-122.535]], housingUnits: 14680, density: 'suburban', costPerPassing: 875, provider: 'Quantum', permitStatus: 'Legacy CenturyLink', sourceType: 'FCC BDC', sourceUrl: 'https://broadbandmap.fcc.gov/', sourceText: 'CenturyLink fiber per FCC data', notes: 'Quantum (CenturyLink) legacy. Now AT&T (Feb 2026).', overlap: false, isNew: false, announcedPassings: null },
-            { id: '061700', name: 'Puyallup', coords: [[47.205,-122.325],[47.205,-122.265],[47.165,-122.265],[47.165,-122.325]], housingUnits: 12920, density: 'suburban', costPerPassing: 850, provider: 'Ezee', permitStatus: 'ACTIVE BUILD', sourceType: 'Company Website', sourceUrl: 'https://ezeefiber.com/', sourceText: 'Ezee Fiber expansion target', notes: 'EZEE EXPANSION. Part of $400M WA investment.', overlap: false, isNew: true, announcedPassings: null },
+            { id: '061700', name: 'Puyallup', coords: [[47.205,-122.325],[47.205,-122.265],[47.165,-122.265],[47.165,-122.325]], housingUnits: 12920, density: 'suburban', costPerPassing: 1148, provider: 'Ezee', permitStatus: 'ACTIVE BUILD', sourceType: 'Company Website', sourceUrl: 'https://ezeefiber.com/', sourceText: 'Ezee Fiber expansion target', notes: 'EZEE EXPANSION. Part of $400M WA investment.', overlap: false, isNew: true, announcedPassings: null },
             { id: '061800', name: 'University Place', coords: [[47.235,-122.575],[47.235,-122.515],[47.195,-122.515],[47.195,-122.575]], housingUnits: 10500, density: 'suburban', costPerPassing: 875, provider: 'Contested', permitStatus: 'Multiple Providers', sourceType: 'FCC BDC', sourceUrl: 'https://broadbandmap.fcc.gov/', sourceText: 'Lightcurve + Quantum overlap', notes: 'Contested market. Lightcurve expanding vs Quantum incumbent.', overlap: true, isNew: false, announcedPassings: null },
             { id: '062100', name: 'South Tacoma / Parkland', coords: [[47.155,-122.475],[47.155,-122.415],[47.115,-122.415],[47.115,-122.475]], housingUnits: 11200, density: 'suburban', costPerPassing: 900, provider: 'Quantum', permitStatus: 'Partial Coverage', sourceType: 'FCC BDC', sourceUrl: 'https://broadbandmap.fcc.gov/', sourceText: 'CenturyLink/Quantum per FCC', notes: 'PLU area. Quantum legacy, potential Ezee expansion target.', overlap: false, isNew: false, announcedPassings: null },
             { id: '061900', name: 'Spanaway / Graham', coords: [[47.115,-122.445],[47.115,-122.365],[47.065,-122.365],[47.065,-122.445]], housingUnits: 13200, density: 'suburban', costPerPassing: 925, provider: 'None', permitStatus: 'Underserved', sourceType: 'FCC BDC', sourceUrl: 'https://broadbandmap.fcc.gov/', sourceText: 'Limited fiber per FCC data', notes: 'Fast-growing area south of Tacoma. Expansion opportunity.', overlap: false, isNew: false, announcedPassings: null },
@@ -241,13 +241,13 @@ const CENSUS_TRACTS = {
         fips: '53033',
         permitPortal: 'https://permitcenter.kentwa.gov/',
         tracts: [
-            { id: '029200', name: 'Downtown Kent', coords: [[47.395,-122.265],[47.395,-122.215],[47.365,-122.215],[47.365,-122.265]], housingUnits: 8250, density: 'suburban', costPerPassing: 825, provider: 'Ezee', permitStatus: 'ACTIVE BUILD - First Customer Oct 2025', sourceType: 'Press Release', sourceUrl: 'https://www.prnewswire.com/news-releases/ezee-fiber-connects-first-customer-in-kent-wa-marking-launch-in-washington-state-302591803.html', sourceText: 'PRNewswire 10/22/25: First customer connected in Kent', notes: 'EZEE FIBER HQ MARKET. $400M WA investment. Up to 8 Gbps residential fiber.', overlap: false, isNew: true, announcedPassings: null },
-            { id: '029300', name: 'Kent East Hill', coords: [[47.415,-122.215],[47.415,-122.165],[47.385,-122.165],[47.385,-122.215]], housingUnits: 11820, density: 'suburban', costPerPassing: 850, provider: 'Ezee', permitStatus: 'Construction Underway', sourceType: 'Company Website', sourceUrl: 'https://ezeefiber.com/cities/wa/kent/', sourceText: 'Ezee Fiber Kent service page', notes: 'Active Ezee buildout. High-density residential target.', overlap: false, isNew: true, announcedPassings: null },
+            { id: '029200', name: 'Downtown Kent', coords: [[47.395,-122.265],[47.395,-122.215],[47.365,-122.215],[47.365,-122.265]], housingUnits: 8250, density: 'suburban', costPerPassing: 1114, provider: 'Ezee', permitStatus: 'ACTIVE BUILD - First Customer Oct 2025', sourceType: 'Press Release', sourceUrl: 'https://www.prnewswire.com/news-releases/ezee-fiber-connects-first-customer-in-kent-wa-marking-launch-in-washington-state-302591803.html', sourceText: 'PRNewswire 10/22/25: First customer connected in Kent', notes: 'EZEE FIBER HQ MARKET. $400M WA investment. Up to 8 Gbps. Cost includes 1.35× underground (HDD) premium.', overlap: false, isNew: true, announcedPassings: null },
+            { id: '029300', name: 'Kent East Hill', coords: [[47.415,-122.215],[47.415,-122.165],[47.385,-122.165],[47.385,-122.215]], housingUnits: 11820, density: 'suburban', costPerPassing: 1148, provider: 'Ezee', permitStatus: 'Construction Underway', sourceType: 'Company Website', sourceUrl: 'https://ezeefiber.com/cities/wa/kent/', sourceText: 'Ezee Fiber Kent service page', notes: 'Active Ezee buildout. High-density residential target.', overlap: false, isNew: true, announcedPassings: null },
             { id: '029400', name: 'Kent West Valley', coords: [[47.405,-122.305],[47.405,-122.265],[47.365,-122.265],[47.365,-122.305]], housingUnits: 7650, density: 'suburban', costPerPassing: 875, provider: 'Ziply', permitStatus: 'Existing Service', sourceType: 'FCC BDC', sourceUrl: 'https://broadbandmap.fcc.gov/', sourceText: 'Ziply legacy footprint per FCC data', notes: 'Ziply incumbent. Ezee entering market with overbuild.', overlap: true, isNew: false, announcedPassings: null },
-            { id: '029500', name: 'Des Moines', coords: [[47.415,-122.335],[47.415,-122.295],[47.385,-122.295],[47.385,-122.335]], housingUnits: 6450, density: 'suburban', costPerPassing: 850, provider: 'Ezee', permitStatus: 'Expansion Target', sourceType: 'Company Website', sourceUrl: 'https://ezeefiber.com/', sourceText: 'Ezee Fiber expansion markets', notes: 'EZEE EXPANSION. Adjacent to Kent launch market.', overlap: false, isNew: true, announcedPassings: null },
+            { id: '029500', name: 'Des Moines', coords: [[47.415,-122.335],[47.415,-122.295],[47.385,-122.295],[47.385,-122.335]], housingUnits: 6450, density: 'suburban', costPerPassing: 1148, provider: 'Ezee', permitStatus: 'Expansion Target', sourceType: 'Company Website', sourceUrl: 'https://ezeefiber.com/', sourceText: 'Ezee Fiber expansion markets', notes: 'EZEE EXPANSION. Adjacent to Kent launch market.', overlap: false, isNew: true, announcedPassings: null },
             { id: '029600', name: 'Auburn North', coords: [[47.335,-122.255],[47.335,-122.205],[47.305,-122.205],[47.305,-122.255]], housingUnits: 8920, density: 'suburban', costPerPassing: 875, provider: 'Ziply', permitStatus: 'Active Service', sourceType: 'FCC BDC', sourceUrl: 'https://broadbandmap.fcc.gov/', sourceText: 'Ziply fiber coverage per FCC', notes: 'Ziply incumbent market south of Kent.', overlap: false, isNew: false, announcedPassings: null },
             { id: '029700', name: 'Federal Way', coords: [[47.335,-122.355],[47.335,-122.295],[47.295,-122.295],[47.295,-122.355]], housingUnits: 12500, density: 'suburban', costPerPassing: 850, provider: 'Contested', permitStatus: 'Multiple Providers', sourceType: 'FCC BDC', sourceUrl: 'https://broadbandmap.fcc.gov/', sourceText: 'Ziply + Quantum coverage overlap', notes: 'Contested market. Ziply and Quantum both present.', overlap: true, isNew: false, announcedPassings: null },
-            { id: '029800', name: 'Algona / Pacific', coords: [[47.290,-122.255],[47.290,-122.215],[47.265,-122.215],[47.265,-122.255]], housingUnits: 4850, density: 'suburban', costPerPassing: 875, provider: 'Ezee', permitStatus: 'Construction Started', sourceType: 'Company Website', sourceUrl: 'https://ezeefiber.com/', sourceText: 'Ezee Fiber blog - Algona/Pacific expansion', notes: 'New Ezee build area. Small market adjacent to Auburn.', overlap: false, isNew: true, announcedPassings: null },
+            { id: '029800', name: 'Algona / Pacific', coords: [[47.290,-122.255],[47.290,-122.215],[47.265,-122.215],[47.265,-122.255]], housingUnits: 4850, density: 'suburban', costPerPassing: 1181, provider: 'Ezee', permitStatus: 'Construction Started', sourceType: 'Company Website', sourceUrl: 'https://ezeefiber.com/', sourceText: 'Ezee Fiber blog - Algona/Pacific expansion', notes: 'New Ezee build area. Small market adjacent to Auburn.', overlap: false, isNew: true, announcedPassings: null },
             { id: '029900', name: 'Covington / Maple Valley', coords: [[47.385,-122.135],[47.385,-122.065],[47.345,-122.065],[47.345,-122.135]], housingUnits: 11400, density: 'suburban', costPerPassing: 925, provider: 'Ziply', permitStatus: 'Partial Coverage', sourceType: 'FCC BDC', sourceUrl: 'https://broadbandmap.fcc.gov/', sourceText: 'Ziply partial coverage per FCC', notes: 'Growing suburban area. Partial Ziply footprint.', overlap: false, isNew: false, announcedPassings: null }
         ]
     },
@@ -1089,4 +1089,188 @@ var OREGON_TOWNS = [
     { name: "Hermiston", county: "Umatilla", countyFips: "41059", pop2020: 19354, estHH: 7200, areaSqMi: 7.8, lat: 45.8404, lng: -119.2895, metro: "Eastern Oregon", notes: "Fastest-growing E OR city; AT&T (fka Lumen)" },
     { name: "The Dalles", county: "Wasco", countyFips: "41065", pop2020: 15340, estHH: 6200, areaSqMi: 6.7, lat: 45.5946, lng: -121.1787, metro: "Eastern Oregon", notes: "Google data center; AT&T (fka Lumen)" },
     { name: "Hood River", county: "Hood River", countyFips: "41027", pop2020: 8313, estHH: 3400, areaSqMi: 2.6, lat: 45.7054, lng: -121.5215, metro: "Eastern Oregon", notes: "Columbia Gorge; AT&T (fka Lumen)" },
+];
+
+// ---- ACQUISITION TARGETS — Deep profiles for Ziply/BCE tuck-in strategy ----
+// BCE (Bell Canada) completed acquisition of Ziply Aug 1, 2025 for C$5.0B + ~C$2.6B net debt.
+// Ziply now at ~1.4M fiber locations across WA, OR, ID, MT. BCE targeting 8M US fiber locations long-term.
+// Sources: ziplyfiber.com/news/press-release/ziply-bce, searchlightcap.com
+const ACQUISITION_TARGETS = [
+    {
+        name: "Lightcurve",
+        fccId: "130786",
+        legalEntity: "Mashell Telecom, Inc.",
+        hq: "Eatonville, WA",
+        owner: "Palisade Infrastructure (Australian infra fund, A$10B+ AUM)",
+        ceo: "Anand Vadapalli (fmr CEO Alaska Communications)",
+        totalPassings: 160000,
+        fiberPct: 12.1,
+        fiberBSLs: 3200,
+        totalBDCBSLs: 26484,
+        employees: "100-150",
+        states: ["WA"],
+        keyMarkets: "Pierce Co (Tacoma, Puyallup, Eatonville), Lewis Co (Centralia, Chehalis), Kittitas Co (Ellensburg), Thurston Co (Yelm), Yakima Co (Selah)",
+        techMix: "HFC (cable) + FTTP + DSL. 20.7% of customers on DSL.",
+        acquisitionHistory: "Rainier Connect (Nov 2023, undisclosed) + Consolidated Comms WA ($73M, May 2024)",
+        impliedValuation: "$200-400M+ (full platform, 160K passings)",
+        revenue: "~$20M+ (CCI WA assets alone had ~$20M revenue FY2023)",
+        fiberUpgrades: "Ellensburg & Selah: copper-to-fiber completed 2025. Yelm: fiber 2026. Centralia/Chehalis: 1,000+ additional locations 2026. Kittitas Co: $3.3M ARPA-funded rural build.",
+        acquisitionLikelihood: "LOW — Palisade just bought (2023-24), long-duration open-ended fund, CEO signaling growth",
+        strategicFit: "HIGH — 160K WA passings, direct overlap in Pierce Co, copper network = Ziply fiber overbuild playbook",
+        color: "#14B8A6",
+        sources: [
+            { name: "Consolidated WA sale closure", url: "https://www.businesswire.com/news/home/20240430603125/en/Consolidated-Communications-Closes-on-Sale-of-its-Washington-Assets" },
+            { name: "Palisade acquires Rainier Connect", url: "https://www.prweb.com/releases/palisade-infrastructure-acquires-rainier-connect-and-announces-name-change-to-lightcurve-301981546.html" },
+            { name: "Lightcurve fiber Ellensburg/Selah", url: "https://getlightcurve.com/lightcurve-brings-fast-and-reliable-fiber-internet-to-residents-in-ellensburg-and-selah-wa/" },
+            { name: "South Sound Biz profile", url: "https://www.southsoundbiz.com/profiles/palisade-infrastructure-rainier-connect-lightcurve/article_5c7acd00-754a-11ef-9882-b749c69fb017.html" },
+            { name: "Lightcurve Lewis Co expansion", url: "https://www.southsoundbiz.com/news/lightcurve-extends-high-speed-fiber-internet-in-lewis-county-elsewhere-plans-more-upgrades/article_da5adef8-6b4e-47e1-bc0a-f467d4b4bf77.html" }
+        ]
+    },
+    {
+        name: "Montana Opticom",
+        fccId: "130569",
+        legalEntity: "Montana Opticom LLC",
+        hq: "Bozeman, MT",
+        owner: "Ascent Data (Pittsburgh, PA — Jim Dolan family)",
+        ceo: "Not publicly disclosed",
+        totalPassings: 20452,
+        fiberPct: 100,
+        fiberBSLs: 20452,
+        totalBDCBSLs: 20452,
+        employees: "11-50",
+        states: ["MT"],
+        keyMarkets: "Bozeman, Belgrade, Gallatin Valley (~48% of Bozeman addresses covered)",
+        techMix: "100% FTTP — clean fiber network",
+        acquisitionHistory: "Founded 1999, fiber in Big Sky since 2005. Sold Big Sky facilities to 3 Rivers Communications. Received $64M federal broadband stimulus grant (2010).",
+        impliedValuation: "~$30-50M est. (based on ~$3M revenue, 20K+ BSLs in high-growth market)",
+        revenue: "~$3M (2025 estimate)",
+        fiberUpgrades: "Already 100% fiber. Up to 1 Gbps symmetric. 5.0/5.0 customer satisfaction.",
+        acquisitionLikelihood: "MEDIUM-HIGH — PE-owned (Ascent Data would sell at right price), clean 100% fiber asset",
+        strategicFit: "MEDIUM-HIGH — Bozeman is fastest-growing MT metro, Ziply already in MT, 100% fiber = no upgrade needed",
+        color: "#F59E0B",
+        sources: [
+            { name: "BroadbandNow profile", url: "https://broadbandnow.com/Montana-Opticom" },
+            { name: "Calix partnership", url: "https://www.calix.com/press-release/2015/05/montana-opticom-and-calix-bring-gigabit-services-to-belgrade--mo.html" },
+            { name: "Bozeman Daily Chronicle", url: "https://www.bozemandailychronicle.com/news/economy/montana-opticom-buyer-rejects-need-for-optic-cable-project/article_2308a622-5d47-11e3-bedf-0019bb2963f4.html" }
+        ]
+    },
+    {
+        name: "Rally Networks",
+        fccId: "130986",
+        legalEntity: "Oregon Telephone Company et al.",
+        hq: "Baker City, OR",
+        owner: "Family/Private (100+ year heritage, multi-company roll-up)",
+        ceo: "Not publicly disclosed",
+        totalPassings: null,
+        fiberPct: 88.4,
+        fiberBSLs: null,
+        totalBDCBSLs: null,
+        employees: "~26",
+        states: ["OR", "WA", "ID"],
+        keyMarkets: "Baker City, Mount Vernon, John Day (OR); 62 cities across 9 states (incl. MO, OK, AR)",
+        techMix: "88.4% Fiber, balance DSL/cable. High fiber penetration for rural ILEC.",
+        acquisitionHistory: "Roll-up of Oregon Telephone Co (est. 1914), NorthState Telephone, Home Telephone, Pine Telephone, Skyline Telecom",
+        impliedValuation: "Unknown — small, multi-state, family-owned",
+        revenue: "Not publicly disclosed",
+        fiberUpgrades: "Already 88.4% fiber — mostly upgraded.",
+        acquisitionLikelihood: "MEDIUM — family succession could trigger sale, but deep community roots",
+        strategicFit: "MEDIUM — PNW assets valuable but company spans 6 states; would need PNW-only carve-out",
+        color: "#8B5CF6",
+        sources: [
+            { name: "Rally Networks About", url: "https://rallynet.us/about-us/" },
+            { name: "Rally Networks regions", url: "https://rallynet.us/regions-we-serve/oregon-washington-and-idaho/" },
+            { name: "BroadbandNow profile", url: "https://broadbandnow.com/rally-networks" }
+        ]
+    },
+    {
+        name: "Wtechlink",
+        fccId: "400130",
+        legalEntity: "Wtechlink LLC",
+        hq: "Pendleton, OR",
+        owner: "Founder-owned (Byron Wysocki + Jordan McDonald)",
+        ceo: "Byron Wysocki (founder, est. 2001)",
+        totalPassings: null,
+        fiberPct: 89.2,
+        fiberBSLs: null,
+        totalBDCBSLs: null,
+        employees: "2-10",
+        states: ["OR"],
+        keyMarkets: "Pendleton, Milton-Freewater, Cayuse, Pilot Rock, Adams, Athena, Helix, Umatilla Indian Reservation",
+        techMix: "89.2% Fiber, balance fixed wireless. Up to 10 Gbps symmetric fiber.",
+        acquisitionHistory: "Founded 2001 as wireless ISP, expanded to fiber. No prior acquisitions.",
+        impliedValuation: "Micro — very small operation",
+        revenue: "Not publicly disclosed",
+        fiberUpgrades: "Already 89.2% fiber. 5.0/5.0 customer satisfaction.",
+        acquisitionLikelihood: "MEDIUM — small founder exit possible, but micro-scale",
+        strategicFit: "LOW — micro-acquisition, rural eastern OR, but adjacent to Ziply WA footprint",
+        color: "#06B6D4",
+        sources: [
+            { name: "Wtechlink website", url: "https://www.wtechlink.com/" },
+            { name: "East Oregonian profile", url: "https://www.eastoregonian.com/news/local/connecting-pendleton/article_550a4ac7-658b-5caf-9a98-45b95f2b0972.html" },
+            { name: "ISP Reports", url: "https://ispreports.org/internet-service-providers/wtechlink-availability/" }
+        ]
+    },
+    {
+        name: "Emerald Broadband",
+        fccId: null,
+        legalEntity: "Emerald Broadband LLC (Public Benefit Corporation)",
+        hq: "Eugene, OR",
+        owner: "Founder-owned PBC (started in a garage, River Road area, 2016)",
+        ceo: "Not publicly disclosed",
+        totalPassings: null,
+        fiberPct: 100,
+        fiberBSLs: null,
+        totalBDCBSLs: null,
+        employees: "<20 est.",
+        states: ["OR"],
+        keyMarkets: "Eugene, Springfield, Westfir, Oakridge (Lane County)",
+        techMix: "Active Ethernet — dedicated fiber line per premises. Acquired coax company in 2019, overbuilding with fiber.",
+        acquisitionHistory: "Founded 2016, acquired coax company 2019. Mission: bridge digital divide in Lane County.",
+        impliedValuation: "Very small — mission-driven PBC",
+        revenue: "Not publicly disclosed",
+        fiberUpgrades: "All new builds are 100% fiber (Active Ethernet).",
+        acquisitionLikelihood: "LOW — Public Benefit Corp structure, mission-driven, likely ideologically opposed to selling to large corp",
+        strategicFit: "LOW — very small, but Eugene/Springfield market is strategically interesting if Lane Co matters",
+        color: "#8B5CF6",
+        sources: [
+            { name: "Emerald Broadband website", url: "https://www.emeraldbroadband.com/" },
+            { name: "3-GIS customer spotlight", url: "https://info.3-gis.com/emerald-broadband-customer-spotlight" },
+            { name: "Lookout Eugene-Springfield", url: "https://lookouteugene-springfield.com/story/latest-news/2025/04/09/emerald-broadband-connecting-lane-county-one-fiber-line-at-a-time/" }
+        ]
+    }
+];
+
+// ---- TOP EXPANSION OPPORTUNITIES — Best towns/clusters for Ziply greenfield or overbuild ----
+// Ranked by housing density (HU/mi²), competitive landscape, and strategic adjacency.
+// Density tiers: Urban (>2K HU/mi²), Suburban (500-2K), Rural (<500).
+// Build cost: Urban $700-775, Suburban $825-900, Rural $1,100-1,500+
+// Sources: Census ACS 2020 5-Year Estimates, FCC BDC J25, company announcements.
+const EXPANSION_OPPORTUNITIES = [
+    // === TIER 1: HIGH-DENSITY, WEAK INCUMBENT (best ROI) ===
+    { town: "Central Point", state: "OR", county: "Jackson", estHH: 7800, areaSqMi: 3.5, density: 2229, tier: "Urban", incumbent: "AT&T/Quantum (weak)", ziplyPresent: false, buildCost: 750, rationale: "Highest density in S OR. AT&T/Quantum is weak incumbent with limited fiber. Adjacent to Medford — cluster opportunity.", source: "Census ACS 2020", sourceUrl: "https://data.census.gov/" },
+    { town: "Keizer", state: "OR", county: "Marion", estHH: 15200, areaSqMi: 7.3, density: 2083, tier: "Urban", incumbent: "Comcast cable only", ziplyPresent: false, buildCost: 740, rationale: "Dense Salem suburb. No fiber incumbent. Pure cable market = greenfield fiber opportunity.", source: "Census ACS 2020", sourceUrl: "https://data.census.gov/" },
+    { town: "Tigard", state: "OR", county: "Washington", estHH: 22800, areaSqMi: 11.6, density: 1966, tier: "Suburban", incumbent: "Ziply (partial) + Comcast", ziplyPresent: true, buildCost: 850, rationale: "Large Portland suburb. Ziply has partial coverage — fill-in build to complete footprint. High-value HH.", source: "Census ACS 2020 / FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" },
+    { town: "Springfield", state: "OR", county: "Lane", estHH: 24600, areaSqMi: 15.4, density: 1597, tier: "Suburban", incumbent: "AT&T/Quantum + Emerald (small)", ziplyPresent: false, buildCost: 850, rationale: "Large Lane Co city. AT&T legacy copper. Emerald too small to defend market. 24K+ HH greenfield.", source: "Census ACS 2020", sourceUrl: "https://data.census.gov/" },
+    { town: "Meridian", state: "ID", county: "Ada", estHH: 42000, areaSqMi: 32.8, density: 1280, tier: "Suburban", incumbent: "Lumen/Brightspeed (weak copper)", ziplyPresent: false, buildCost: 860, rationale: "Fastest-growing Idaho city. 42K HH. Lumen/Brightspeed weak. Huge greenfield opportunity adjacent to Boise.", source: "Census ACS 2020", sourceUrl: "https://data.census.gov/" },
+    { town: "Nampa", state: "ID", county: "Canyon", estHH: 35000, areaSqMi: 31.2, density: 1122, tier: "Suburban", incumbent: "Lumen/Brightspeed (weak copper)", ziplyPresent: false, buildCost: 870, rationale: "2nd largest Boise metro city. 35K HH with weak incumbent. Cable One/Sparklight cable but no fiber.", source: "Census ACS 2020", sourceUrl: "https://data.census.gov/" },
+    { town: "Medford", state: "OR", county: "Jackson", estHH: 34500, areaSqMi: 25.3, density: 1363, tier: "Suburban", incumbent: "AT&T/Quantum (limited fiber) + Hunter", ziplyPresent: false, buildCost: 850, rationale: "Largest S OR city. Hunter expanding but small. AT&T legacy. Cluster with Central Point + Ashland.", source: "Census ACS 2020 / FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" },
+    { town: "Bend", state: "OR", county: "Deschutes", estHH: 43000, areaSqMi: 35.6, density: 1208, tier: "Suburban", incumbent: "TDS/BendBroadband + Vero Fiber", ziplyPresent: false, buildCost: 870, rationale: "Fastest-growing OR city. 43K HH. TDS incumbent but Vero entering. Competitive but high-value.", source: "Census ACS 2020", sourceUrl: "https://data.census.gov/" },
+
+    // === TIER 2: MEDIUM-DENSITY, STRATEGIC ADJACENCY ===
+    { town: "Coeur d'Alene", state: "ID", county: "Kootenai", estHH: 22000, areaSqMi: 17.1, density: 1287, tier: "Suburban", incumbent: "TDS (active fiber build)", ziplyPresent: false, buildCost: 860, rationale: "Fastest-growing N Idaho metro. Adjacent to Spokane (Ziply stronghold). TDS building 22K+, but Ziply could leverage Spokane infrastructure.", source: "Census ACS 2020 / TDS", sourceUrl: "https://tdsfiber.com/build/coeur-d-alene-id/" },
+    { town: "Bozeman", state: "MT", county: "Gallatin", estHH: 24000, areaSqMi: 20.6, density: 1165, tier: "Suburban", incumbent: "Montana Opticom (48%) + TDS", ziplyPresent: true, buildCost: 870, rationale: "Fastest-growing MT metro. Montana Opticom (acq target) covers 48%. Ziply already building. Complete the market.", source: "Census ACS 2020 / FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" },
+    { town: "Salem", state: "OR", county: "Marion", estHH: 68000, areaSqMi: 48.5, density: 1402, tier: "Suburban", incumbent: "Comcast + AT&T/Quantum (partial)", ziplyPresent: false, buildCost: 855, rationale: "Oregon state capital. 68K HH — massive greenfield. Combine with Keizer for 83K HH cluster.", source: "Census ACS 2020", sourceUrl: "https://data.census.gov/" },
+    { town: "Missoula", state: "MT", county: "Missoula", estHH: 32000, areaSqMi: 28.3, density: 1131, tier: "Suburban", incumbent: "Lumen/Brightspeed (copper) + TDS (partial)", ziplyPresent: true, buildCost: 870, rationale: "2nd largest MT city. University town = high broadband demand. Ziply already active. Expand footprint.", source: "Census ACS 2020", sourceUrl: "https://data.census.gov/" },
+    { town: "Olympia", state: "WA", county: "Thurston", estHH: 24000, areaSqMi: 19.7, density: 1218, tier: "Suburban", incumbent: "Lightcurve (expanding) + Comcast", ziplyPresent: false, buildCost: 860, rationale: "WA state capital. Only ~2.9% fiber availability. Lightcurve expanding but slow. Massive underserved market.", source: "BroadbandNow", sourceUrl: "https://broadbandnow.com/Washington/Olympia" },
+    { town: "Eugene", state: "OR", county: "Lane", estHH: 72000, areaSqMi: 44.4, density: 1622, tier: "Suburban", incumbent: "Comcast + Emerald (tiny) + AT&T legacy", ziplyPresent: false, buildCost: 850, rationale: "3rd largest OR city. 72K HH. No serious fiber competitor. Combine with Springfield for 96K HH cluster.", source: "Census ACS 2020", sourceUrl: "https://data.census.gov/" },
+
+    // === TIER 3: CLUSTER PLAYS — Adjacent towns that combine into large markets ===
+    { town: "Billings", state: "MT", county: "Yellowstone", estHH: 48000, areaSqMi: 46.3, density: 1037, tier: "Suburban", incumbent: "TDS (50K+ fiber build) + Ziply", ziplyPresent: true, buildCost: 880, rationale: "Largest MT city. TDS and Ziply both building actively. High competition but largest market in MT. Ziply targeting 18-20K addresses.", source: "Yahoo Finance / TDS", sourceUrl: "https://finance.yahoo.com/news/ziply-fiber-aggressively-expanding-montana-183500923.html" },
+    { town: "Idaho Falls", state: "ID", county: "Bonneville", estHH: 26000, areaSqMi: 23.5, density: 1106, tier: "Suburban", incumbent: "Lumen/Brightspeed (weak)", ziplyPresent: false, buildCost: 880, rationale: "Eastern ID's largest city. INL (Idaho National Lab) nearby = high-income HH. Weak copper incumbent.", source: "Census ACS 2020", sourceUrl: "https://data.census.gov/" },
+    { town: "Corvallis", state: "OR", county: "Benton", estHH: 24000, areaSqMi: 14.3, density: 1678, tier: "Suburban", incumbent: "Comcast + AT&T legacy", ziplyPresent: false, buildCost: 850, rationale: "Oregon State University. High-density college town. No fiber competitor. 24K HH.", source: "Census ACS 2020", sourceUrl: "https://data.census.gov/" },
+    { town: "Twin Falls", state: "ID", county: "Twin Falls", estHH: 19000, areaSqMi: 20.1, density: 945, tier: "Suburban", incumbent: "Sparklight (cable) + Lumen (copper)", ziplyPresent: false, buildCost: 890, rationale: "Magic Valley regional center. Sparklight cable only. No fiber incumbent = greenfield.", source: "Census ACS 2020", sourceUrl: "https://data.census.gov/" },
+    { town: "Pocatello", state: "ID", county: "Bannock", estHH: 22000, areaSqMi: 25.6, density: 859, tier: "Suburban", incumbent: "Lumen/Brightspeed (copper)", ziplyPresent: false, buildCost: 885, rationale: "Idaho State University town. Weak copper incumbent. Cluster with Idaho Falls for 48K HH E Idaho market.", source: "Census ACS 2020", sourceUrl: "https://data.census.gov/" },
+    { town: "Great Falls", state: "MT", county: "Cascade", estHH: 28000, areaSqMi: 22.6, density: 1239, tier: "Suburban", incumbent: "Lumen/Brightspeed (copper)", ziplyPresent: true, buildCost: 865, rationale: "3rd largest MT city. Malmstrom AFB = stable population. Ziply targeting ~10K addresses. Fill in remaining.", source: "Yahoo Finance", sourceUrl: "https://finance.yahoo.com/news/ziply-fiber-aggressively-expanding-montana-183500923.html" },
+    { town: "Helena", state: "MT", county: "Lewis and Clark", estHH: 16000, areaSqMi: 15.8, density: 1013, tier: "Suburban", incumbent: "Lumen/Brightspeed (copper)", ziplyPresent: false, buildCost: 880, rationale: "MT state capital. 16K HH. Weak incumbent. Government/institutional anchor.", source: "Census ACS 2020", sourceUrl: "https://data.census.gov/" },
+    { town: "Kalispell", state: "MT", county: "Flathead", estHH: 12000, areaSqMi: 11.5, density: 1043, tier: "Suburban", incumbent: "Vero Fiber (acquired MtnMax)", ziplyPresent: false, buildCost: 890, rationale: "Flathead Valley gateway. Vero Fiber entering via MtnMax acquisition. Growing tourism/retirement market.", source: "Census ACS 2020 / PR Newswire", sourceUrl: "https://www.prnewswire.com/news-releases/vero-fiber-acquires-montana-digital-expanding-fiber-to-the-premise-business-in-montana-302391884.html" }
 ];
