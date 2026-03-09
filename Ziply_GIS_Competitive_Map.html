@@ -218,7 +218,7 @@
                                     Ziply
                                 </button>
                                 <button id="bdcToggle_lumen" onclick="toggleBDCProvider('lumen')" class="px-2.5 py-1 rounded-lg text-[11px] font-semibold transition-all" style="background:#6366F1;color:white;">
-                                    Lumen
+                                    AT&amp;T (Lumen)
                                 </button>
                                 <button id="bdcToggle_hunter" onclick="toggleBDCProvider('hunter')" class="px-2.5 py-1 rounded-lg text-[11px] font-semibold transition-all" style="background:#EF4444;color:white;">
                                     Hunter
@@ -341,11 +341,11 @@
                         </div>
                         <div class="collapsible-content">
                             <div class="space-y-2 text-[11px]">
-                                <div><p class="text-red-700 font-semibold">Seattle Metro (Multi-way)</p><p class="text-red-600 text-[10px]">Ziply + Lumen + Comcast + Astound across King/Snohomish counties</p></div>
+                                <div><p class="text-red-700 font-semibold">Seattle Metro (Multi-way)</p><p class="text-red-600 text-[10px]">Ziply + AT&amp;T (fka Lumen) + Comcast + Astound across King/Snohomish counties</p></div>
                                 <div><p class="text-red-700 font-semibold">Portland Metro (Triple)</p><p class="text-red-600 text-[10px]">Ziply + Hunter + Comcast direct overbuild in Clackamas/Washington Co.</p></div>
-                                <div><p class="text-red-700 font-semibold">Boise, ID (Emerging)</p><p class="text-red-600 text-[10px]">Sparklight + Lumen + TDS fiber expansion corridor</p></div>
-                                <div><p class="text-red-700 font-semibold">Spokane/CDA (Dual)</p><p class="text-red-600 text-[10px]">Ziply + Lumen fiber overlap in urban core + suburbs</p></div>
-                                <div><p class="text-red-700 font-semibold">Tri-Cities, WA</p><p class="text-red-600 text-[10px]">Ziply + Lumen + Astound fiber competition heating up</p></div>
+                                <div><p class="text-red-700 font-semibold">Boise, ID (Emerging)</p><p class="text-red-600 text-[10px]">Sparklight + AT&amp;T (fka Lumen) + TDS fiber expansion corridor</p></div>
+                                <div><p class="text-red-700 font-semibold">Spokane/CDA (Dual)</p><p class="text-red-600 text-[10px]">Ziply + AT&amp;T (fka Lumen) fiber overlap in urban core + suburbs</p></div>
+                                <div><p class="text-red-700 font-semibold">Tri-Cities, WA</p><p class="text-red-600 text-[10px]">Ziply + AT&amp;T (fka Lumen) + Astound fiber competition heating up</p></div>
                             </div>
                         </div>
                     </div>
@@ -359,7 +359,7 @@
                         <div class="collapsible-content" id="sourcesPanel">
                             <div class="space-y-1 text-[10px]">
                                 <a href="https://www.ziplyfiber.com/" target="_blank" class="block underline" style="color:#4ADE80">Ziply Fiber - 1.7M+ passings (WA/OR/ID/MT)</a>
-                                <a href="https://www.lumen.com/" target="_blank" class="block underline" style="color:#818CF8">Lumen/CenturyLink - Legacy + fiber upgrade</a>
+                                <a href="https://about.att.com/story/2026/att-lumen-deal-close.html" target="_blank" class="block underline" style="color:#818CF8">AT&T (formerly Lumen) - Consumer fiber acquired Feb 2026</a>
                                 <a href="https://www.hunterfiber.com/" target="_blank" class="block underline" style="color:#FCA5A5">Hunter Communications - S. Oregon fiber</a>
                                 <a href="https://www.astound.com/" target="_blank" class="block underline" style="color:#FDBA74">Astound (Wave/RCN) - WA/OR cable/fiber</a>
                                 <a href="https://www.tdstelecom.com/" target="_blank" class="block underline" style="color:#67E8F9">TDS Telecom - Fiber builds in OR/ID</a>
@@ -432,7 +432,7 @@
                     <span class="px-2 py-0.5 bg-white/20 rounded text-[10px] font-medium">COMPUTED FROM BDC DATA</span>
                 </div>
                 <div class="flex flex-wrap items-center gap-3 mb-4">
-                    <p class="text-purple-200 text-xs flex-1">Block groups where 2+ fiber providers have filed FTTP coverage in FCC BDC (Jun 2025). Competitive entities: Ziply, Lumen, Hunter, Astound, TDS.</p>
+                    <p class="text-purple-200 text-xs flex-1">Block groups where 2+ fiber providers have filed FTTP coverage in FCC BDC (Jun 2025). Competitive entities: Ziply, AT&amp;T (fka Lumen), Hunter, Astound, TDS.</p>
                     <div class="flex items-center gap-2 bg-white/10 rounded-lg px-3 py-1.5">
                         <label class="text-purple-200 text-[10px] font-medium whitespace-nowrap">Min BSLs per provider:</label>
                         <select id="overlapMinBSLSelect" onchange="recomputeOverlaps(parseInt(this.value))"
@@ -741,7 +741,7 @@
 
     // Provider color map for census tracts
     var providerColorMap = {
-        'Ziply': '#22C55E', 'Lumen': '#6366F1', 'CenturyLink': '#6366F1',
+        'Ziply': '#22C55E', 'AT&T': '#6366F1', 'Lumen': '#6366F1', 'CenturyLink': '#6366F1',
         'Hunter': '#EF4444', 'Astound': '#F97316', 'Wave': '#F97316',
         'TDS': '#06B6D4', 'Sparklight': '#A855F7', 'Comcast': '#3B82F6',
         'Ezee': '#EC4899', 'Lightcurve': '#14B8A6', 'Fat Beam': '#F59E0B',
@@ -1008,7 +1008,7 @@
         legendBar.innerHTML += '<div class="flex items-center gap-1"><div class="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-pink-500 to-red-500 animate-pulse"></div><span>New Build</span></div>';
         legendBar.innerHTML += '<div class="flex items-center gap-1"><div class="w-2.5 h-2.5 rounded-full bg-purple-500" style="border: 2px dashed #7C3AED;"></div><span>Overlap</span></div>';
         legendBar.innerHTML += '<div class="flex items-center gap-1"><div class="w-2.5 h-2.5 rounded" style="background:linear-gradient(135deg,#DCFCE7,#22C55E);"></div><span>Ziply BDC</span></div>';
-        legendBar.innerHTML += '<div class="flex items-center gap-1"><div class="w-2.5 h-2.5 rounded" style="background:linear-gradient(135deg,#E0E7FF,#6366F1);"></div><span>Lumen BDC</span></div>';
+        legendBar.innerHTML += '<div class="flex items-center gap-1"><div class="w-2.5 h-2.5 rounded" style="background:linear-gradient(135deg,#E0E7FF,#6366F1);"></div><span>AT&T (Lumen) BDC</span></div>';
         legendBar.innerHTML += '<div class="flex items-center gap-1"><div class="w-2.5 h-2.5 rounded" style="background:linear-gradient(135deg,#FEE2E2,#EF4444);"></div><span>Hunter BDC</span></div>';
     }
     buildLegend();
@@ -1240,7 +1240,7 @@
     // ================================================================
     var bdcProviderConfig = {
         ziply: { color: '#22C55E', label: 'Ziply Fiber', data: null },
-        lumen: { color: '#6366F1', label: 'Lumen/CenturyLink', data: null },
+        lumen: { color: '#6366F1', label: 'AT&T (formerly Lumen)', data: null },
         hunter: { color: '#EF4444', label: 'Hunter Communications', data: null },
         astound: { color: '#F97316', label: 'Astound (Wave)', data: null },
         tds: { color: '#06B6D4', label: 'TDS Telecom', data: null }
@@ -1491,7 +1491,7 @@
     // ================================================================
     var ENTITY_LABELS = {
         ziply: { name: 'Ziply Fiber', short: 'ZFB', color: '#22C55E', sponsor: 'WaveDivision/Searchlight' },
-        lumen: { name: 'Lumen/CenturyLink', short: 'LMN', color: '#6366F1', sponsor: 'Public' },
+        lumen: { name: 'AT&T (formerly Lumen)', short: 'ATT', color: '#6366F1', sponsor: 'AT&T Inc. (NYSE: T)' },
         hunter: { name: 'Hunter Communications', short: 'HNT', color: '#EF4444', sponsor: 'Private' },
         astound: { name: 'Astound (Wave)', short: 'AST', color: '#F97316', sponsor: 'Stonepeak' },
         tds: { name: 'TDS Telecom', short: 'TDS', color: '#06B6D4', sponsor: 'Public' }
@@ -1821,7 +1821,7 @@
         // Tracked providers get their config colors
         Object.keys(bdcProviderConfig).forEach(function(k) { brandColors[bdcProviderConfig[k].label] = bdcProviderConfig[k].color; });
         // Also map partial names
-        brandColors['Quantum Fiber'] = '#6366F1'; brandColors['CenturyLink'] = '#818CF8';
+        brandColors['Quantum Fiber'] = '#6366F1'; brandColors['CenturyLink'] = '#818CF8'; brandColors['AT&T'] = '#6366F1';
         brandColors['Ziply Fiber'] = '#22C55E'; brandColors['Hunter Communications Inc'] = '#EF4444';
         brandColors['Astound Broadband'] = '#F97316'; brandColors['TDS Telecom'] = '#06B6D4';
 
