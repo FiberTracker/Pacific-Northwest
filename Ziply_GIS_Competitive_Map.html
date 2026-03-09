@@ -135,6 +135,7 @@
     <!-- Data & Logic -->
     <script src="data.js"></script>
     <script src="calculations.js"></script>
+    <script src="or_county_fiber.js"></script>
     <!-- BDC data loaded async -->
     <script>
     function loadBDCScripts() {
@@ -1789,144 +1790,176 @@
     }
 
     function renderORTownsTab() {
-        if (typeof OREGON_TOWNS === 'undefined' || !bdcBlockGroupIndex || Object.keys(bdcBlockGroupIndex).length === 0) {
+        if (typeof OREGON_TOWNS === 'undefined') {
             var t = document.getElementById('orTownsTable');
-            if (t) t.innerHTML = '<tr><td colspan="10" class="py-8 text-center text-slate-400 text-sm">BDC data not loaded yet. Wait for coverage files to load.</td></tr>';
+            if (t) t.innerHTML = '<tr><td colspan="10" class="py-8 text-center text-slate-400 text-sm">Data not loaded.</td></tr>';
             return;
         }
 
-        // Build county-level BDC aggregation for Oregon
-        var countyBGs = {}; // countyFips -> [{ geoid, providers, bsls, hu100, pop100, areaLandSqKm }]
-        Object.keys(bdcBlockGroupIndex).forEach(function(geoid) {
-            var bg = bdcBlockGroupIndex[geoid];
-            if (bg.state !== 'OR') return;
-            var countyFips = '41' + geoid.substring(2, 5); // state(2) + county(3)
-            if (!countyBGs[countyFips]) countyBGs[countyFips] = [];
-            countyBGs[countyFips].push({
-                geoid: geoid,
-                providers: bg.providers,
-                hu100: bg.hu100 || 0,
-                pop100: bg.pop100 || 0,
-                areaLandSqKm: bg.areaLandSqKm || 0
-            });
-        });
+        // Use OR_COUNTY_FIBER (all providers from raw BDC CSVs) if available, else fallback to tracked 5
+        var hasFullData = typeof OR_COUNTY_FIBER !== 'undefined';
 
-        // For each town, aggregate its county's BDC data
+        // Build county-level BG data from bdcBlockGroupIndex (for sub-row expansion)
+        var countyBGs = {};
+        if (bdcBlockGroupIndex && Object.keys(bdcBlockGroupIndex).length > 0) {
+            Object.keys(bdcBlockGroupIndex).forEach(function(geoid) {
+                var bg = bdcBlockGroupIndex[geoid];
+                if (bg.state !== 'OR') return;
+                var countyFips = '41' + geoid.substring(2, 5);
+                if (!countyBGs[countyFips]) countyBGs[countyFips] = [];
+                countyBGs[countyFips].push({
+                    geoid: geoid, providers: bg.providers,
+                    hu100: bg.hu100 || 0, pop100: bg.pop100 || 0, areaLandSqKm: bg.areaLandSqKm || 0
+                });
+            });
+        }
+
+        // Assign color palette for non-tracked providers
+        var brandColors = {};
+        var colorPalette = ['#8B5CF6','#EC4899','#14B8A6','#F59E0B','#6366F1','#10B981','#EF4444','#3B82F6','#D946EF','#84CC16','#F97316','#0EA5E9','#A855F7','#FB7185','#22D3EE'];
+        var colorIdx = 0;
+        // Tracked providers get their config colors
+        Object.keys(bdcProviderConfig).forEach(function(k) { brandColors[bdcProviderConfig[k].label] = bdcProviderConfig[k].color; });
+        // Also map partial names
+        brandColors['Quantum Fiber'] = '#6366F1'; brandColors['CenturyLink'] = '#818CF8';
+        brandColors['Ziply Fiber'] = '#22C55E'; brandColors['Hunter Communications Inc'] = '#EF4444';
+        brandColors['Astound Broadband'] = '#F97316'; brandColors['TDS Telecom'] = '#06B6D4';
+
+        function getBrandColor(brand) {
+            if (brandColors[brand]) return brandColors[brand];
+            brandColors[brand] = colorPalette[colorIdx % colorPalette.length];
+            colorIdx++;
+            return brandColors[brand];
+        }
+
         var towns = OREGON_TOWNS.map(function(town) {
             var bgs = countyBGs[town.countyFips] || [];
-            var totalFiberBSLs = 0;
-            var totalHU = 0;
-            var totalArea = 0;
-            var providerBSLs = {};
-            var overlapBGs = 0;
-
-            // Track busiest block groups for sub-rows
+            var totalHU = 0, totalArea = 0, overlapBGs = 0;
             var bgDetails = [];
 
             bgs.forEach(function(bg) {
                 totalHU += bg.hu100;
                 totalArea += bg.areaLandSqKm;
-                var bgProvCount = Object.keys(bg.providers).length;
-                if (bgProvCount > 1) overlapBGs++;
-
+                if (Object.keys(bg.providers).length > 1) overlapBGs++;
                 var bgTotalBSLs = 0;
-                Object.keys(bg.providers).forEach(function(pk) {
-                    var bsls = bg.providers[pk].bsls || 0;
-                    if (!providerBSLs[pk]) providerBSLs[pk] = 0;
-                    providerBSLs[pk] += bsls;
-                    totalFiberBSLs += bsls;
-                    bgTotalBSLs += bsls;
-                });
-
-                bgDetails.push({
-                    geoid: bg.geoid,
-                    hu100: bg.hu100,
-                    pop100: bg.pop100,
-                    area: bg.areaLandSqKm,
-                    providers: bg.providers,
-                    totalBSLs: bgTotalBSLs,
-                    providerCount: bgProvCount
-                });
+                Object.keys(bg.providers).forEach(function(pk) { bgTotalBSLs += bg.providers[pk].bsls || 0; });
+                bgDetails.push({ geoid: bg.geoid, hu100: bg.hu100, pop100: bg.pop100, area: bg.areaLandSqKm, providers: bg.providers, totalBSLs: bgTotalBSLs, providerCount: Object.keys(bg.providers).length });
             });
-
-            // Sort sub-rows by total BSLs descending
             bgDetails.sort(function(a, b) { return b.totalBSLs - a.totalBSLs; });
 
-            var huPerSqKm = totalArea > 0 ? Math.round(totalHU / totalArea) : 0;
-            var densityClass = huPerSqKm > 400 ? 'Urban' : huPerSqKm > 100 ? 'Suburban' : 'Rural';
+            // Use OR_COUNTY_FIBER for ALL providers (comprehensive)
+            var allProviders = {};
+            var totalFiberBSLs = 0;
+            if (hasFullData && OR_COUNTY_FIBER[town.countyFips]) {
+                allProviders = OR_COUNTY_FIBER[town.countyFips];
+                Object.keys(allProviders).forEach(function(b) { totalFiberBSLs += allProviders[b]; });
+            } else {
+                // Fallback to tracked-only
+                bgs.forEach(function(bg) {
+                    Object.keys(bg.providers).forEach(function(pk) {
+                        var label = (bdcProviderConfig[pk] || {}).label || pk;
+                        if (!allProviders[label]) allProviders[label] = 0;
+                        allProviders[label] += bg.providers[pk].bsls || 0;
+                        totalFiberBSLs += bg.providers[pk].bsls || 0;
+                    });
+                });
+            }
+
+            // City-level density from areaSqMi (Census incorporated place boundaries)
+            var cityAreaSqMi = town.areaSqMi || 0;
+            var huPerSqMi = cityAreaSqMi > 0 ? Math.round(town.estHH / cityAreaSqMi) : 0;
+            var densityClass = huPerSqMi > 1000 ? 'Urban' : huPerSqMi > 400 ? 'Suburban' : 'Rural';
+            // County-level BDC density for reference
+            var countyHuPerSqKm = totalArea > 0 ? Math.round(totalHU / totalArea) : 0;
+
+            // Census source link for this county
+            var censusUrl = 'https://data.census.gov/profile/' + town.county + '_County,_Oregon?g=050XX00US' + town.countyFips;
+            // City QuickFacts link
+            var cityUrl = 'https://www.census.gov/quickfacts/' + town.name.toLowerCase().replace(/[^a-z]/g, '') + 'cityoregon';
 
             return {
-                name: town.name,
-                county: town.county,
-                metro: town.metro,
-                estHH: town.estHH,
-                bgCount: bgs.length,
-                totalFiberBSLs: totalFiberBSLs,
-                totalHU: totalHU,
-                providerBSLs: providerBSLs,
-                providerCount: Object.keys(providerBSLs).length,
-                overlapBGs: overlapBGs,
-                densityClass: densityClass,
-                huPerSqKm: huPerSqKm,
-                bgDetails: bgDetails.slice(0, 15), // Top 15 busiest BGs
-                notes: town.notes
+                name: town.name, county: town.county, countyFips: town.countyFips,
+                metro: town.metro, estHH: town.estHH, pop2020: town.pop2020,
+                areaSqMi: cityAreaSqMi,
+                bgCount: bgs.length, totalFiberBSLs: totalFiberBSLs, totalHU: totalHU,
+                totalArea: totalArea,
+                allProviders: allProviders, providerCount: Object.keys(allProviders).length,
+                overlapBGs: overlapBGs, densityClass: densityClass, huPerSqMi: huPerSqMi,
+                countyHuPerSqKm: countyHuPerSqKm,
+                censusUrl: censusUrl, cityUrl: cityUrl,
+                bgDetails: bgDetails.slice(0, 15), notes: town.notes
             };
         });
 
-        // Apply metro filter
         if (orTownsCurrentFilter !== 'all') {
             towns = towns.filter(function(t) { return t.metro === orTownsCurrentFilter; });
         }
-
-        // Sort by total fiber BSLs descending
         towns.sort(function(a, b) { return b.totalFiberBSLs - a.totalFiberBSLs; });
 
-        // Update summary stats
-        var totalHUAll = 0, totalBGsAll = 0, allProviders = {};
+        // Summary stats
+        var totalHUAll = 0, totalBGsAll = 0, allProvNames = {};
         towns.forEach(function(t) {
             totalHUAll += t.estHH;
             totalBGsAll += t.bgCount;
-            Object.keys(t.providerBSLs).forEach(function(pk) { allProviders[pk] = true; });
+            Object.keys(t.allProviders).forEach(function(b) { allProvNames[b] = true; });
         });
 
         var el;
         el = document.getElementById('orTownCount'); if (el) el.textContent = towns.length;
         el = document.getElementById('orTotalHU'); if (el) el.textContent = totalHUAll.toLocaleString();
-        el = document.getElementById('orProviderCount'); if (el) el.textContent = Object.keys(allProviders).length;
+        el = document.getElementById('orProviderCount'); if (el) el.textContent = Object.keys(allProvNames).length;
         el = document.getElementById('orTotalBGs'); if (el) el.textContent = totalBGsAll.toLocaleString();
 
-        // Render table
         var tbody = document.getElementById('orTownsTable');
         if (!tbody) return;
-
         var densityColors = { Urban: '#059669', Suburban: '#D97706', Rural: '#DC2626' };
         var densityBgs = { Urban: '#ECFDF5', Suburban: '#FFFBEB', Rural: '#FEF2F2' };
 
         tbody.innerHTML = towns.map(function(t, idx) {
-            // Provider pills
-            var provPills = Object.keys(t.providerBSLs).sort(function(a, b) {
-                return t.providerBSLs[b] - t.providerBSLs[a];
-            }).map(function(pk) {
-                var cfg = bdcProviderConfig[pk];
-                var bsls = t.providerBSLs[pk];
-                return '<span style="display:inline-flex;align-items:center;gap:3px;padding:1px 6px;border-radius:10px;font-size:10px;font-weight:500;background:' + (cfg ? cfg.color : '#888') + '20;color:' + (cfg ? cfg.color : '#888') + ';border:1px solid ' + (cfg ? cfg.color : '#888') + '40;">' +
-                    '<span style="width:6px;height:6px;border-radius:50%;background:' + (cfg ? cfg.color : '#888') + ';"></span>' +
-                    (cfg ? cfg.label.split('/')[0].split(' ')[0] : pk) + ' <strong>' + bsls.toLocaleString() + '</strong></span>';
+            // Provider pills — show ALL providers (top 6, then "+N more")
+            var sortedProvs = Object.keys(t.allProviders).sort(function(a, b) { return t.allProviders[b] - t.allProviders[a]; });
+            var shownProvs = sortedProvs.slice(0, 6);
+            var hiddenCount = sortedProvs.length - shownProvs.length;
+            var provPills = shownProvs.map(function(brand) {
+                var c = getBrandColor(brand);
+                var bsls = t.allProviders[brand];
+                var shortName = brand.replace(/ Communications?/i, '').replace(/ Inc\.?/i, '').replace(/ Broadband/i, '').replace(/ Telephone/i, '').replace(/ Cooperative/i, '').replace(/ Fiber$/i, '');
+                if (shortName.length > 14) shortName = shortName.substring(0, 12) + '..';
+                return '<span style="display:inline-flex;align-items:center;gap:3px;padding:1px 6px;border-radius:10px;font-size:10px;font-weight:500;background:' + c + '18;color:' + c + ';border:1px solid ' + c + '30;margin:1px 0;">' +
+                    '<span style="width:6px;height:6px;border-radius:50%;background:' + c + ';flex-shrink:0;"></span>' +
+                    shortName + ' <strong>' + bsls.toLocaleString() + '</strong></span>';
             }).join(' ');
+            if (hiddenCount > 0) provPills += ' <span style="font-size:10px;color:#94A3B8;">+' + hiddenCount + ' more</span>';
 
-            // Overlap indicator
+            // Density with city-level HH/sq mi and census link
+            var densityHTML = '<span style="padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600;background:' + (densityBgs[t.densityClass] || '#F1F5F9') + ';color:' + (densityColors[t.densityClass] || '#64748B') + ';">' + t.densityClass + '</span>';
+            densityHTML += '<br><a href="' + t.cityUrl + '" target="_blank" style="font-size:9px;color:#6366F1;text-decoration:none;" title="Census QuickFacts: ' + t.name + ', OR — ' + t.areaSqMi + ' sq mi city area">' + t.huPerSqMi.toLocaleString() + ' HU/mi²</a>';
+
+            // Overlap
             var overlapBadge = t.overlapBGs > 0
-                ? '<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold ' +
-                  (t.overlapBGs > 20 ? 'bg-red-100 text-red-700' : t.overlapBGs > 5 ? 'bg-amber-100 text-amber-700' : 'bg-slate-100 text-slate-500') + '">' +
-                  t.overlapBGs + ' BGs</span>'
-                : '<span class="text-slate-300 text-[10px]">None</span>';
+                ? '<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold ' + (t.overlapBGs > 20 ? 'bg-red-100 text-red-700' : t.overlapBGs > 5 ? 'bg-amber-100 text-amber-700' : 'bg-slate-100 text-slate-500') + '">' + t.overlapBGs + '</span>'
+                : '<span class="text-slate-300 text-[10px]">—</span>';
 
-            // Sub-rows HTML for expandable section
-            var subRowsHTML = t.bgDetails.map(function(bg) {
+            // Sub-rows: top BGs + note about census source
+            var subRowsHTML = '';
+
+            // Source attribution sub-row
+            subRowsHTML += '<tr class="or-subrow-' + idx + ' hidden border-b border-emerald-100 bg-emerald-50/50 text-[10px]">' +
+                '<td class="py-2 px-3" colspan="10">' +
+                '<strong>Sources:</strong> ' +
+                '<a href="https://broadbandmap.fcc.gov/location-summary/fixed?speed=25_3&location_id=' + t.countyFips + '&addr=' + encodeURIComponent(t.county + ' County, OR') + '&lat=' + '&lng=&zoom=9" target="_blank" style="color:#6366F1;">FCC BDC (Jun 2025)</a> · ' +
+                '<a href="' + t.censusUrl + '" target="_blank" style="color:#6366F1;">Census ACS ' + t.county + ' Co.</a> · ' +
+                '<a href="https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_main.html" target="_blank" style="color:#6366F1;">TIGERweb Boundaries</a> · ' +
+                '<a href="' + t.cityUrl + '" target="_blank" style="color:#6366F1;">Census QuickFacts ' + t.name + '</a> · ' +
+                'City: ' + t.areaSqMi + ' mi² · ' + t.huPerSqMi.toLocaleString() + ' HU/mi² · County BGs: ' + t.bgCount + ' · County area: ' + Math.round(t.totalArea).toLocaleString() + ' km²' +
+                '</td></tr>';
+
+            // BG detail sub-rows
+            subRowsHTML += t.bgDetails.map(function(bg) {
                 var bgProvs = Object.keys(bg.providers).map(function(pk) {
-                    var cfg = bdcProviderConfig[pk];
-                    return '<span style="color:' + (cfg ? cfg.color : '#888') + ';font-weight:600;">' +
-                        (cfg ? cfg.label.split('/')[0].split(' ')[0] : pk) + ': ' + (bg.providers[pk].bsls || 0).toLocaleString() + '</span>';
+                    var label = (bdcProviderConfig[pk] || {}).label || pk;
+                    var c = getBrandColor(label);
+                    return '<span style="color:' + c + ';font-weight:600;">' + label.split('/')[0].split(' ')[0] + ': ' + (bg.providers[pk].bsls || 0).toLocaleString() + '</span>';
                 }).join(', ');
                 var bgDensity = bg.area > 0 ? Math.round(bg.hu100 / bg.area) : 0;
                 var bgDensClass = bgDensity > 400 ? 'Urban' : bgDensity > 100 ? 'Suburban' : 'Rural';
@@ -1938,8 +1971,7 @@
                     '<td class="py-1.5 px-3 text-right"></td>' +
                     '<td class="py-1.5 px-3 text-center"><span style="color:' + (densityColors[bgDensClass] || '#888') + ';font-size:10px;">' + bgDensClass + '</span></td>' +
                     '<td class="py-1.5 px-3" colspan="2">' + bgProvs + '</td>' +
-                    '<td class="py-1.5 px-3 text-center">' + (bg.providerCount > 1 ? '<span class="text-amber-600 font-semibold">' + bg.providerCount + '</span>' : '') + '</td>' +
-                    '</tr>';
+                    '<td class="py-1.5 px-3 text-center">' + (bg.providerCount > 1 ? '<span class="text-amber-600 font-semibold">' + bg.providerCount + '</span>' : '') + '</td></tr>';
             }).join('');
 
             return '<tr class="border-b border-slate-100 hover:bg-slate-50/50 cursor-pointer" onclick="toggleORSubRows(' + idx + ')">' +
@@ -1949,11 +1981,10 @@
                 '<td class="py-2.5 px-3 text-slate-500 text-[11px]">' + t.metro + '</td>' +
                 '<td class="py-2.5 px-3 text-right">' + (t.estHH || 0).toLocaleString() + '</td>' +
                 '<td class="py-2.5 px-3 text-right font-semibold">' + t.bgCount + '</td>' +
-                '<td class="py-2.5 px-3 text-center"><span style="padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600;background:' + (densityBgs[t.densityClass] || '#F1F5F9') + ';color:' + (densityColors[t.densityClass] || '#64748B') + ';">' + t.densityClass + '</span></td>' +
+                '<td class="py-2.5 px-3 text-center">' + densityHTML + '</td>' +
                 '<td class="py-2.5 px-3">' + provPills + '</td>' +
                 '<td class="py-2.5 px-3 text-right font-bold">' + t.totalFiberBSLs.toLocaleString() + '</td>' +
-                '<td class="py-2.5 px-3 text-center">' + overlapBadge + '</td>' +
-                '</tr>' + subRowsHTML;
+                '<td class="py-2.5 px-3 text-center">' + overlapBadge + '</td></tr>' + subRowsHTML;
         }).join('');
     }
 
