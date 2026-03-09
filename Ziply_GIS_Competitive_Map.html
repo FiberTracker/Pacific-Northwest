@@ -333,6 +333,18 @@
                         <p class="text-slate-500 text-xs">Tap a census tract on the map to see build economics</p>
                     </div>
 
+                    <!-- Town Competitive Profiles -->
+                    <div class="bg-white rounded-xl shadow-sm p-3">
+                        <div class="collapsible-header mb-2" onclick="toggleCollapsible(this)">
+                            <h3 class="font-semibold text-slate-800 text-sm">Market Profiles</h3>
+                            <span class="text-xs text-slate-400 lg:hidden">tap</span>
+                        </div>
+                        <div class="collapsible-content">
+                            <p class="text-[10px] text-slate-500 mb-2">Click a town to see all active providers, builds &amp; competition</p>
+                            <div class="grid grid-cols-2 gap-1.5" id="townProfileButtons"></div>
+                        </div>
+                    </div>
+
                     <!-- Overlap Alerts -->
                     <div class="bg-red-50 border-l-4 border-red-500 rounded-r-xl p-3">
                         <div class="collapsible-header mb-2" onclick="toggleCollapsible(this)">
@@ -1034,17 +1046,135 @@
     function mapPopupHTML(m) {
         var prov = (typeof PROVIDERS !== 'undefined') ? PROVIDERS[m.provider.toLowerCase().replace(/\s+/g, '')] : null;
         var color = prov ? prov.color : '#6B7280';
-        return '<div style="font-family:Inter,-apple-system,sans-serif;min-width:250px;">' +
+
+        // Consolidation candidate marker — special styling
+        if (m.isConsolidation) {
+            return '<div style="font-family:Inter,-apple-system,sans-serif;min-width:260px;">' +
+                '<div style="font-size:10px;color:#7C3AED;font-weight:600;margin-bottom:2px;">CONSOLIDATION CANDIDATE</div>' +
+                '<div style="font-size:11px;color:#64748B;margin-bottom:2px;">' + (m.state || '') + '</div>' +
+                '<div style="font-weight:700;font-size:14px;margin-bottom:6px;color:#1E293B;">' + m.name + '</div>' +
+                '<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px;">' +
+                '<div style="background:#F5F3FF;padding:6px 8px;border-radius:6px;border-left:3px solid #7C3AED;">' +
+                '<div style="font-size:9px;color:#6B21A8;">Fiber BSLs</div>' +
+                '<div style="font-weight:700;font-size:14px;color:#7C3AED;">' + (m.fiberBSLs || 0).toLocaleString() + '</div></div>' +
+                '<div style="background:#F1F5F9;padding:6px 8px;border-radius:6px;">' +
+                '<div style="font-size:9px;color:#64748B;">Total BSLs</div>' +
+                '<div style="font-weight:700;font-size:14px;">' + (m.totalBSLs || 0).toLocaleString() + '</div></div></div>' +
+                '<div style="background:#F5F3FF;padding:4px 8px;border-radius:4px;margin-bottom:6px;">' +
+                '<span style="font-size:10px;color:#6B21A8;font-weight:600;">Fiber: ' + (m.fiberPct || 0) + '%</span></div>' +
+                (m.notes ? '<p style="font-size:11px;color:#475569;margin-bottom:4px;">' + m.notes + '</p>' : '') +
+                '<a href="' + (m.sourceUrl || '#') + '" target="_blank" style="font-size:10px;color:#0EA5E9;text-decoration:underline;">' + (m.source || 'Source') + '</a>' +
+                '</div>';
+        }
+
+        var html = '<div style="font-family:Inter,-apple-system,sans-serif;min-width:250px;">' +
             '<div style="font-size:11px;color:#64748B;margin-bottom:2px;">' + (m.state || '') + '</div>' +
             '<div style="font-weight:700;font-size:15px;margin-bottom:6px;color:#1E293B;">' + m.name + '</div>' +
-            '<div style="display:flex;gap:6px;margin-bottom:8px;">' +
+            '<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">' +
             '<span style="padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;background:' + color + '22;color:' + color + ';">' + (prov ? prov.short : m.provider) + '</span>' +
             (m.isNew ? '<span style="padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;background:#FEE2E2;color:#DC2626;">NEW BUILD</span>' : '') +
+            (m.overlap ? '<span style="padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;background:#F3E8FF;color:#7C3AED;">OVERLAP</span>' : '') +
             '</div>' +
             (m.passings ? '<div style="background:#F1F5F9;padding:6px 8px;border-radius:6px;margin-bottom:6px;"><span style="font-size:10px;color:#64748B;">Passings: </span><span style="font-weight:700;font-size:14px;">' + m.passings + '</span></div>' : '') +
             (m.notes ? '<p style="font-size:11px;color:#475569;margin-bottom:4px;">' + m.notes + '</p>' : '') +
-            (m.sourceUrl ? '<a href="' + m.sourceUrl + '" target="_blank" style="font-size:10px;color:#0EA5E9;text-decoration:underline;">' + (m.source || 'Source') + '</a>' : '') +
-            '</div>';
+            (m.sourceUrl ? '<a href="' + m.sourceUrl + '" target="_blank" style="font-size:10px;color:#0EA5E9;text-decoration:underline;">' + (m.source || 'Source') + '</a>' : '');
+
+        // Check for town profile link
+        if (typeof TOWN_PROFILES !== 'undefined') {
+            var townKey = findTownProfile(m);
+            if (townKey) {
+                html += '<div style="margin-top:8px;padding-top:6px;border-top:1px solid #E2E8F0;">' +
+                    '<button onclick="showTownProfile(\'' + townKey + '\')" style="background:#0F172A;color:white;border:none;border-radius:6px;padding:6px 12px;font-size:11px;font-weight:600;cursor:pointer;width:100%;">View Full Market Profile →</button></div>';
+            }
+        }
+
+        html += '</div>';
+        return html;
+    }
+
+    // Match a market marker to a town profile
+    function findTownProfile(m) {
+        if (typeof TOWN_PROFILES === 'undefined') return null;
+        var nameL = (m.name || '').toLowerCase();
+        var profiles = {
+            'eugene': 'eugene_or', 'springfield': 'eugene_or',
+            'kent': 'kent_wa', 'auburn': 'kent_wa', 'des moines': 'kent_wa',
+            'spokane': 'spokane_wa',
+            'tacoma': 'tacoma_wa', 'puyallup': 'tacoma_wa', 'lightcurve': 'tacoma_wa', 'lakewood': 'tacoma_wa',
+            'bend': 'bend_or', 'sunriver': 'bend_or', 'vero': 'bend_or',
+            'medford': 'medford_or', 'ashland': 'medford_or', 'grants pass': 'medford_or',
+            'boise': 'boise_id', 'meridian': 'boise_id', 'nampa': 'boise_id',
+            'billings': 'billings_mt',
+            'great falls': 'great_falls_mt'
+        };
+        for (var key in profiles) {
+            if (nameL.indexOf(key) !== -1) return profiles[key];
+        }
+        return null;
+    }
+
+    // Show town competitive profile in a modal
+    function showTownProfile(townKey) {
+        if (typeof TOWN_PROFILES === 'undefined' || !TOWN_PROFILES[townKey]) return;
+        var tp = TOWN_PROFILES[townKey];
+        var html = '<div class="modal-overlay" id="townProfileModal" onclick="if(event.target===this)this.remove();">' +
+            '<div class="modal-content" style="max-width:600px;max-height:85vh;overflow-y:auto;">' +
+            '<div style="background:linear-gradient(135deg,#0F172A,#1E293B);color:white;padding:16px 20px;border-radius:12px 12px 0 0;">' +
+            '<div style="display:flex;justify-content:space-between;align-items:center;">' +
+            '<div><div style="font-size:11px;color:#94A3B8;">Market Competitive Profile</div>' +
+            '<div style="font-size:18px;font-weight:700;">' + tp.name + '</div></div>' +
+            '<button onclick="document.getElementById(\'townProfileModal\').remove();" style="background:none;border:none;color:#94A3B8;font-size:20px;cursor:pointer;">×</button></div>' +
+            '<div style="display:flex;gap:12px;margin-top:8px;">' +
+            '<span style="font-size:11px;color:#94A3B8;">Pop: ' + (tp.pop ? tp.pop.toLocaleString() : 'N/A') + '</span>' +
+            '<span style="font-size:11px;color:#94A3B8;">Est. HH: ' + (tp.estHH ? tp.estHH.toLocaleString() : 'N/A') + '</span>' +
+            '<span style="font-size:11px;color:#94A3B8;">' + tp.county + ' Co, ' + tp.state + '</span></div></div>' +
+            '<div style="padding:16px 20px;">';
+
+        // Active Providers table
+        html += '<div style="font-weight:700;font-size:13px;color:#1E293B;margin-bottom:8px;">Active Providers (' + tp.providers.length + ')</div>' +
+            '<table style="width:100%;border-collapse:collapse;margin-bottom:16px;font-size:11px;">' +
+            '<tr style="background:#F8FAFC;"><th style="text-align:left;padding:6px;color:#64748B;font-weight:600;">Provider</th>' +
+            '<th style="text-align:left;padding:6px;color:#64748B;font-weight:600;">Role</th>' +
+            '<th style="text-align:left;padding:6px;color:#64748B;font-weight:600;">Tech</th>' +
+            '<th style="text-align:right;padding:6px;color:#64748B;font-weight:600;">BSLs</th></tr>';
+        tp.providers.forEach(function(p, i) {
+            html += '<tr style="background:' + (i%2===0?'#FFFFFF':'#F8FAFC') + ';border-bottom:1px solid #E2E8F0;">' +
+                '<td style="padding:5px 6px;font-weight:600;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:' + p.color + ';margin-right:4px;"></span>' + p.name + '</td>' +
+                '<td style="padding:5px 6px;color:#64748B;">' + p.role + '</td>' +
+                '<td style="padding:5px 6px;color:' + (p.tech.indexOf('FTTP')!==-1?'#059669':'#D97706') + ';">' + p.tech + '</td>' +
+                '<td style="padding:5px 6px;text-align:right;font-weight:600;">' + (p.bsls ? p.bsls.toLocaleString() : '—') + '</td></tr>';
+        });
+        html += '</table>';
+
+        // Provider detail cards
+        tp.providers.forEach(function(p) {
+            html += '<div style="border-left:3px solid ' + p.color + ';padding:8px 10px;margin-bottom:8px;background:' + p.color + '08;border-radius:0 6px 6px 0;">' +
+                '<div style="font-weight:700;font-size:12px;color:' + p.color + ';">' + p.name + '</div>' +
+                '<div style="font-size:11px;color:#475569;margin-top:2px;">Speeds: ' + p.speeds + '</div>' +
+                '<div style="font-size:11px;color:#334155;margin-top:2px;">' + p.status + '</div>' +
+                '<a href="' + p.sourceUrl + '" target="_blank" style="font-size:10px;color:#0EA5E9;text-decoration:underline;">' + p.source + '</a></div>';
+        });
+
+        // Competitive Notes
+        if (tp.competitiveNotes) {
+            html += '<div style="background:#FEF2F2;border-left:3px solid #DC2626;padding:10px;border-radius:0 6px 6px 0;margin:12px 0;">' +
+                '<div style="font-weight:700;font-size:11px;color:#991B1B;margin-bottom:4px;">Competitive Assessment</div>' +
+                '<div style="font-size:11px;color:#475569;">' + tp.competitiveNotes + '</div></div>';
+        }
+
+        // Build Announcements
+        if (tp.buildAnnouncements && tp.buildAnnouncements.length) {
+            html += '<div style="font-weight:700;font-size:13px;color:#1E293B;margin:12px 0 8px;">Build Announcements</div>';
+            tp.buildAnnouncements.forEach(function(b) {
+                html += '<div style="background:#F0FDF4;border-left:3px solid #16A34A;padding:8px 10px;margin-bottom:6px;border-radius:0 6px 6px 0;">' +
+                    '<div style="font-weight:600;font-size:11px;color:#166534;">' + b.provider + ' <span style="color:#64748B;font-weight:400;">(' + b.date + ')</span></div>' +
+                    '<div style="font-size:11px;color:#334155;margin-top:2px;">' + b.announcement + '</div>' +
+                    '<a href="' + b.sourceUrl + '" target="_blank" style="font-size:10px;color:#0EA5E9;text-decoration:underline;">' + b.source + '</a></div>';
+            });
+        }
+
+        html += '</div></div></div>';
+        document.body.insertAdjacentHTML('beforeend', html);
     }
 
     // ================================================================
@@ -1146,6 +1276,25 @@
     }
     buildNavButtons();
 
+    // Build town profile buttons
+    function buildTownProfileButtons() {
+        var container = document.getElementById('townProfileButtons');
+        if (!container || typeof TOWN_PROFILES === 'undefined') return;
+        var stateColors = { 'WA': { bg: '#DCFCE7', text: '#166534' }, 'OR': { bg: '#FEE2E2', text: '#991B1B' }, 'ID': { bg: '#EDE9FE', text: '#6D28D9' }, 'MT': { bg: '#CCFBF1', text: '#0F766E' } };
+        Object.keys(TOWN_PROFILES).forEach(function(key) {
+            var tp = TOWN_PROFILES[key];
+            var sc = stateColors[tp.state] || { bg: '#F1F5F9', text: '#475569' };
+            var btn = document.createElement('button');
+            btn.className = 'text-left px-2 py-1.5 rounded-lg text-[11px] font-medium transition-transform active:scale-95';
+            btn.style.background = sc.bg;
+            btn.style.color = sc.text;
+            btn.innerHTML = '<div>' + tp.name.split(',')[0].split('/')[0] + '</div><div style="font-size:9px;opacity:0.7;">' + tp.providers.length + ' providers</div>';
+            btn.onclick = function() { showTownProfile(key); };
+            container.appendChild(btn);
+        });
+    }
+    buildTownProfileButtons();
+
     // ================================================================
     // LEGEND
     // ================================================================
@@ -1158,6 +1307,7 @@
         });
         legendBar.innerHTML += '<div class="flex items-center gap-1"><div class="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-pink-500 to-red-500 animate-pulse"></div><span>New Build</span></div>';
         legendBar.innerHTML += '<div class="flex items-center gap-1"><div class="w-2.5 h-2.5 rounded-full bg-purple-500" style="border: 2px dashed #7C3AED;"></div><span>Overlap</span></div>';
+        legendBar.innerHTML += '<div class="flex items-center gap-1"><div class="w-2.5 h-2.5 bg-purple-400" style="transform:rotate(45deg);border-radius:1px;"></div><span>Consol. Target</span></div>';
         legendBar.innerHTML += '<div class="flex items-center gap-1"><div class="w-2.5 h-2.5 rounded" style="background:linear-gradient(135deg,#DCFCE7,#22C55E);"></div><span>Ziply BDC</span></div>';
         legendBar.innerHTML += '<div class="flex items-center gap-1"><div class="w-2.5 h-2.5 rounded" style="background:linear-gradient(135deg,#E0E7FF,#6366F1);"></div><span>AT&T (Lumen) BDC</span></div>';
         legendBar.innerHTML += '<div class="flex items-center gap-1"><div class="w-2.5 h-2.5 rounded" style="background:linear-gradient(135deg,#FEE2E2,#EF4444);"></div><span>Hunter BDC</span></div>';
@@ -1176,14 +1326,34 @@
         });
     }
 
+    function createConsolidationIcon(fiberPct) {
+        var c = fiberPct > 60 ? '#7C3AED' : fiberPct > 20 ? '#A78BFA' : '#C4B5FD';
+        return L.divIcon({
+            className: 'custom-marker',
+            html: '<div style="width:10px;height:10px;background:' + c + ';border-radius:2px;border:2px solid #7C3AED88;box-shadow:0 1px 4px rgba(124,58,237,0.3);transform:rotate(45deg);"></div>',
+            iconSize: [10, 10], iconAnchor: [5, 5]
+        });
+    }
+
     function renderMarkers() {
         if (typeof MARKET_MARKERS === 'undefined' || typeof PROVIDERS === 'undefined') return;
         MARKET_MARKERS.forEach(function(m) {
+            if (m.isConsolidation) {
+                // Consolidation candidate — diamond marker, add to a special layer
+                var marker = L.marker([m.lat, m.lng], { icon: createConsolidationIcon(m.fiberPct || 0) });
+                marker.bindPopup(mapPopupHTML(m), { maxWidth: 340 });
+                if (!layers.consolidation) {
+                    layers.consolidation = L.layerGroup().addTo(map);
+                }
+                layers.consolidation.addLayer(marker);
+                return;
+            }
             var key = m.provider.toLowerCase().replace(/\s+/g, '');
             var prov = PROVIDERS[key];
             if (!prov) return;
-            var marker = L.marker([m.lat, m.lng], { icon: createMarkerIcon(prov.color, m.isNew, m.size) });
-            marker.bindPopup(mapPopupHTML(m));
+            var sz = m.size === 'large' ? 14 : 10;
+            var marker = L.marker([m.lat, m.lng], { icon: createMarkerIcon(prov.color, m.isNew, sz) });
+            marker.bindPopup(mapPopupHTML(m), { maxWidth: 380 });
             if (layers[key]) layers[key].addLayer(marker);
         });
     }

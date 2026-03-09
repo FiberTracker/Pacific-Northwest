@@ -975,6 +975,170 @@ MARKET_MARKERS.push(
     { lat: 45.6800, lng: -111.0350, name: 'Bozeman (SkyNet — 77% coverage)', state: 'MT', provider: 'SkyNet', status: 'ACTIVE', passings: '~77% of Bozeman homes', notes: 'SkyNet Communications. 30+ years. Multi-100Gb backbone. Local fiber/wireless ISP.', source: 'SkyNet Communications', sourceUrl: 'http://getskynet.com/', isNew: false, overlap: true, size: 'normal' },
     { lat: 48.1920, lng: -114.3168, name: 'Kalispell (Vero Fiber — acq. MtnMax)', state: 'MT', provider: 'Vero', status: 'EXPANDING', passings: '1,500+ customers acquired', notes: 'Vero Fiber acquired Montana Digital (MtnMax) Mar 2025. 261 route mi. PE-backed consolidator.', source: 'PR Newswire', sourceUrl: 'https://www.prnewswire.com/news-releases/vero-fiber-acquires-montana-digital-expanding-fiber-to-the-premise-business-in-montana-302391884.html', isNew: true, overlap: true, size: 'normal' });
 
+// ---- CONSOLIDATION CANDIDATE MARKERS on Map (WA + OR with fiber presence) ----
+MARKET_MARKERS.push(
+    // --- WA Consolidation Candidates ---
+    { lat: 46.3300, lng: -120.4300, name: 'Rally Networks (WA/OR/ID)', state: 'WA', provider: 'Rally', status: 'ACTIVE', passings: '13,201 fiber BSLs (88.4%)', notes: 'Multi-brand family: NorthState, Home Telephone, Pine Telephone, Skyline Telecom. 14,936 total BSLs across 3 states.', source: 'FCC BDC J25', sourceUrl: 'https://broadbandmap.fcc.gov/', isNew: false, overlap: false, size: 'normal', isConsolidation: true, fiberPct: 88.4, totalBSLs: 14936, fiberBSLs: 13201 },
+    { lat: 47.4300, lng: -120.3300, name: 'Grant County PUD (wholesale)', state: 'WA', provider: 'Grant PUD', status: 'ACTIVE', passings: '38,626 fiber BSLs (100%)', notes: 'WA PUD — wholesale only by state law. 100% fiber. Infrastructure for retail ISPs.', source: 'FCC BDC J25', sourceUrl: 'https://broadbandmap.fcc.gov/', isNew: false, overlap: false, size: 'normal', isConsolidation: true, fiberPct: 100, totalBSLs: 38626, fiberBSLs: 38626 },
+    { lat: 47.4250, lng: -120.3500, name: 'Chelan County PUD (wholesale)', state: 'WA', provider: 'Chelan PUD', status: 'ACTIVE', passings: '29,944 fiber BSLs (100%)', notes: 'WA PUD — wholesale only by state law. Wenatchee area. 100% fiber.', source: 'FCC BDC J25', sourceUrl: 'https://broadbandmap.fcc.gov/', isNew: false, overlap: false, size: 'normal', isConsolidation: true, fiberPct: 100, totalBSLs: 29944, fiberBSLs: 29944 },
+    { lat: 46.8000, lng: -117.4500, name: 'Inland Cellular (E WA / N ID)', state: 'WA', provider: 'Inland', status: 'ACTIVE', passings: '6,171 fiber BSLs (21.9%)', notes: 'Eastern WA / N Idaho. 28,183 total BSLs. Growing fiber from wireless base.', source: 'FCC BDC J25', sourceUrl: 'https://broadbandmap.fcc.gov/', isNew: false, overlap: false, size: 'normal', isConsolidation: true, fiberPct: 21.9, totalBSLs: 28183, fiberBSLs: 6171 },
+    { lat: 46.1500, lng: -119.9000, name: 'Native Network (WA/OR tribal)', state: 'WA', provider: 'Native', status: 'ACTIVE', passings: '29,942 fiber BSLs (65.5%)', notes: 'Tribal broadband focus. 45,680 total BSLs. Founders previously sold NWT to Zayo (2008).', source: 'FCC BDC J25', sourceUrl: 'https://broadbandmap.fcc.gov/', isNew: false, overlap: false, size: 'normal', isConsolidation: true, fiberPct: 65.5, totalBSLs: 45680, fiberBSLs: 29942 },
+    // --- OR Consolidation Candidates ---
+    { lat: 44.2500, lng: -121.2000, name: 'Wtechlink (OR fiber)', state: 'OR', provider: 'Wtechlink', status: 'ACTIVE', passings: '10,524 fiber BSLs (89.2%)', notes: 'Small but high-quality fiber network in OR. 11,802 total BSLs.', source: 'FCC BDC J25', sourceUrl: 'https://broadbandmap.fcc.gov/', isNew: false, overlap: false, size: 'normal', isConsolidation: true, fiberPct: 89.2, totalBSLs: 11802, fiberBSLs: 10524 },
+    { lat: 42.3400, lng: -122.9500, name: 'Cal-Ore Communications (S OR)', state: 'OR', provider: 'Cal-Ore', status: 'ACTIVE', passings: '2,760 fiber BSLs (15.2%)', notes: 'Publicly traded (OTC Pink: LICT). 18,160 total BSLs. 65+ year legacy telco. Mario Gabelli 24% owner.', source: 'FCC BDC J25', sourceUrl: 'https://broadbandmap.fcc.gov/', isNew: false, overlap: false, size: 'normal', isConsolidation: true, fiberPct: 15.2, totalBSLs: 18160, fiberBSLs: 2760 },
+    { lat: 44.7700, lng: -121.1800, name: 'PrineTIME Internet (OR)', state: 'OR', provider: 'PrineTIME', status: 'ACTIVE', passings: '2,957 fiber BSLs (7.5%)', notes: 'Private OR ISP. 39,401 total BSLs. Predominantly fixed wireless despite large footprint.', source: 'FCC BDC J25', sourceUrl: 'https://broadbandmap.fcc.gov/', isNew: false, overlap: false, size: 'normal', isConsolidation: true, fiberPct: 7.5, totalBSLs: 39401, fiberBSLs: 2957 }
+);
+
+// ---- TOWN COMPETITIVE PROFILES — Multi-provider view per metro area ----
+// When user clicks a town area, shows all active providers + builds + competition
+const TOWN_PROFILES = {
+    eugene_or: {
+        name: "Eugene / Springfield, OR",
+        county: "Lane", state: "OR", pop: 238910, estHH: 100000,
+        coords: [44.0521, -123.0868],
+        providers: [
+            { name: "Hunter Communications", role: "Dominant Fiber", bsls: 27523, tech: "FTTP", speeds: "Up to 2.5 Gbps", status: "Active Build — Salem expansion Phase 1", color: "#DC2626", source: "FCC BDC J25", sourceUrl: "https://broadbandmap.fcc.gov/" },
+            { name: "DFN (Douglas Fast Net)", role: "Local Fiber ISP", bsls: 9596, tech: "FTTP", speeds: "Up to 10 Gbps", status: "Active — 2,500+ mi fiber network", color: "#2563EB", source: "DFN About", sourceUrl: "https://dfn.net/about-us/" },
+            { name: "Ziply Fiber", role: "ILEC Fiber", bsls: null, tech: "FTTP", speeds: "Up to 50 Gbps (biz)", status: "Active — Cottage Grove Jan 2026", color: "#16A34A", source: "Ziply Fiber", sourceUrl: "https://ziplyfiber.com/" },
+            { name: "AT&T (fka Quantum/Lumen)", role: "Legacy ILEC", bsls: null, tech: "FTTP + DSL", speeds: "Up to 8 Gbps", status: "AT&T acquired Lumen consumer Feb 2026", color: "#0EA5E9", source: "AT&T Newsroom", sourceUrl: "https://about.att.com/story/2026/att-lumen-deal-close.html" },
+            { name: "Hyak Networks", role: "Local Fiber", bsls: 3865, tech: "FTTP", speeds: "Up to 1 Gbps", status: "Active in Lane County", color: "#F59E0B", source: "FCC BDC J25", sourceUrl: "https://broadbandmap.fcc.gov/" },
+            { name: "Emerald Broadband", role: "Community PBC", bsls: 2500, tech: "FTTP", speeds: "Residential", status: "Growing — River Road, Whiteaker, S Eugene", color: "#8B5CF6", source: "Emerald Broadband", sourceUrl: "https://www.emeraldbroadband.com/" }
+        ],
+        competitiveNotes: "6-provider fiber battleground. Hunter dominant with 27K+ BSLs. DFN (Douglas Electric Coop subsidiary) second at 9.6K. Emerald Broadband emerging as PBC competitor. Ziply launched Cottage Grove fiber Jan 2026.",
+        buildAnnouncements: [
+            { provider: "Hunter", announcement: "Salem expansion Phase 1 active (2,500 by EOY 2025, 7K by 2026)", date: "May 2025", source: "PRNewswire", sourceUrl: "https://www.prnewswire.com/news-releases/oregon-based-internet-provider-announces-expansion-into-salem-metro-region-302460727.html" },
+            { provider: "Ziply", announcement: "Cottage Grove fiber launched Jan 2026 (2,100+ addresses)", date: "Jan 2026", source: "Ziply Fiber", sourceUrl: "https://ziplyfiber.com/new-fiber-locations/oregon" },
+            { provider: "DFN", announcement: "Continuing fiber expansion in Lane/Douglas counties, $25M invested", date: "Ongoing", source: "DFN Networks", sourceUrl: "https://dfn.net/about-us/" }
+        ]
+    },
+    kent_wa: {
+        name: "Kent / Auburn / South King County, WA",
+        county: "King", state: "WA", pop: 136000, estHH: 52000,
+        coords: [47.3809, -122.2348],
+        providers: [
+            { name: "Ezee Fiber", role: "New Overbuilder", bsls: null, tech: "FTTP", speeds: "Up to 8 Gbps", status: "NEW BUILD — first customer Oct 2025, $400M WA investment", color: "#EC4899", source: "PRNewswire", sourceUrl: "https://www.prnewswire.com/news-releases/ezee-fiber-connects-first-customer-in-kent-wa-marking-launch-in-washington-state-302591803.html" },
+            { name: "Ziply Fiber", role: "ILEC Fiber", bsls: null, tech: "FTTP", speeds: "Up to 50 Gbps (biz)", status: "Active — incumbent fiber", color: "#16A34A", source: "FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" },
+            { name: "AT&T (fka Quantum/Lumen)", role: "Legacy Fiber", bsls: null, tech: "FTTP", speeds: "Up to 8 Gbps", status: "~9.5% Kent coverage. AT&T acquired Feb 2026", color: "#0EA5E9", source: "FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" },
+            { name: "Comcast Xfinity", role: "Cable Incumbent", bsls: null, tech: "HFC (DOCSIS 4.0)", speeds: "Up to 2 Gbps", status: "Active cable. DOCSIS 4.0 upgrade path", color: "#E11D48", source: "FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" },
+            { name: "Google Fiber", role: "Exploring Entry", bsls: null, tech: "FTTP", speeds: "TBD", status: "Advanced conversations with Kent (May 2024). Not committed.", color: "#4285F4", source: "GeekWire", sourceUrl: "https://www.geekwire.com/" }
+        ],
+        competitiveNotes: "Ezee Fiber's WA beachhead ($400M investment). Underground HDD construction → 1.35× cost premium. Ziply incumbent. Google Fiber exploring entry. Could become 4-provider fiber market.",
+        buildAnnouncements: [
+            { provider: "Ezee Fiber", announcement: "First customer connected Oct 22, 2025. $400M WA investment. Expanding to Des Moines, Puyallup, Vancouver WA.", date: "Oct 2025", source: "PRNewswire", sourceUrl: "https://www.prnewswire.com/news-releases/ezee-fiber-connects-first-customer-in-kent-wa-marking-launch-in-washington-state-302591803.html" },
+            { provider: "Google Fiber", announcement: "Advanced conversations with City of Kent for single-family FTTH deployment", date: "May 2024", source: "GeekWire", sourceUrl: "https://www.geekwire.com/" }
+        ]
+    },
+    spokane_wa: {
+        name: "Spokane Metro, WA",
+        county: "Spokane", state: "WA", pop: 230000, estHH: 95000,
+        coords: [47.6588, -117.4260],
+        providers: [
+            { name: "Ziply Fiber", role: "ILEC Fiber", bsls: null, tech: "FTTP", speeds: "Up to 50 Gbps (biz)", status: "Active incumbent fiber", color: "#16A34A", source: "FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" },
+            { name: "TDS Telecom", role: "Major Overbuilder", bsls: null, tech: "FTTP", speeds: "Up to 8 Gbps", status: "88K premises target / 1,100 mi fiber build", color: "#1D4ED8", source: "Fierce Network", sourceUrl: "https://www.fierce-network.com/broadband/tds-telecom-targets-fiber-110k-big-sky-country-and-beyond" },
+            { name: "Fat Beam", role: "Enterprise→Residential", bsls: null, tech: "FTTP", speeds: "250M–2 Gbps", status: "Now residential FTTH. EMAN acquisition (24.5 mi)", color: "#F59E0B", source: "Fierce Network", sourceUrl: "https://www.fierce-network.com/telecom/fatbeam-acquires-eman-networks-spokane-valley-network-gains-24-5-miles-fiber" },
+            { name: "Comcast Xfinity", role: "Cable Incumbent", bsls: null, tech: "HFC", speeds: "Up to 2 Gbps", status: "Active cable", color: "#E11D48", source: "FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" }
+        ],
+        competitiveNotes: "4-way competition. TDS's 88K-premise overbuild is the biggest competitive threat to Ziply. Fat Beam entering residential from enterprise base. Spokane Valley corridor especially contested.",
+        buildAnnouncements: [
+            { provider: "TDS Telecom", announcement: "88,000 premises / 1,100 mile fiber build in Spokane metro", date: "2023+", source: "Fierce Network", sourceUrl: "https://www.fierce-network.com/broadband/tds-telecom-targets-fiber-110k-big-sky-country-and-beyond" },
+            { provider: "Fat Beam", announcement: "EMAN Networks acquisition — 24.5 miles fiber in Spokane Valley + Liberty Lake residential", date: "2025", source: "Fierce Network", sourceUrl: "https://www.fierce-network.com/telecom/fatbeam-acquires-eman-networks-spokane-valley-network-gains-24-5-miles-fiber" }
+        ]
+    },
+    tacoma_wa: {
+        name: "Tacoma / Pierce County, WA",
+        county: "Pierce", state: "WA", pop: 220000, estHH: 85000,
+        coords: [47.2529, -122.4443],
+        providers: [
+            { name: "Lightcurve", role: "HQ Market (fmr Rainier Connect)", bsls: 123170, tech: "HFC + FTTP + DSL", speeds: "Up to 1 Gbps fiber", status: "HQ in Eatonville. 160K total passings. 94.6% cable, 4.9% fiber.", color: "#14B8A6", source: "FCC BDC J25", sourceUrl: "https://broadbandmap.fcc.gov/" },
+            { name: "Ziply Fiber", role: "ILEC Fiber", bsls: null, tech: "FTTP", speeds: "Up to 50 Gbps (biz)", status: "Active — Bonney Lake, Sumner areas", color: "#16A34A", source: "FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" },
+            { name: "Ezee Fiber", role: "New Overbuilder", bsls: null, tech: "FTTP", speeds: "Up to 8 Gbps", status: "Expanding from Kent into Puyallup, Milton, Lakewood", color: "#EC4899", source: "Ezee Fiber", sourceUrl: "https://ezeefiber.com/" },
+            { name: "AT&T (fka Quantum/Lumen)", role: "Legacy ILEC", bsls: null, tech: "FTTP + DSL", speeds: "Up to 8 Gbps", status: "Lakewood, UP. AT&T acquired Feb 2026", color: "#0EA5E9", source: "FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" },
+            { name: "Astound Broadband", role: "Rural FTTH Build", bsls: null, tech: "FTTP", speeds: "TBD", status: "$12.1M Pierce Co rural FTTH — 3,200 premises by EOY 2026", color: "#F97316", source: "Astound Broadband", sourceUrl: "https://www.astound.com/" }
+        ],
+        competitiveNotes: "Lightcurve HQ market (160K passings). Massive cable plant (94.6%) with fiber upgrade opportunity. Ezee entering from south. Astound building rural FTTH with county funds.",
+        buildAnnouncements: [
+            { provider: "Ezee Fiber", announcement: "Expanding from Kent into Puyallup, Milton, Lakewood ($400M WA investment)", date: "2025-26", source: "Ezee Fiber", sourceUrl: "https://ezeefiber.com/" },
+            { provider: "Astound", announcement: "$12.1M Pierce County rural FTTH build — 3,200 premises target", date: "2026", source: "Astound Broadband", sourceUrl: "https://www.astound.com/" },
+            { provider: "Lightcurve", announcement: "Fiber upgrades: Ellensburg & Selah completed 2025; Yelm fiber 2026; Lewis Co +1,000 locs", date: "2025-26", source: "Lightcurve", sourceUrl: "https://getlightcurve.com/" }
+        ]
+    },
+    bend_or: {
+        name: "Bend / Central Oregon",
+        county: "Deschutes", state: "OR", pop: 132000, estHH: 55000,
+        coords: [44.0582, -121.3153],
+        providers: [
+            { name: "TDS/BendBroadband", role: "Incumbent ILEC", bsls: 14675, tech: "FTTP + HFC", speeds: "Up to 1 Gbps", status: "Active — Sunriver FTTH all homes by EOY 2026", color: "#1D4ED8", source: "FCC BDC J25", sourceUrl: "https://broadbandmap.fcc.gov/" },
+            { name: "Vero Fiber", role: "PE-backed Overbuilder", bsls: null, tech: "FTTP", speeds: "TBD", status: "Acquired BendTel Dec 2025. Active FTTH: Portland Ave, River West", color: "#059669", source: "PR Newswire", sourceUrl: "https://www.prnewswire.com/news-releases/vero-fiber-completes-acquisition-of-bendtel-inc-302630739.html" },
+            { name: "AT&T (fka Quantum/Lumen)", role: "Legacy Fiber", bsls: null, tech: "FTTP", speeds: "Up to 8 Gbps", status: "CenturyLink legacy → AT&T Feb 2026", color: "#0EA5E9", source: "FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" },
+            { name: "Webformix", role: "Local WISP", bsls: 36947, tech: "Fixed Wireless", speeds: "~200 Mbps", status: "Active — Awbrey Butte transmitter. 100% wireless", color: "#78716C", source: "FCC BDC J25", sourceUrl: "https://broadbandmap.fcc.gov/" }
+        ],
+        competitiveNotes: "TDS incumbent with 14.7K BSLs. Vero Fiber (PE-backed: Delta-v Capital, Hamilton Lane $80M) entering aggressively post-BendTel acquisition. Bend is fastest-growing OR city.",
+        buildAnnouncements: [
+            { provider: "Vero Fiber", announcement: "Acquired BendTel Dec 1, 2025. FTTH: Portland Ave, River West complete. Next: Old Bend, Orchard District", date: "Dec 2025", source: "PR Newswire", sourceUrl: "https://www.prnewswire.com/news-releases/vero-fiber-completes-acquisition-of-bendtel-inc-302630739.html" },
+            { provider: "TDS", announcement: "Sunriver FTTH build — all homes connected by Dec 31, 2026", date: "2026", source: "Sunriver Owners", sourceUrl: "https://www.sunriverowners.org/community/sunriver-fiber" }
+        ]
+    },
+    medford_or: {
+        name: "Medford / Rogue Valley, OR",
+        county: "Jackson", state: "OR", pop: 130000, estHH: 53000,
+        coords: [42.3265, -122.8756],
+        providers: [
+            { name: "Hunter Communications", role: "Dominant Fiber (HQ)", bsls: 30000, tech: "FTTP", speeds: "Up to 2.5 Gbps", status: "HQ market — 100K passings, 25K+ customers. Oak Hill Capital acquired Dec 2025", color: "#DC2626", source: "Oak Hill Capital", sourceUrl: "https://oakhill.com/2025/12/10/oak-hill-capital-to-acquire-hunter-communications/" },
+            { name: "AT&T (fka Lumen)", role: "Legacy ILEC", bsls: null, tech: "DSL + FTTP", speeds: "Varies", status: "CenturyLink legacy copper + partial fiber → AT&T", color: "#0EA5E9", source: "FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" },
+            { name: "Cal-Ore Communications", role: "Legacy Telco", bsls: 2760, tech: "FTTP + DSL + FWA", speeds: "Up to 65 Mbps", status: "15.2% fiber. Publicly traded (LICT). Gabelli 24% owner", color: "#78716C", source: "FCC BDC J25", sourceUrl: "https://broadbandmap.fcc.gov/" }
+        ],
+        competitiveNotes: "Hunter hometown market — dominant fiber. Oak Hill Capital (8th FTTP platform) acquired Dec 2025 for PE-backed growth. Cal-Ore competitively vulnerable at only 65 Mbps vs Hunter's 2.5 Gbps.",
+        buildAnnouncements: [
+            { provider: "Hunter", announcement: "Oak Hill Capital acquisition closed Dec 2025. 22nd broadband deal, 8 FTTP platforms, 35 states", date: "Dec 2025", source: "Oak Hill Capital", sourceUrl: "https://oakhill.com/2025/12/10/oak-hill-capital-to-acquire-hunter-communications/" }
+        ]
+    },
+    boise_id: {
+        name: "Boise / Treasure Valley, ID",
+        county: "Ada", state: "ID", pop: 250000, estHH: 95000,
+        coords: [43.6150, -116.2023],
+        providers: [
+            { name: "Ziply Fiber", role: "ILEC Fiber", bsls: null, tech: "FTTP", speeds: "Up to 50 Gbps (biz)", status: "Active — core Idaho market (~120K passings)", color: "#16A34A", source: "FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" },
+            { name: "AT&T (fka Quantum/Lumen)", role: "Overbuilder", bsls: null, tech: "FTTP", speeds: "Up to 8 Gbps", status: "Nearly doubling ID fiber build rate in 2026", color: "#0EA5E9", source: "BoiseDev", sourceUrl: "https://boisedev.com/news/2026/02/03/major-company-acquires-fiber-internet-networks-in-boise/" },
+            { name: "Fat Beam", role: "Enterprise→Residential", bsls: null, tech: "FTTP", speeds: "250M–2 Gbps", status: "Phase 1 Boise complete. Expanding Meridian + Twin Falls", color: "#F59E0B", source: "Fat Beam", sourceUrl: "https://www.fatbeamfiber.com/media-news/fatbeam-fiber-expands-fiber-network-to-new-boise-areas-and-meridian" },
+            { name: "Sparklight (Cable One)", role: "Cable Incumbent", bsls: null, tech: "HFC", speeds: "Up to 1 Gbps", status: "Active — Nampa, Caldwell, Canyon County", color: "#7C3AED", source: "FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" }
+        ],
+        competitiveNotes: "Ziply's core ID market. AT&T doubling build rate post-Lumen deal. Fat Beam entering residential from enterprise. Treasure Valley (Meridian, Nampa) is fastest-growing metro in ID.",
+        buildAnnouncements: [
+            { provider: "AT&T", announcement: "Nearly doubling Idaho fiber build rate in 2026 post-Lumen acquisition", date: "Feb 2026", source: "BoiseDev", sourceUrl: "https://boisedev.com/news/2026/02/03/major-company-acquires-fiber-internet-networks-in-boise/" },
+            { provider: "Fat Beam", announcement: "Expanding residential FTTH to Meridian + Twin Falls after Boise Phase 1", date: "2026", source: "Fat Beam", sourceUrl: "https://www.fatbeamfiber.com/media-news/fatbeam-fiber-expands-fiber-network-to-new-boise-areas-and-meridian" }
+        ]
+    },
+    billings_mt: {
+        name: "Billings, MT",
+        county: "Yellowstone", state: "MT", pop: 117000, estHH: 48000,
+        coords: [45.7833, -108.5007],
+        providers: [
+            { name: "TDS Telecom", role: "Major Overbuilder", bsls: null, tech: "FTTP", speeds: "Up to 8 Gbps", status: "50K+ addresses, 10K+ customers (Feb 2026). Expanding to Laurel/Lockwood", color: "#1D4ED8", source: "TDS Telecom", sourceUrl: "https://tdsfiber.com/build/billings-mt/" },
+            { name: "Ziply Fiber", role: "New Entrant", bsls: null, tech: "FTTP", speeds: "Up to 50 Gbps (biz)", status: "NEW BUILD — 18-20K addresses by EOY 2026", color: "#16A34A", source: "Yahoo Finance", sourceUrl: "https://finance.yahoo.com/news/ziply-fiber-aggressively-expanding-montana-183500923.html" },
+            { name: "AT&T (fka Lumen)", role: "Legacy ILEC", bsls: null, tech: "DSL + partial FTTP", speeds: "Varies", status: "CenturyLink legacy → AT&T. Enterprise focus post-sale.", color: "#0EA5E9", source: "FCC BDC", sourceUrl: "https://broadbandmap.fcc.gov/" }
+        ],
+        competitiveNotes: "TDS first-mover advantage (since Aug 2022, 10K+ customers). Ziply new entrant (18-20K address target). Both overbuilding legacy CenturyLink copper.",
+        buildAnnouncements: [
+            { provider: "TDS", announcement: "10,000+ MT customers as of Feb 2026. Expanding to Laurel, Lockwood adjacent markets", date: "Feb 2026", source: "FiberBroadband.org", sourceUrl: "https://fiberbroadband.org/2026/02/03/tds-celebrates-10000-montana-customers/" },
+            { provider: "Ziply", announcement: "Aggressively expanding Montana — 18-20K addresses in Billings by EOY 2026", date: "2026", source: "Yahoo Finance", sourceUrl: "https://finance.yahoo.com/news/ziply-fiber-aggressively-expanding-montana-183500923.html" }
+        ]
+    },
+    great_falls_mt: {
+        name: "Great Falls, MT",
+        county: "Cascade", state: "MT", pop: 60000, estHH: 26000,
+        coords: [47.5002, -111.3008],
+        providers: [
+            { name: "Ziply Fiber", role: "New Entrant", bsls: null, tech: "FTTP", speeds: "Up to 50 Gbps (biz)", status: "Active build — ~10K addresses", color: "#16A34A", source: "Ziply Fiber", sourceUrl: "https://ziplyfiber.com/" },
+            { name: "TDS Telecom", role: "Overbuilder", bsls: null, tech: "FTTP", speeds: "Up to 8 Gbps", status: "Active fiber build in Great Falls metro", color: "#1D4ED8", source: "Fierce Network", sourceUrl: "https://www.fierce-network.com/broadband/tds-telecom-targets-fiber-110k-big-sky-country-and-beyond" },
+            { name: "KDS Fiber", role: "Local Fiber/WISP", bsls: 1255, tech: "FTTP + FWA", speeds: "Up to 1 Gbps", status: "South/SW Great Falls. 100% underground conduit. Since 2007.", color: "#78716C", source: "FCC BDC J25", sourceUrl: "https://broadbandmap.fcc.gov/" }
+        ],
+        competitiveNotes: "RARE 3-way overbuild: Ziply, TDS, and KDS Fiber all building simultaneously. Only 60K population — significant overinvestment risk.",
+        buildAnnouncements: [
+            { provider: "All 3", announcement: "Simultaneous 3-way fiber overbuild: Ziply + TDS + KDS — unusual for a city of 60K", date: "2025-26", source: "Multiple", sourceUrl: "https://broadbandmap.fcc.gov/" }
+        ]
+    }
+};
+
 // ---- CONSOLIDATION CANDIDATES (from FCC BDC J25 filing, <50K BSLs in PNW states) ----
 // fiberBSLs = unique location_ids with technology=50 (FTTP) from BDC CSV data
 // totalBSLs = unique location_ids across all technologies from BDC CSV data
@@ -1018,7 +1182,7 @@ const CONSOLIDATION_CANDIDATES = [
     { provider: "Grant County PUD", providerId: "240110", states: ["WA"], totalBSLs: 38626, fiberBSLs: 38626, keyMarkets: "Grant County, WA", techMix: "Fiber", ownership: "Public utility district (wholesale-only by WA state law)", strategicNotes: "100% fiber. WA PUD — wholesale only by state law. NOT an acquisition target. Provides infrastructure for retail ISPs." },
     { provider: "Washington Broadband", providerId: "330082", states: ["WA"], totalBSLs: 32940, fiberBSLs: 2130, keyMarkets: "Washington", techMix: "Fiber, Cable, Fixed Wireless", ownership: "Private (sold fiber/cable assets to Spectrum; now wireless-only)", strategicNotes: "Only 6.5% fiber. Sold wireline to Spectrum. Now primarily wireless. Limited acquisition value." },
     { provider: "Chelan County PUD", providerId: "140020", states: ["WA"], totalBSLs: 29944, fiberBSLs: 29944, keyMarkets: "Chelan County (Wenatchee area)", techMix: "Fiber", ownership: "Public utility district (wholesale-only by WA state law)", strategicNotes: "100% fiber. WA PUD — wholesale only by state law. NOT an acquisition target." },
-    { provider: "Lightcurve", providerId: "130335", states: ["WA"], totalBSLs: 26484, fiberBSLs: 3200, keyMarkets: "Kittitas, Thurston, Yakima Cos.", techMix: "Fiber, DSL", ownership: "Palisade Infrastructure (PE)", strategicNotes: "Only 12.1% fiber — legacy Consolidated Comms WA copper plant. Palisade PE-backed since May 2024 sale. FTTP upgrade opportunity. See also 130786 (Mashell/Rainier Connect) in Pierce Co." },
+    { provider: "Lightcurve (combined)", providerId: "130786+130335", states: ["WA"], totalBSLs: 123170, fiberBSLs: 6061, keyMarkets: "Pierce Co (Tacoma), Lewis Co, Kittitas Co, Thurston Co, Yakima Co", techMix: "Cable (HFC 74.2%), DSL (20.8%), Fiber (4.9%)", ownership: "Palisade Infrastructure (PE)", strategicNotes: "COMBINED 2 FCC IDs: 130786 (Mashell/Rainier Connect, 96,686 BSLs — 94.6% cable DOCSIS 3.0) + 130335 (ex-CCI WA, 26,484 BSLs — 87.9% DSL). Total 123K BSLs exceeds 50K screen but Palisade-owned platform is a strategic target. Only 4.9% fiber (6,061 FTTP BSLs) — massive fiber upgrade opportunity across cable+DSL plant." },
     { provider: "Swift-Stream Internet", providerId: "470055", states: ["WA"], totalBSLs: 24525, fiberBSLs: 164, keyMarkets: "Washington", techMix: "Fiber, Fixed Wireless", ownership: "Private", strategicNotes: "BDC brand: Swift-Stream Internet. Only 0.7% fiber (164 BSLs). Almost entirely fixed wireless." },
     { provider: "Douglas County PUD", providerId: "190303", states: ["WA"], totalBSLs: 15347, fiberBSLs: 0, keyMarkets: "Douglas County, WA", techMix: "DSL, Fixed Wireless", ownership: "Public utility district (wholesale-only by WA state law)", strategicNotes: "Zero fiber in BDC — DSL + FWA only. WA PUD — NOT an acquisition target." },
     // === MULTI-STATE ===
@@ -1098,19 +1262,19 @@ var OREGON_TOWNS = [
 const ACQUISITION_TARGETS = [
     {
         name: "Lightcurve",
-        fccId: "130786",
-        legalEntity: "Mashell Telecom, Inc.",
+        fccId: "130786 + 130335",
+        legalEntity: "Mashell Telecom, Inc. (130786) + CCI WA assets (130335)",
         hq: "Eatonville, WA",
         owner: "Palisade Infrastructure (Australian infra fund, A$10B+ AUM)",
         ceo: "Anand Vadapalli (fmr CEO Alaska Communications)",
         totalPassings: 160000,
-        fiberPct: 12.1,
-        fiberBSLs: 3200,
-        totalBDCBSLs: 26484,
+        fiberPct: 4.9,
+        fiberBSLs: 6061,
+        totalBDCBSLs: 123170,
         employees: "100-150",
         states: ["WA"],
         keyMarkets: "Pierce Co (Tacoma, Puyallup, Eatonville), Lewis Co (Centralia, Chehalis), Kittitas Co (Ellensburg), Thurston Co (Yelm), Yakima Co (Selah)",
-        techMix: "HFC (cable) + FTTP + DSL. 20.7% of customers on DSL.",
+        techMix: "HFC/Cable 74.2% (91,447 BSLs — legacy Rainier Connect DOCSIS 3.0) + DSL 20.8% (25,662 BSLs — ex-CCI copper) + FTTP 4.9% (6,061 BSLs). Two FCC IDs: 130786 (Mashell Telecom, 96,686 locs) + 130335 (ex-CCI WA, 26,484 locs).",
         acquisitionHistory: "Rainier Connect (Nov 2023, undisclosed) + Consolidated Comms WA ($73M, May 2024)",
         impliedValuation: "$200-400M+ (full platform, 160K passings)",
         revenue: "~$20M+ (CCI WA assets alone had ~$20M revenue FY2023)",
